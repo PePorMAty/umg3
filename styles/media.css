@@ -1,0 +1,586 @@
+@media (max-width: 1600px) {
+  .boronTypes {
+    padding: 0 60px;
+  }
+}
+@media (max-width: 1500px) {
+  .application-right-arrow {
+    top: -400px;
+  }
+  .application-left-arrow {
+    top: -302px;
+  }
+  .contacts-text {
+    font-size: 55px;
+  }
+}
+@media (max-width: 1450px) {
+  .logo {
+    max-width: 180px;
+  }
+  .header-contacts-tel {
+    font-size: 15px;
+  }
+  .header-btn {
+    padding: 19px 50px;
+    font-size: 15px;
+  }
+  .topBoron-title {
+    color: #00000090;
+  }
+  .topBoron-title span + .up {
+    color: #00000090;
+  }
+}
+@media (max-width: 1350px) {
+  .contacts-text {
+    font-size: 43px;
+  }
+}
+@media (max-width: 1300px) {
+  .nav-item {
+    margin-right: 44px;
+    font-size: 14px;
+  }
+  .nav-item {
+    margin-right: 30px;
+  }
+  .header-contacts-tel {
+    margin-right: 14px;
+  }
+  .boronProcessing-item__text {
+    max-width: 360px;
+    margin-bottom: 70px;
+  }
+  .reasons-item__title {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 1250px) {
+  .application-right-arrow {
+    top: -370px;
+  }
+  .application-left-arrow {
+    top: -271px;
+  }
+  .application-slider__title {
+    margin-left: 25px;
+    bottom: 80px;
+  }
+}
+@media (max-width: 1200px) {
+  .botonTypes-right-arrow {
+    left: 95%;
+  }
+  .boronTypes-slider__title {
+    font-size: 22px;
+  }
+  .boronTypes-slider__img {
+    margin-top: 5%;
+  }
+  .boronProcessing-link img {
+    max-width: 500px;
+  }
+  .reasons-top__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  .top-item__one {
+    margin-right: 0;
+  }
+  .top-item__two {
+    margin-top: 165px;
+    margin-left: 146px;
+  }
+  .reasons-bot__inner {
+    flex-direction: column;
+  }
+  .reasons-bot__item {
+    margin-left: 146px;
+  }
+  .reason-item__link {
+    margin-top: 80px;
+    display: block;
+    margin: 80px auto;
+  }
+  .contacts-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .contacts-text {
+    font-size: 64px;
+  }
+  .contacts-form {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1150px) {
+  .burger-menu__open {
+    display: block;
+  }
+  .logo-link {
+    z-index: 2;
+  }
+  .nav-list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: #161616;
+    top: 100px;
+    align-items: center;
+    height: 300vw;
+    width: 100vw;
+    left: 0;
+    flex-direction: column;
+  }
+  .nav-item {
+    margin-bottom: 60px;
+    font-size: 30px;
+  }
+  .header-contacts {
+    display: none;
+    position: absolute;
+    bottom: -550%;
+    right: 27%;
+  }
+  .header-contacts-tel {
+    margin-right: 100px;
+  }
+  .boronTypes-slider__title {
+    font-size: 20px;
+  }
+  .boronProcessing-title {
+    font-size: 33px;
+  }
+  .application-left-arrow {
+    top: -365px;
+    left: 64px;
+  }
+  .application-right-arrow {
+    top: -465px;
+    right: 60px;
+  }
+}
+@media (max-width: 1050px) {
+  .boronTypes-slider__img {
+    margin-top: 15%;
+  }
+  .boronTypes-slider__title {
+    font-size: 20px;
+  }
+  .boronTypes-slider__title {
+    padding: 80px 50px 0 70px;
+  }
+  .boronTypes-slider__text {
+    padding: 0 50px 80px 70px;
+  }
+  .boronProcessing-item__btn {
+    padding: 19px 30px;
+  }
+}
+@media (max-width: 1000px) {
+  .boronProcessing-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .boronProcessing-link img {
+    margin-bottom: 80px;
+    max-width: 100%;
+  }
+  .boronProcessing-item__title {
+    max-width: 100%;
+  }
+  .boronProcessing-item__text {
+    max-width: 100%;
+  }
+  .application-title {
+    font-size: 34px;
+  }
+}
+@media (max-width: 950px) {
+  .application-left-arrow {
+    top: -300px;
+  }
+  .application-right-arrow {
+    top: -400px;
+  }
+}
+@media (max-width: 900px) {
+  .boronTypes-slider__text {
+    font-size: 13px;
+  }
+  .boronTypes-slider__img {
+    margin-top: 23%;
+  }
+}
+@media (max-width: 850px) {
+  .footer-nav__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .contacts-text {
+    font-size: 54px;
+  }
+}
+@media (max-width: 800px) {
+  .boronTypes-slider__img {
+    margin-top: 30%;
+  }
+  .reasons-title {
+    font-size: 30px;
+  }
+  .contacts-title {
+    font-size: 90px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 750px) {
+  .botonTypes-right-arrow {
+    top: -350px;
+    left: 91%;
+  }
+  .botonTypes-left-arrow {
+    top: -251px;
+  }
+  .boronTypes-slider__text {
+    padding: 0 80px 80px 80px;
+  }
+  .boronTypes-slider__img {
+    margin-top: 0;
+  }
+  .application-left-arrow {
+    top: -260px;
+  }
+  .application-right-arrow {
+    top: -356px;
+  }
+  .application-title {
+    font-size: 26px;
+  }
+  .footer-logo {
+    margin-right: 80px;
+  }
+}
+@media (max-width: 700px) {
+  .topBoron-title {
+    font-size: 38px;
+  }
+  .topBoron-title span {
+    font-size: 100px;
+  }
+  .topBoron-title span + .up {
+    font-size: 50px;
+  }
+  .boronProcessing-title {
+    font-size: 26px;
+  }
+  .boronProcessing-item__title {
+    font-size: 22px;
+  }
+  .application-left-arrow {
+    top: -328px;
+    left: 25px;
+  }
+  .application-right-arrow {
+    top: -427px;
+  }
+  .contacts-text {
+    font-size: 44px;
+  }
+  .header-contacts {
+    right: 17%;
+  }
+}
+@media (max-width: 650px) {
+  .button-uotlined {
+    padding: 19px 45px;
+  }
+  .topBoron-btn {
+    padding: 19px 45px;
+  }
+  .boronTypes-slider__img {
+    margin-top: 50px;
+  }
+  .footer-logo {
+    margin-right: 40px;
+    max-width: 150px;
+  }
+  .footer {
+    padding: 60px 40px;
+  }
+}
+@media (max-width: 600px) {
+  .topBoron-title {
+    font-size: 31px;
+  }
+  .topBoron-title span {
+    font-size: 80px;
+  }
+  .topBoron-title span + .up {
+    font-size: 40px;
+  }
+  .topBoron-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .topBoron-btn {
+    margin-bottom: 30px;
+  }
+  .button-outlined {
+    margin-left: 0;
+  }
+  .boronTypes-title {
+    font-size: 32px;
+  }
+  .botonTypes-right-arrow {
+    top: -350px;
+  }
+  .botonTypes-left-arrow {
+    top: -251px;
+  }
+  .reasons-item__text {
+    font-size: 14px;
+  }
+  .reasons-item__title {
+    font-size: 20px;
+  }
+  .application-left-arrow {
+    top: -285px;
+    left: 25px;
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .application-right-arrow {
+    top: -366px;
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 25px;
+  }
+  .contacts-text {
+    font-size: 35px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 550px) {
+  .botonTypes-right-arrow {
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+  }
+  .botonTypes-left-arrow {
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    top: -270px;
+  }
+  .boronProcessing {
+    padding: 81px 30px 0px 30px;
+  }
+  .application-title {
+    font-size: 24px;
+  }
+  .contacts-title {
+    font-size: 70px;
+  }
+  .header-contacts {
+    right: 9%;
+  }
+}
+@media (max-width: 500px) {
+  .header-contacts-tel {
+    margin-right: 50px;
+  }
+  .topBoron {
+    margin-top: 300px;
+  }
+  .topBoron-title {
+    font-size: 23px;
+  }
+  .topBoron-title span {
+    font-size: 65px;
+    color: #000;
+  }
+  .topBoron-title span + .up {
+    font-size: 33px;
+  }
+  .topBoron-text {
+    margin-bottom: 80px;
+    font-size: 22px;
+  }
+  .boronProcessing-title {
+    margin-bottom: 40px;
+    font-size: 22px;
+  }
+  .boronProcessing-item__title {
+    font-size: 20px;
+  }
+  .top-item__one::after {
+    display: none;
+  }
+  .top-item__two::after {
+    display: none;
+  }
+  .reasons-bot__item::after {
+    display: none;
+  }
+  .top-item__one {
+    margin-left: 0px;
+  }
+  .top-item__two {
+    margin-left: 0px;
+  }
+  .reasons-bot__item {
+    margin-left: 0px;
+  }
+  .reasons-title {
+    font-size: 26px;
+    margin-bottom: 85px;
+  }
+  .reasons-top__inner {
+    margin-bottom: 80px;
+  }
+  .top-item__two {
+    margin-top: 80px;
+  }
+  .application-left-arrow {
+    top: -250px;
+  }
+  .application-right-arrow {
+    top: -331px;
+  }
+  .contacts-form__wrapper {
+    flex-direction: column-reverse;
+  }
+  .contacts-form {
+    padding: 40px 40px 40px 40px;
+    background-color: #365edc;
+    border-radius: 14px;
+    max-width: 615px;
+    max-height: none;
+  }
+  .contacts-form-accept {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .contacts-text {
+    font-size: 28px;
+  }
+  .footer-nav__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 450px) {
+  .header-contacts {
+    right: 32%;
+    flex-direction: column;
+  }
+  .header-contacts-tel {
+    margin-right: 0px;
+    text-align: center;
+  }
+  .boronTypes {
+    margin-bottom: 80px;
+  }
+  .boronTypes-slider__title {
+    font-size: 15px;
+  }
+  .boronTypes-slider__text {
+    padding: 0 60px 80px 60px;
+  }
+  .botonTypes-right-arrow {
+    top: 0px;
+    left: 78%;
+  }
+  .botonTypes-left-arrow {
+    top: 80px;
+    left: 0px;
+  }
+  .boronTypes {
+    padding: 0;
+  }
+  .application-title {
+    font-size: 21px;
+  }
+  .contacts-title {
+    font-size: 50px;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 400px) {
+  .button-outlined {
+    padding: 19px 20px;
+  }
+  .topBoron-title span {
+    font-size: 50px;
+  }
+  .topBoron-title {
+    font-size: 20px;
+  }
+  .topBoron-title span + .up {
+    font-size: 27px;
+  }
+  .boronTypes-title {
+    font-size: 26px;
+  }
+  .application-left-arrow {
+    top: -20px;
+  }
+  .application-right-arrow {
+    top: -100px;
+  }
+  .application-slider__title {
+    margin-left: 20px;
+    bottom: 60px;
+    font-size: 20px;
+  }
+  .contacts-form-text {
+    font-size: 13px;
+  }
+  .contacts-form__input {
+    background-color: #4371ff10;
+    padding: 17px 20px;
+    max-width: 100%;
+  }
+  .contacts-text {
+    font-size: 20px;
+  }
+  .contacts-form {
+    padding: 40px 20px;
+  }
+}
+@media (max-width: 370px) {
+  .header-contacts {
+    right: 26%;
+    flex-direction: column;
+  }
+  .boronTypes {
+    padding: 0 10px;
+  }
+  .botonTypes-right-arrow {
+    left: 74%;
+  }
+  .boronProcessing-item__btn {
+    text-transform: none;
+    padding: 19px 13px;
+  }
+  .reasons-item__text {
+    font-size: 13px;
+  }
+  .footer {
+    flex-direction: column;
+  }
+  .footer-logo {
+    margin-bottom: 40px;
+  }
+  .contacts-form {
+    width: 100%;
+  }
+  .contacts-form__btn {
+    padding: 19px 33px;
+  }
+}

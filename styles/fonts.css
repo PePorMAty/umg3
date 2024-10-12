@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap");
+
+@font-face {
+  font-family: "Geist";
+  src: url("/fonts/Geist/ttf/Geist-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Geist Bold";
+  src: url("/fonts/Geist/ttf/Geist-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Geist Medium";
+  src: url("/fonts/Geist/ttf/Geist-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Geist Light";
+  src: url("/fonts/Geist/ttf/Geist-Light.ttf");
+}
+
+@font-face {
+  font-family: "Hero";
+  src: url("/fonts/Hero/Hero-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Hero Bold";
+  src: url("/fonts/Hero/Hero-Bold.ttf");
+}
+
+.ibm-plex-sans-regular {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ibm-plex-sans-medium {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ibm-plex-sans-bold {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.geist-regular {
+  font-family: "Geist", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.geist-bold {
+  font-family: "Geist Bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.geist-medium {
+  font-family: "Geist Medium", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.geist-light {
+  font-family: "Geist Light", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.hero-regular {
+  font-family: "Hero", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hero-bold {
+  font-family: "Hero Bold", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "Gaist", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

@@ -1,0 +1,560 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  background-image: url("../assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.header {
+  margin-top: 10px;
+}
+
+.header-container {
+  padding: 0 10px;
+  max-width: 1839px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header-container::after {
+  content: "";
+  position: absolute;
+  background-image: url("../assets/boron-nitride/boron-main-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 876px;
+  height: 1232px;
+  top: -10px;
+  right: 0;
+  z-index: -10;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #161616;
+  padding: 22px 40px;
+  border-radius: 8px;
+}
+
+.logo {
+  max-width: 220px;
+  width: 100%;
+  height: 56px;
+  padding-right: 30px;
+}
+
+.nav-list {
+  display: flex;
+  padding: 22px 0;
+}
+
+.nav-item {
+  margin-right: 44px;
+  font-size: 16px;
+}
+
+.header-contacts {
+  display: flex;
+}
+
+.header-contacts-tel {
+  padding: 22px 0;
+  margin-right: 52px;
+}
+
+.button {
+  padding: 19px 77px;
+  color: #fff;
+  background-color: #365edc;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.header-no-margin {
+  margin-top: 0;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.header-no-border {
+  border-radius: 0px;
+}
+.container-no-padding {
+  padding: 0px 0px;
+}
+
+.active {
+  display: flex !important;
+}
+
+.open {
+  display: block !important;
+}
+
+.close {
+  display: none !important;
+}
+
+.burger-menu__open {
+  position: relative;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  background-image: url("../assets/burger-menu-icon.svg");
+  background-repeat: no-repeat;
+  margin: auto 0;
+  display: none;
+}
+
+.burger-menu__close {
+  position: relative;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: none;
+  background-image: url("../assets/close-burger-icon.svg");
+  background-repeat: no-repeat;
+  margin: auto 0;
+}
+
+.container {
+  max-width: 1504px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.topBoron {
+  margin-top: 236px;
+  margin-bottom: 262px;
+}
+
+.topBoron-title {
+  font-size: 44px;
+  color: #ffffff30;
+  text-transform: uppercase;
+  max-width: 650px;
+  margin-bottom: 75px;
+}
+
+.topBoron-title span {
+  color: #fff;
+  font-size: 128px;
+}
+
+.topBoron-title span + .up {
+  color: #ffffff30;
+  font-size: 68px;
+  vertical-align: 70%;
+}
+
+.topBoron-text {
+  max-width: 900px;
+  font-size: 24px;
+  margin-bottom: 120px;
+}
+
+.topBoron-text span {
+  color: #0f70b7;
+}
+
+.button-outlined {
+  border: #757575 1px solid;
+  margin-left: 40px;
+  background-color: inherit;
+}
+
+.boronTypes {
+  margin-bottom: 40px;
+}
+
+.boronTypes-title {
+  text-transform: uppercase;
+  font-size: 44px;
+  margin-bottom: 40px;
+}
+
+.boronTypes-slider {
+  display: flex;
+  gap: 40px;
+}
+
+.boronTypes-slider__item {
+  max-width: 732px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 14px;
+  color: #161616;
+  min-height: 400px;
+}
+
+.boronTypes-slider__title {
+  padding: 80px 80px 0 80px;
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+
+.boronTypes-slider__text {
+  color: #999999;
+  padding: 0 80px 80px 88px;
+}
+
+.boronTypes-slider__img {
+  width: 100%;
+  max-width: 615px;
+  max-height: 400px;
+  margin: auto auto;
+  display: flex;
+}
+
+.botonTypes-left-arrow {
+  position: relative;
+  background-image: url("../assets/arrow-left.svg");
+  width: 99px;
+  height: 99px;
+
+  top: -250px;
+  z-index: 10;
+  left: -50px;
+  cursor: pointer;
+}
+
+.botonTypes-right-arrow {
+  background-image: url("../assets/arrow-right.svg");
+  width: 99px;
+  height: 99px;
+  position: relative;
+  top: -350px;
+  z-index: 10;
+  left: 96%;
+  cursor: pointer;
+}
+
+.boronProcessing {
+  margin-bottom: 120px;
+  padding: 81px 62px 0px 74px;
+  background-color: #2b2b2b70;
+  border-radius: 14px;
+}
+
+.boronProcessing-title {
+  margin-bottom: 80px;
+  font-size: 44px;
+  text-transform: uppercase;
+}
+
+.boronProcessing-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.boronProcessing-item {
+  margin-bottom: 77px;
+}
+
+.boronProcessing-item__title {
+  margin-bottom: 40px;
+  font-size: 24px;
+  max-width: 309px;
+}
+
+.boronProcessing-item__text {
+  max-width: 470px;
+  margin-bottom: 80px;
+}
+
+.boronProcessing-item__btn {
+  text-transform: none;
+}
+
+.characteristics {
+  height: 880px;
+  margin-bottom: 120px;
+}
+
+.reasons {
+  margin-bottom: 120px;
+}
+
+.reasons-title {
+  font-size: 44px;
+  max-width: 850px;
+  margin-bottom: 176px;
+  text-transform: uppercase;
+}
+
+.reasons-top__inner {
+  color: #161616;
+  margin-bottom: 156px;
+  display: flex;
+}
+
+.reasons-top__item {
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 40px 40px;
+  max-width: 566px;
+  max-height: 336px;
+}
+
+.top-item__one {
+  margin-right: 196px;
+  position: relative;
+  margin-left: 146px;
+}
+
+.top-item__one::after {
+  content: "";
+  position: absolute;
+  background-image: url("../assets/boron-nitride/1.png");
+  background-repeat: no-repeat;
+  width: 225px;
+  height: 355px;
+  top: -65px;
+  left: -125px;
+  z-index: -10;
+}
+
+.reasons-item__title {
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+
+.reasons-item__text {
+  max-width: 435px;
+  color: #999999;
+}
+
+.top-item__two {
+  position: relative;
+  margin-top: 126px;
+}
+
+.top-item__two::after {
+  content: "";
+  position: absolute;
+  background-image: url("../assets/boron-nitride/2.png");
+  background-repeat: no-repeat;
+  width: 225px;
+  height: 355px;
+  top: -100px;
+  left: -120px;
+  z-index: -10;
+}
+
+.reasons-bot__inner {
+  color: #161616;
+  justify-content: space-between;
+  display: flex;
+}
+
+.reasons-bot__item {
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 40px 40px;
+  max-width: 566px;
+  max-height: 336px;
+  margin-left: 298px;
+  position: relative;
+}
+
+.reasons-bot__item::after {
+  content: "";
+  position: absolute;
+  background-image: url("../assets/boron-nitride/3.png");
+  background-repeat: no-repeat;
+  width: 225px;
+  height: 355px;
+  top: -100px;
+  left: -120px;
+  z-index: -10;
+}
+
+.reason-item__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.application {
+  margin-bottom: 380px;
+}
+
+.application-title__wrapper {
+  max-width: 1504px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.application-title {
+  font-size: 44px;
+  margin-bottom: 80px;
+  max-width: 1100px;
+  text-transform: uppercase;
+}
+
+.application-left-arrow {
+  background-image: url("../assets/arrow-left.svg");
+  width: 99px;
+  height: 99px;
+  position: relative;
+  top: -350px;
+  z-index: 10;
+  left: 100px;
+  cursor: pointer;
+}
+
+.application-right-arrow {
+  background-image: url("../assets/arrow-right.svg");
+  width: 99px;
+  height: 99px;
+  position: relative;
+  top: -450px;
+  z-index: 10;
+  right: 100px;
+  float: right;
+  cursor: pointer;
+}
+
+.application-slider__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.application-slider__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.application-slider__title {
+  font-size: 24px;
+  max-width: 516px;
+  text-transform: uppercase;
+  margin-left: 80px;
+  position: relative;
+  bottom: 110px;
+}
+
+.contacts {
+  margin-bottom: 40px;
+}
+
+.contacts-title {
+  font-size: 128px;
+  margin-bottom: 63px;
+  text-transform: uppercase;
+}
+
+.contacts-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts-info {
+  margin-top: 75px;
+}
+
+.contacts-text {
+  font-size: 64px;
+  margin-bottom: 80px;
+  color: #ffffff30;
+  text-transform: uppercase;
+}
+
+.contacts-form {
+  padding: 40px 40px 40px 40px;
+  background-color: #365edc;
+  border-radius: 14px;
+  max-width: 615px;
+  max-height: 430px;
+}
+
+.contacts-form__title {
+  font-size: 16px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.contacts-form-text {
+  margin-bottom: 20px;
+  max-width: 430px;
+}
+
+.contacts-form__input {
+  background-color: #4371ff10;
+  padding: 17px 20px;
+  width: 100%;
+  margin-bottom: 20px;
+  border: #4371ff 1px solid;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.contacts-form__input::placeholder {
+  color: #ffffff30;
+}
+
+.contacts-form__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts-form__btn {
+  background-color: #fff;
+  color: #365edc;
+  margin-right: 42px;
+}
+
+.contacts-form-accept {
+  font-size: 10px;
+  color: #ffffff50;
+  text-align: right;
+  max-width: 220px;
+}
+
+.footer {
+  padding: 76px 80px;
+  background-color: #161616;
+  display: flex;
+}
+
+.footer-logo {
+  margin-right: 157px;
+  cursor: pointer;
+}
+
+.footer-nav__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.footer-nav__link {
+  font-size: 16px;
+}
