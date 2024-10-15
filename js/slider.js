@@ -1,20 +1,16 @@
-const boronTypesSwiper = new Swiper(".boronTypes-slider", {
-  // Настройки Swiper
+const boronTypesSwiper = new Swiper(".typesSlider-slider", {
   loop: true, // Бесконечная прокрутка
   navigation: {
-    nextEl: ".botonTypes-right-arrow ",
-    prevEl: ".botonTypes-left-arrow",
+    nextEl: ".typesSlider-right-arrow ",
+    prevEl: ".typesSlider-left-arrow",
   },
   slidesPerView: 2,
   spaceBetween: 40,
-  /* centeredSlides: true, */
   initialSlide: 0,
   slideToClickedSlide: true,
   freeMode: true,
-  /* cssMode: true, */
   breakpoints: {
     // Настройки для разных размеров экрана
-
     320: {
       slidesPerView: 1,
     },
@@ -24,7 +20,6 @@ const boronTypesSwiper = new Swiper(".boronTypes-slider", {
   },
 });
 const applictationSwiper = new Swiper(".application-slider", {
-  // Настройки Swiper
   loop: true, // Бесконечная прокрутка
   navigation: {
     nextEl: ".application-right-arrow",
@@ -32,14 +27,11 @@ const applictationSwiper = new Swiper(".application-slider", {
   },
   slidesPerView: 2.5,
   spaceBetween: 40,
-  /* centeredSlides: true, */
   initialSlide: 0,
   slideToClickedSlide: true,
   freeMode: true,
-  /* cssMode: true, */
   breakpoints: {
     // Настройки для разных размеров экрана
-
     320: {
       slidesPerView: 1,
     },
@@ -50,4 +42,16 @@ const applictationSwiper = new Swiper(".application-slider", {
       slidesPerView: 2.5,
     },
   },
+});
+const baseSwiper = new Swiper(".base-slider", {
+  loop: true, // Бесконечная прокрутка
+  navigation: {
+    nextEl: ".base-right-arrow",
+    prevEl: ".base-left-arrow",
+  },
+  slidesPerView: 1,
+  spaceBetween: 40,
+  initialSlide: 0,
+  slideToClickedSlide: true,
+  freeMode: true,
 });

@@ -1,5 +1,13 @@
+@media (max-width: 1650px) {
+  .base-slider__wrapper {
+    margin-right: 50px;
+  }
+  .base-info {
+    max-width: 750px;
+  }
+}
 @media (max-width: 1600px) {
-  .boronTypes {
+  .typesSlider {
     padding: 0 60px;
   }
 }
@@ -31,10 +39,25 @@
   .topBoron-title span + .up {
     color: #00000090;
   }
+  .topSilicon-title {
+    color: #00000090;
+  }
+  .topSilicon-title span + .up {
+    color: #00000090;
+  }
+  .topSilicon-title {
+    color: #00000090;
+  }
+  .topSilicon-title span + .up {
+    color: #00000090;
+  }
 }
 @media (max-width: 1350px) {
   .contacts-text {
     font-size: 43px;
+  }
+  .base-info {
+    max-width: 550px;
   }
 }
 @media (max-width: 1300px) {
@@ -67,15 +90,18 @@
     margin-left: 25px;
     bottom: 80px;
   }
+  .technology-item__img {
+    max-width: 500px;
+  }
 }
 @media (max-width: 1200px) {
   .botonTypes-right-arrow {
     left: 95%;
   }
-  .boronTypes-slider__title {
+  .typesSlider-slider__title {
     font-size: 22px;
   }
-  .boronTypes-slider__img {
+  .typesSlider-slider__img {
     margin-top: 5%;
   }
   .boronProcessing-link img {
@@ -113,6 +139,9 @@
   .contacts-form {
     margin: 0 auto;
   }
+  .base-info {
+    max-width: 450px;
+  }
 }
 @media (max-width: 1150px) {
   .burger-menu__open {
@@ -146,7 +175,7 @@
   .header-contacts-tel {
     margin-right: 100px;
   }
-  .boronTypes-slider__title {
+  .typesSlider-slider__title {
     font-size: 20px;
   }
   .boronProcessing-title {
@@ -160,18 +189,33 @@
     top: -465px;
     right: 60px;
   }
+  .technology-item__img {
+    max-width: 400px;
+  }
+  .base-info {
+    max-width: 900px;
+  }
+  .base-wrapper {
+    flex-direction: column;
+  }
+  /* .base-left-arrow {
+    left: 205px;
+  }
+  .base-right-arrow {
+    left: 69%;
+  } */
 }
 @media (max-width: 1050px) {
-  .boronTypes-slider__img {
+  .typesSlider-slider__img {
     margin-top: 15%;
   }
-  .boronTypes-slider__title {
+  .typesSlider-slider__title {
     font-size: 20px;
   }
-  .boronTypes-slider__title {
+  .typesSlider-slider__title {
     padding: 80px 50px 0 70px;
   }
-  .boronTypes-slider__text {
+  .typesSlider-slider__text {
     padding: 0 50px 80px 70px;
   }
   .boronProcessing-item__btn {
@@ -196,6 +240,15 @@
   .application-title {
     font-size: 34px;
   }
+  .technology-item__wrapper {
+    flex-direction: column;
+  }
+  .technology-item__wrapper:nth-child(odd) {
+    flex-direction: column;
+  }
+  .technology-item__img {
+    max-width: 100%;
+  }
 }
 @media (max-width: 950px) {
   .application-left-arrow {
@@ -206,10 +259,10 @@
   }
 }
 @media (max-width: 900px) {
-  .boronTypes-slider__text {
+  .typesSlider-slider__text {
     font-size: 13px;
   }
-  .boronTypes-slider__img {
+  .typesSlider-slider__img {
     margin-top: 23%;
   }
 }
@@ -224,7 +277,7 @@
   }
 }
 @media (max-width: 800px) {
-  .boronTypes-slider__img {
+  .typesSlider-slider__img {
     margin-top: 30%;
   }
   .reasons-title {
@@ -233,6 +286,9 @@
   .contacts-title {
     font-size: 90px;
     margin-bottom: 40px;
+  }
+  .characteristics-title {
+    font-size: 30px;
   }
 }
 @media (max-width: 750px) {
@@ -243,10 +299,10 @@
   .botonTypes-left-arrow {
     top: -251px;
   }
-  .boronTypes-slider__text {
+  .typesSlider-slider__text {
     padding: 0 80px 80px 80px;
   }
-  .boronTypes-slider__img {
+  .typesSlider-slider__img {
     margin-top: 0;
   }
   .application-left-arrow {
@@ -270,6 +326,15 @@
     font-size: 100px;
   }
   .topBoron-title span + .up {
+    font-size: 50px;
+  }
+  .topSilicon-title {
+    font-size: 38px;
+  }
+  .topSilicon-title span {
+    font-size: 100px;
+  }
+  .topSilicon-title span + .up {
     font-size: 50px;
   }
   .boronProcessing-title {
@@ -299,7 +364,10 @@
   .topBoron-btn {
     padding: 19px 45px;
   }
-  .boronTypes-slider__img {
+  .topSilicon-btn {
+    padding: 19px 45px;
+  }
+  .typesSlider-slider__img {
     margin-top: 50px;
   }
   .footer-logo {
@@ -327,10 +395,26 @@
   .topBoron-btn {
     margin-bottom: 30px;
   }
+  .topSilicon-title {
+    font-size: 31px;
+  }
+  .topSilicon-title span {
+    font-size: 80px;
+  }
+  .topSilicon-title span + .up {
+    font-size: 40px;
+  }
+  .topSilicon-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .topSilicon-btn {
+    margin-bottom: 30px;
+  }
   .button-outlined {
     margin-left: 0;
   }
-  .boronTypes-title {
+  .typesSlider-title {
     font-size: 32px;
   }
   .botonTypes-right-arrow {
@@ -364,6 +448,9 @@
   .contacts-text {
     font-size: 35px;
     margin-bottom: 40px;
+  }
+  .technology-item__btn {
+    padding: 19px 37px;
   }
 }
 @media (max-width: 550px) {
@@ -403,12 +490,30 @@
   }
   .topBoron-title span {
     font-size: 65px;
-    color: #000;
+    color: #5b5b5b;
   }
   .topBoron-title span + .up {
     font-size: 33px;
   }
   .topBoron-text {
+    margin-bottom: 80px;
+    font-size: 22px;
+  }
+  .topSilicon {
+    margin-top: 300px;
+  }
+  .topSilicon-title {
+    font-size: 23px;
+    color: #ffffff90;
+  }
+  .topSilicon-title span {
+    font-size: 65px;
+  }
+  .topSilicon-title span + .up {
+    font-size: 33px;
+    color: #ffffff90;
+  }
+  .topSilicon-text {
     margin-bottom: 80px;
     font-size: 22px;
   }
@@ -473,6 +578,19 @@
   .footer-nav__list {
     grid-template-columns: repeat(1, 1fr);
   }
+  .technology-item__btn {
+    font-size: 14px;
+    padding: 19px 10px;
+  }
+  .technology-title {
+    font-size: 30px;
+  }
+  .technology {
+    padding: 81px 20px 37px 20px;
+  }
+  .characteristics-title {
+    font-size: 26px;
+  }
 }
 @media (max-width: 450px) {
   .header-contacts {
@@ -483,13 +601,13 @@
     margin-right: 0px;
     text-align: center;
   }
-  .boronTypes {
+  .typesSlider {
     margin-bottom: 80px;
   }
-  .boronTypes-slider__title {
+  .typesSlider-slider__title {
     font-size: 15px;
   }
-  .boronTypes-slider__text {
+  .typesSlider-slider__text {
     padding: 0 60px 80px 60px;
   }
   .botonTypes-right-arrow {
@@ -500,7 +618,7 @@
     top: 80px;
     left: 0px;
   }
-  .boronTypes {
+  .typesSlider {
     padding: 0;
   }
   .application-title {
@@ -524,7 +642,16 @@
   .topBoron-title span + .up {
     font-size: 27px;
   }
-  .boronTypes-title {
+  .topSilicon-title span {
+    font-size: 50px;
+  }
+  .topSilicon-title {
+    font-size: 20px;
+  }
+  .topSilicon-title span + .up {
+    font-size: 27px;
+  }
+  .typesSlider-title {
     font-size: 26px;
   }
   .application-left-arrow {
@@ -558,7 +685,7 @@
     right: 26%;
     flex-direction: column;
   }
-  .boronTypes {
+  .typesSlider {
     padding: 0 10px;
   }
   .botonTypes-right-arrow {

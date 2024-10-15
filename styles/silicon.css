@@ -16,10 +16,11 @@ li {
 }
 
 body {
-  background-image: url("../assets/bg.jpg");
+  background-image: url("../assets/silicon/slicon-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
+  overflow-x: hidden;
 }
 
 .header {
@@ -36,13 +37,14 @@ body {
 .header-container::after {
   content: "";
   position: absolute;
-  background-image: url("../assets/boron-nitride/boron-main-bg.png");
+  background-image: url("../assets/silicon/silicon-top-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 876px;
-  height: 1232px;
-  top: -10px;
-  right: 0;
+  width: 1096px;
+  height: 974px;
+  top: 145%;
+  /* right: -12px; */
+  right: -0.6%;
   z-index: -10;
 }
 
@@ -109,6 +111,12 @@ body {
   background-color: #34495e;
 }
 
+.button-outlined {
+  border: #757575 1px solid;
+  margin-left: 40px;
+  background-color: inherit;
+}
+
 .header-no-margin {
   margin-top: 0;
 }
@@ -164,45 +172,39 @@ body {
   padding: 0 10px;
 }
 
-.topBoron {
+.topSilicon {
   margin-top: 236px;
   margin-bottom: 262px;
   position: relative;
 }
 
-.topBoron-title {
+.topSilicon-title {
   font-size: 44px;
   color: #ffffff30;
   text-transform: uppercase;
-  max-width: 650px;
-  margin-bottom: 75px;
+  max-width: 820px;
+  margin-bottom: 61px;
 }
 
-.topBoron-title span {
+.topSilicon-title span {
   color: #fff;
   font-size: 128px;
 }
 
-.topBoron-title span + .up {
+.topSilicon-title span + .up {
   color: #ffffff30;
   font-size: 68px;
   vertical-align: 70%;
 }
 
-.topBoron-text {
+.topSilicon-text {
   max-width: 900px;
   font-size: 24px;
-  margin-bottom: 120px;
+  margin-bottom: 27px;
 }
 
-.topBoron-text span {
+.topSilicon-text span {
   color: #0f70b7;
-}
-
-.button-outlined {
-  border: #757575 1px solid;
-  margin-left: 40px;
-  background-color: inherit;
 }
 
 .typesSlider {
@@ -271,172 +273,94 @@ body {
   cursor: pointer;
 }
 
-.boronProcessing {
+.technology {
   margin-bottom: 120px;
-  padding: 81px 62px 0px 74px;
+  padding: 81px 86px 37px 72px;
   background-color: #2b2b2b70;
   border-radius: 14px;
 }
-
-.boronProcessing-title {
-  margin-bottom: 80px;
-  font-size: 44px;
+.technology-title {
   text-transform: uppercase;
+  font-size: 40px;
+  margin-bottom: 95px;
 }
-
-.boronProcessing-wrapper {
+.technology-item__wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 23px;
+  margin-bottom: 30px;
+}
+.technology-item__wrapper:nth-child(odd) {
+  flex-direction: row-reverse;
 }
 
-.boronProcessing-item {
-  margin-bottom: 77px;
-}
-
-.boronProcessing-item__title {
-  margin-bottom: 40px;
-  font-size: 24px;
-  max-width: 309px;
-}
-
-.boronProcessing-item__text {
-  max-width: 470px;
-  margin-bottom: 80px;
-}
-
-.boronProcessing-item__btn {
-  text-transform: none;
-}
-
-.boronProcessing-link img {
-  transition: opacity 0.2 ease-in-out;
-}
-
-.boronProcessing-link img:hover {
-  opacity: 0.8;
-}
-
-.characteristics {
-  margin-bottom: 120px;
-}
-
-.characteristics-title {
-  font-size: 44px;
-  margin-bottom: 50px;
-  max-width: 820px;
-}
-
-.characteristics-img {
-  max-width: 1500px;
-  width: 100%;
-}
-
-.reasons {
-  margin-bottom: 120px;
-}
-
-.reasons-title {
-  font-size: 44px;
-  max-width: 850px;
-  margin-bottom: 176px;
-  text-transform: uppercase;
-}
-
-.reasons-top__inner {
-  color: #161616;
-  margin-bottom: 156px;
-  display: flex;
-}
-
-.reasons-top__item {
-  background-color: #fff;
-  border-radius: 14px;
-  padding: 40px 40px;
-  max-width: 566px;
-  max-height: 336px;
-}
-
-.top-item__one {
-  margin-right: 196px;
-  position: relative;
-  margin-left: 146px;
-}
-
-.top-item__one::after {
-  content: "";
-  position: absolute;
-  background-image: url("../assets/boron-nitride/1.png");
-  background-repeat: no-repeat;
-  width: 225px;
-  height: 355px;
-  top: -65px;
-  left: -125px;
-  z-index: -10;
-}
-
-.reasons-item__title {
-  margin-bottom: 40px;
-  font-size: 24px;
-}
-
-.reasons-item__text {
-  max-width: 435px;
-  color: #999999;
-}
-
-.top-item__two {
-  position: relative;
-  margin-top: 126px;
-}
-
-.top-item__two::after {
-  content: "";
-  position: absolute;
-  background-image: url("../assets/boron-nitride/2.png");
-  background-repeat: no-repeat;
-  width: 225px;
-  height: 355px;
-  top: -100px;
-  left: -120px;
-  z-index: -10;
-}
-
-.reasons-bot__inner {
-  color: #161616;
-  justify-content: space-between;
-  display: flex;
-}
-
-.reasons-bot__item {
-  background-color: #fff;
-  border-radius: 14px;
-  padding: 40px 40px;
-  max-width: 566px;
-  max-height: 336px;
-  margin-left: 298px;
-  position: relative;
-}
-
-.reasons-bot__item::after {
-  content: "";
-  position: absolute;
-  background-image: url("../assets/boron-nitride/3.png");
-  background-repeat: no-repeat;
-  width: 225px;
-  height: 355px;
-  top: -100px;
-  left: -120px;
-  z-index: -10;
-}
-
-.reason-item__link {
+.technology-item__info {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: space-between;
+}
+
+.technology-item__text {
+  max-width: 570px;
+  color: #999999;
+  margin-bottom: 37px;
+}
+
+.technology-item__wrapper:nth-child(odd) .technology-item__text {
+  max-width: none;
+}
+
+.technology-item__btn {
+  text-transform: none;
+  max-width: max-content;
+  margin-bottom: 13px;
+}
+
+.technology-item__img {
+  max-width: 630px;
+  width: 100%;
+  height: 327px;
+}
+
+.siliconTable {
+  margin-bottom: 120px;
+}
+.table-title {
+  margin-bottom: 106px;
+  font-size: 44px;
+  text-transform: uppercase;
+  max-width: 890px;
+}
+
+.table {
+  line-height: 1.1;
+  background: inherit;
+  color: #0c213b;
+  border: 4px solid #365edc;
+  border-collapse: collapse;
+  font-size: 22px;
+  color: #fff;
+}
+
+.table-head {
+  padding: 20px 20px;
+  border: 4px solid #365edc;
+  text-align: left;
+}
+
+.table-head-colspan {
+  text-align: center;
+}
+
+.table-body {
+  font-size: 22px;
+  padding: 20px 20px;
+  border: 4px solid #365edc;
+  text-align: center;
 }
 
 .application {
-  margin-bottom: 380px;
+  margin-bottom: 268px;
 }
 
 .application-title__wrapper {
@@ -593,7 +517,7 @@ body {
 
 .footer-nav__link {
   font-size: 16px;
-  transition: opacity 0.2 ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .footer-nav__link:hover {
