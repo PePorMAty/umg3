@@ -331,6 +331,12 @@ body {
   width: 100%;
 }
 
+.characteristics-btn {
+  float: right;
+  position: relative;
+  bottom: 150px;
+}
+
 .reasons {
   margin-bottom: 120px;
 }
