@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/fonts.css" />
     <link rel="stylesheet" href="styles/media.css" />
+    <link rel="stylesheet" href="styles/form.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -51,11 +52,212 @@
         </nav>
       </div>
     </header>
+    <!-- Форма оформления заказа -->
+    <div class="overlay"></div>
+    <div class="popup">
+      <form
+        class="popup-top__form form"
+        action="order-top0-form"
+        onsubmit="event.preventDefault()"
+      >
+        <h3 class="popup-form__title geist-bold">Форма оформления заказа</h3>
+        <fieldset class="fieldset">
+          <legend class="form-title geist-medium">Персональные данные</legend>
+          <div class="top-form__wrapper">
+            <p class="form-label__wrapper">
+              <label class="form-label" for="companyName"
+                >Название компании</label
+              >
+              <input
+                class="form-input"
+                id="companyName"
+                type="text"
+                placeholder="ООО Название"
+              />
+            </p>
+            <p class="form-label__wrapper">
+              <label class="form-label" for="name">ФИО</label>
+              <input
+                class="form-input"
+                id="name"
+                type="text"
+                placeholder="Иванов Иван Иванович"
+              />
+            </p>
+            <p class="form-label__wrapper">
+              <label class="form-label" for="email">Email</label>
+              <input
+                class="form-input"
+                id="email"
+                type="email"
+                placeholder="example@mail.ru"
+              />
+            </p>
+            <p class="form-label__wrapper">
+              <label class="form-label" for="tel">Телефон</label>
+              <input
+                class="form-input"
+                id="tel"
+                type="tel"
+                placeholder="+7 (___) ___-__-__"
+              />
+            </p>
+          </div>
+        </fieldset>
+        <fieldset class="fieldset">
+          <legend class="form-title geist-medium">Детали заказа</legend>
+          <div class="bot-form__wrapper">
+            <p class="form-label__wrapper">
+              <label class="form-label" for="material">Материал</label>
+              <input
+                class="form-input input1"
+                id="materialInput"
+                name="material-input"
+                type="text"
+                placeholder="Оксид алюминия"
+                list="material-options"
+                autocomplete="off"
+                role="combobox"
+              />
+              <datalist id="material" role="listbox">
+                <option value="Вариант 1">Вариант 1</option>
+                <option value="Вариант 2">Вариант 2</option>
+                <option value="Вариант 3">Вариант 3</option>
+                <option value="Вариант 1">Вариант 1</option>
+                <option value="Вариант 2">Вариант 2</option>
+                <option value="Вариант 3">Вариант 3</option>
+                <option value="Вариант 1">Вариант 1</option>
+                <option value="Вариант 2">Вариант 2</option>
+                <option value="Вариант 3">Вариант 3</option>
+                <option value="Вариант 1">Вариант 1</option>
+                <option value="Вариант 2">Вариант 2</option>
+                <option value="Вариант 3">Вариант 3</option>
+              </datalist>
+            </p>
+            <p class="form-label__wrapper">
+              <label class="form-label" for="size">Размер заготовки (мм)</label>
+              <input
+                class="form-input"
+                id="size"
+                type="text"
+                placeholder="ДхШхВ"
+              />
+            </p>
+          </div>
+          <div class="bot-form__wrapper">
+            <p class="form-label__wrapper">
+              <label class="form-label" for="blueprint">Чертеж изделия</label>
+              <label class="input-file" for="blueprint">Загрузить</label>
+              <input
+                class="form-input input2"
+                id="blueprint"
+                type="file"
+                placeholder="Загрузить"
+              />
+            </p>
+            <p class="form-label__wrapper">
+              <label class="form-label" for="requirements"
+                >ТУ (требования)</label
+              >
+              <label class="input-file" for="blueprint">Загрузить</label>
+              <input
+                class="form-input input3"
+                id="requirements"
+                type="file"
+                placeholder="Загрузить"
+              />
+            </p>
+            <p class="form-label__wrapper">
+              <label class="form-label" for="quantity">Количество</label>
+              <input
+                class="form-input input4"
+                id="quantity"
+                type="number"
+                placeholder="-  0  +"
+              />
+            </p>
+            <p class="form-label__wrapper">
+              <label class="form-label" for="map">Карта предприятия</label>
+              <label class="input-file" for="blueprint">Загрузить</label>
+              <input
+                class="form-input input5"
+                id="map"
+                type="file"
+                placeholder="Загрузить"
+              />
+            </p>
+          </div>
+          <div class="bot-form__wrapper">
+            <p class="form-label__wrapper">
+              <label class="form-label" for="address">Адрес доставки</label>
+              <input
+                class="form-input"
+                id="address"
+                type="text"
+                placeholder="Город"
+              />
+            </p>
+            <p class="form-label__wrapper mt1">
+              <input class="form-input" type="text" placeholder="Улица" />
+            </p>
+            <p class="form-label__wrapper mt1">
+              <input class="form-input" type="text" placeholder="Дом" />
+            </p>
+            <p class="form-label__wrapper mt1">
+              <input class="form-input" type="text" placeholder="Офис" />
+            </p>
+          </div>
+          <div class="text-area__wrapper">
+            <label class="form-label" for="comments">Комментарии</label>
+            <textarea
+              class="textarea"
+              name="comments"
+              id="comments"
+              placeholder="Дополнительные уточнения по заказу"
+            ></textarea>
+          </div>
+          <div class="form-buttons__wrapper">
+            <button class="button form-btn" onclick="confirmOrder()">
+              Оформить заказ
+            </button>
+            <button class="button outlined-form-btn">
+              Сохранить и оформить ещё заказ
+            </button>
+          </div>
+        </fieldset>
+      </form>
+      <form
+        class="popup-order-form form"
+        action="order bot form"
+        onsubmit="event.preventDefault()"
+      >
+        <h3 class="popup-form__title geist-bold">Форма оформления заказа</h3>
+        <fieldset class="fieldset">
+          <legend class="form-title geist-medium">Состав заказа</legend>
+          <div class="order-form__wrapper">
+            <p class="order-form__text">Изделие 1 Оксид алюминия</p>
+            <p class="order-form__text">300 шт</p>
+            <p class="order-form__text">550 мм</p>
+            <p class="order-form__text">
+              ООО “Название компании”, г. Москва, ул Ленина
+            </p>
+          </div>
+          <div class="form-buttons__wrapper">
+            <button class="button form-btn">Оформить заказ</button>
+            <button class="button outlined-form-btn" onclick="oneMoreOrder()">
+              Заказать ещё
+            </button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <!-- Конец формы оформления заказа -->
     <main class="main">
       <div class="container">
         <section class="topBoron">
           <h1 class="topBoron-title geist-light">
-            техническая керамика из <span class="geist-bold">нитрида бора</span>
+            техническая керамика из
+            <span class="geist-bold">нитрида бора</span>
             <span class="up">[ПНБ]</span>
           </h1>
           <p class="topBoron-text hero-regular">
@@ -67,9 +269,9 @@
             <a href="#">
               <button class="topBoron-btn button">Подробнее</button>
             </a>
-            <a href="#">
-              <button class="button button-outlined">Оформить заказ</button>
-            </a>
+            <button class="button button-outlined" onclick="openPopup()">
+              Оформить заказ
+            </button>
           </div>
         </section>
         <section class="typesSlider">
@@ -164,7 +366,9 @@
             src="assets/boron-nitride/characteristics-bg.png"
             alt="characteristics-bg"
           />
-          <button class="characteristics-btn button">ОФОРМИТЬ ЗАКАЗ</button>
+          <button class="characteristics-btn button" onclick="openPopup()">
+            ОФОРМИТЬ ЗАКАЗ
+          </button>
         </section>
         <section class="reasons">
           <h3 class="reasons-title">
@@ -208,9 +412,11 @@
                 процессах расплавления металлов.
               </p>
             </div>
-            <a class="reason-item__link" href="#">
-              <button class="button">Оформить заказ</button>
-            </a>
+            <div class="reasons-btn">
+              <button class="button" onclick="openPopup()">
+                Оформить заказ
+              </button>
+            </div>
           </div>
         </section>
       </div>
@@ -282,7 +488,7 @@
               />
               <input
                 class="contacts-form__input"
-                type="tel:"
+                type="tel"
                 placeholder="+7 --- --- ---"
               />
               <input
@@ -335,5 +541,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/customDataList.js"></script>
   </body>
 </html>

@@ -45,12 +45,6 @@
   .topSilicon-title span + .up {
     color: #00000090;
   }
-  .topSilicon-title {
-    color: #00000090;
-  }
-  .topSilicon-title span + .up {
-    color: #00000090;
-  }
 }
 @media (max-width: 1350px) {
   .contacts-text {

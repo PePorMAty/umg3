@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: "Geist Medium";
-  src: url("/fonts/Geist/ttf/Geist-Medium.ttf");
+  src: url("/fonts/Geist/ttf/Geist-Medium.ttf") format("ttf");
 }
 
 @font-face {
