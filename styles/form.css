@@ -216,7 +216,7 @@ datalist::-webkit-scrollbar-thumb {
   border-radius: 5px;
 }
 
-option {
+.option {
   background-color: #757575;
   padding: 4px;
   color: #2b2b2b;
@@ -225,8 +225,7 @@ option {
   cursor: pointer;
 }
 
-option:hover,
-.active {
+.option:hover {
   background-color: lightblue;
 }
 

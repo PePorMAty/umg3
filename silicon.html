@@ -14,7 +14,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="header-container">
+      <div class="header-container header-container__silicon">
         <nav class="header-nav">
           <a href="#" class="logo-link">
             <img class="logo" src="./assets/logo.svg" alt="logo" />
@@ -111,8 +111,44 @@
               </div>
             </div>
           </div>
+          <div class="typesSlider-mobile swiper">
+            <div class="swiper-wrapper">
+              <div class="typesSlider-mobile__item swiper-slide">
+                <h5 class="typesSlider-mobile__title geist-bold">
+                  Альфа-нитрид бора (α-BN)
+                </h5>
+                <img
+                  class="typesSlider-mobile__img"
+                  src="./assets/silicon/silicon-slider-img.png"
+                  alt="slide-img"
+                />
+                <p class="typesSlider-mobile__text geist-medium">
+                  Мягкий и пластичный полиморф с гексагональной кристаллической
+                  решеткой, подобной решетке графита, также называемый
+                  гексагональным нитридом бора (HBN) или белым графитом
+                </p>
+              </div>
+              <div class="typesSlider-mobile__item swiper-slide">
+                <h5 class="typesSlider-mobile__title geist-bold">
+                  Альфа-нитрид бора (α-BN)
+                </h5>
+                <img
+                  class="typesSlider-mobile__img"
+                  src="./assets/silicon/silicon-slider-img.png"
+                  alt="slide-img"
+                />
+                <p class="typesSlider-mobile__text geist-medium">
+                  Мягкий и пластичный полиморф с гексагональной кристаллической
+                  решеткой, подобной решетке графита, также называемый
+                  гексагональным нитридом бора (HBN) или белым графитом
+                </p>
+              </div>
+            </div>
+          </div>
           <div class="typesSlider-left-arrow"></div>
           <div class="typesSlider-right-arrow"></div>
+          <div class="typesSlider-mobile-left-arrow"></div>
+          <div class="typesSlider-mobile-right-arrow"></div>
         </section>
         <section class="technology">
           <h3 class="technology-title ibm-plex-sans-bold">Технология производства</h3>
@@ -138,6 +174,60 @@
             </div>
             <img class="technology-item__img" src="assets/silicon/technology-img2.png" alt="technology-img">
           </div>
+        </section>
+        <section class="boronProcessingMobile">
+          <h3 class="boronProcessingMobile-title geist-bold">
+            Обработка керамики из Нитрида Бора
+          </h3>
+          <div class="boronProcessingMobile-slider swiper">
+            <div class="swiper-wrapper">
+              <div class="boronProcessingMobile-wrapper swiper-slide">
+                <div class="boronProcessingMobile-item">
+                  
+                  <a class="boronProcessingMobile-link" href="#">
+                    <img
+                      src="assets/silicon/technology-img1.png"
+                      alt="media1"
+                    />
+                  </a>
+                  <p class="boronProcessingMobile-item__text">
+                    Карбиды кремния для конструкционного применения можно классифицировать как: спеченные, связанные реакцией, жидкофазные
+                    и спеченные в твердом состоянии. SiC, связанный реакцией, представляет собой соединение сплошной матрицы SiC, содержащий кремний от 5 до 20%, и металл, заполняющий оставшийся объем.
+                    Для получения этого материала порошковообразную заготовку, содержащую уголь, добавляют в виде порошка или в виде продукта разложения смолы из источника углерода, пропитывают кремнием
+                    при температуре около 1500оС при непосредственном контакте или
+                    с использованием паров кремния.
+                  </p>
+                  <button
+                    class="boronProcessingMobile-item__btn button"
+                    onclick="openPopup()"
+                  >
+                    Оформить заказ
+                  </button>
+                </div>
+              </div>
+              <div class="boronProcessingMobile-wrapper swiper-slide">
+                <div class="boronProcessingMobile-item"> 
+                  <a class="boronProcessingMobile-link" href="#">
+                    <img
+                      src="assets/silicon/technology-img2.png"
+                      alt="media1"
+                    />
+                  </a>
+                  <p class="boronProcessingMobile-item__text">
+                    Кремний вступает в реакцию с углеродной заготовкой, образуя структуру, соединяющую SiC. Оставшийся избыток кремнезема заполняет остаточное паровое пространство и дает полностью плотный продукт, сохраняющий структурную целостность при температуре до 1370оС. Кремний плавится при температуре 1410оС. Заготовка может быть изготовлена любым из традиционных керамических процессов. С другой стороны, низкие температуры (до 1500оС), используемые при реакционном связывании, в сочетании с гибкостью размеров и чистотой порошка обеспечивает получение продукта хорошего качества при разумной стоимости.
+                  </p>
+                  <button
+                    class="boronProcessingMobile-item__btn button"
+                    onclick="openPopup()"
+                  >
+                    Оформить заказ
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="boronProcessingMobile-left-arrow"></div>
+          <div class="boronProcessingMobile-right-arrow"></div>
         </section>
         <section class="siliconTable">
           <h3 class="table-title geist-bold">Сравнительные характеристики марок карбида кремния</h3>
@@ -188,6 +278,113 @@
               <td class="table-body">200-280</td>
             </tr>
           </table>
+          <div class="table-slider swiper">
+            <div class="table-slider__wrapper swiper-wrapper">
+              <div class="table-slide swiper-slide">
+                <div class="table-slider__item">
+                  <h5 class="table-slider__item-titile ibm-plex-sans-bold">УМГ-1</h5>
+                  <div class="table-slider__item-text__wrapper">
+                    <p class="table-slider__item-text-title ibm-plex-sans-regular">Плотность г/см3, не мeнее</p>
+                    <p class="table-slider__item-text ibm-plex-sans-regular">3.05</p>
+                  </div>
+                  <div class="table-slider__item-text__wrapper">
+                    <p class="table-slider__item-text-title ibm-plex-sans-regular">Доля рабочей поверхности</p>
+                    <p class="table-slider__item-text ibm-plex-sans-regular">18</p>
+                  </div>
+                  <div class="table-slider__item-text__wrapper">
+                    <p class="table-slider__item-text-title ibm-plex-sans-regular">Микротвердость зерен</p>
+                    <p class="table-slider__item-text ibm-plex-sans-regular">23-33</p>
+                  </div>
+                  <div class="table-slider__item-text__wrapper">
+                    <p class="table-slider__item-text-title ibm-plex-sans-regular">Прочность на изгиб</p>
+                    <p class="table-slider__item-text ibm-plex-sans-regular">340-450</p>
+                  </div>
+                </div>
+                <div class="table-slider__item">
+                  <h5 class="table-slider__item-titile ibm-plex-sans-bold">УМГ-2</h5>
+                  <div class="table-slider__item-text__wrapper">
+                    <p class="table-slider__item-text-title ibm-plex-sans-regular">Плотность г/см3, не мeнее</p>
+                    <p class="table-slider__item-text ibm-plex-sans-regular">3.10</p>
+                  </div>
+                  <div class="table-slider__item-text__wrapper">
+                    <p class="table-slider__item-text-title ibm-plex-sans-regular">Доля рабочей поверхности</p>
+                    <p class="table-slider__item-text ibm-plex-sans-regular">12</p>
+                  </div>
+                  <div class="table-slider__item-text__wrapper">
+                    <p class="table-slider__item-text-title ibm-plex-sans-regular">Микротвердость зерен</p>
+                    <p class="table-slider__item-text ibm-plex-sans-regular">23-35</p>
+                  </div>
+                  <div class="table-slider__item-text__wrapper">
+                    <p class="table-slider__item-text-title ibm-plex-sans-regular">Прочность на изгиб</p>
+                    <p class="table-slider__item-text ibm-plex-sans-regular">400-500</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="table-slider__item">
+                  <h5 class="table-slider__item-titile ibm-plex-sans-bold">УМГ-3гр</h5>
+                  <div class="table-slider__item-text__wrapper">
+                    <p class="table-slider__item-text-title ibm-plex-sans-regular">Плотность г/см3, не менее</p>
+                    <p class="table-slider__item-text ibm-plex-sans-regular">2.65</p>
+                  </div>
+                  <div class="table-slider__item-text__wrapper">
+                    <p class="table-slider__item-text-title ibm-plex-sans-regular">Доля рабочей поверхности</p>
+                    <p class="table-slider__item-text ibm-plex-sans-regular">25</p>
+                  </div>
+                  <div class="table-slider__item-text__wrapper">
+                    <p class="table-slider__item-text-title ibm-plex-sans-regular">Микротвердость зерен</p>
+                    <p class="table-slider__item-text ibm-plex-sans-regular">20-30</p>
+                  </div>
+                  <div class="table-slider__item-text__wrapper">
+                    <p class="table-slider__item-text-title ibm-plex-sans-regular">Прочность на изгиб</p>
+                    <p class="table-slider__item-text ibm-plex-sans-regular">250-300</p>
+                  </div>
+                </div>
+                <div class="table-slider__item">
+                  <h5 class="table-slider__item-titile ibm-plex-sans-bold">УМГ-4</h5>
+                  <div class="table-slider__item-text__wrapper">
+                    <p class="table-slider__item-text-title ibm-plex-sans-regular">Плотность г/см3, не менее</p>
+                    <p class="table-slider__item-text ibm-plex-sans-regular">2.65</p>
+                  </div>
+                  <div class="table-slider__item-text__wrapper">
+                    <p class="table-slider__item-text-title ibm-plex-sans-regular">Доля рабочей поверхности</p>
+                    <p class="table-slider__item-text ibm-plex-sans-regular">25</p>
+                  </div>
+                  <div class="table-slider__item-text__wrapper">
+                    <p class="table-slider__item-text-title ibm-plex-sans-regular">Микротвердость зерен</p>
+                    <p class="table-slider__item-text ibm-plex-sans-regular">20-30</p>
+                  </div>
+                  <div class="table-slider__item-text__wrapper">
+                    <p class="table-slider__item-text-title ibm-plex-sans-regular">Прочность на изгиб</p>
+                    <p class="table-slider__item-text ibm-plex-sans-regular">200-250</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="table-slider__item">
+                  <h5 class="table-slider__item-titile ibm-plex-sans-bold">УМГ-Л</h5>
+                  <div class="table-slider__item-text__wrapper">
+                    <p class="table-slider__item-text-title ibm-plex-sans-regular">Плотность г/см3, не менее</p>
+                    <p class="table-slider__item-text ibm-plex-sans-regular">3.02</p>
+                  </div>
+                  <div class="table-slider__item-text__wrapper">
+                    <p class="table-slider__item-text-title ibm-plex-sans-regular">Доля рабочей поверхности</p>
+                    <p class="table-slider__item-text ibm-plex-sans-regular">30</p>
+                  </div>
+                  <div class="table-slider__item-text__wrapper">
+                    <p class="table-slider__item-text-title ibm-plex-sans-regular">Микротвердость зерен</p>
+                    <p class="table-slider__item-text ibm-plex-sans-regular">20-25</p>
+                  </div>
+                  <div class="table-slider__item-text__wrapper">
+                    <p class="table-slider__item-text-title ibm-plex-sans-regular">Прочность на изгиб</p>
+                    <p class="table-slider__item-text ibm-plex-sans-regular">200-280</p>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
         </section>
       </div>
       <section class="application">
@@ -282,13 +479,25 @@
       </div>
     </main>
     <footer class="footer">
-      <a href="#">
-        <img
-          class="footer-logo"
-          src="assets/footer-logo.svg"
-          alt="footer-logo"
-        />
-      </a>
+      <div class="footer-wrapper">
+        <a href="#">
+          <img
+            class="footer-logo"
+            src="assets/footer-logo.svg"
+            alt="footer-logo"
+          />
+        </a>
+        <div class="footer-link__wrapper">
+          <a class="footer-link__social" href="#">
+            <img src="assets/tg-icon.svg" alt="social" />
+          </a>
+          <a class="footer-link__social" href="#">
+            <img src="assets/vk-icon.svg" alt="social" />
+          </a>
+        </div>
+        <p class="footer-tel">+7 (351) 799-54-99</p>
+        <p class="footer-text">Условия политики конфиденциальности</p>
+      </div>
       <nav class="footer-nav">
         <ul class="footer-nav__list">
           <li class="footer-nav__item">

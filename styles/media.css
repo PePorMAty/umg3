@@ -33,17 +33,9 @@
     padding: 19px 50px;
     font-size: 15px;
   }
-  .topBoron-title {
-    color: #00000090;
-  }
-  .topBoron-title span + .up {
-    color: #00000090;
-  }
-  .topSilicon-title {
-    color: #00000090;
-  }
-  .topSilicon-title span + .up {
-    color: #00000090;
+  .header-container::after {
+    width: 580px;
+    height: 785px;
   }
 }
 @media (max-width: 1350px) {
@@ -102,26 +94,46 @@
     max-width: 500px;
   }
   .reasons-top__inner {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
   .top-item__one {
     margin-right: 0;
+    grid-column: span 2;
   }
   .top-item__two {
     margin-top: 165px;
     margin-left: 146px;
+    justify-self: self-end;
+    grid-column: span 2;
+  }
+  .top-item__two {
+    margin-right: 112px;
+    margin-left: 0;
+    margin-top: 140px;
+  }
+  .top-item__two::after {
+    top: -150px;
+    left: 380px;
+  }
+  .reasons-top__item {
+    padding: 20px 24px;
   }
   .reasons-bot__inner {
     flex-direction: column;
   }
   .reasons-bot__item {
-    margin-left: 146px;
+    margin-left: 50px;
+    margin-bottom: 24px;
   }
   .reason-item__link {
     margin-top: 80px;
     display: block;
     margin: 80px auto;
+  }
+  .reasons-btn {
+    justify-content: center;
+    flex-direction: initial;
   }
   .contacts-wrapper {
     display: flex;
@@ -192,12 +204,43 @@
   .base-wrapper {
     flex-direction: column;
   }
-  /* .base-left-arrow {
-    left: 205px;
+  .header-container {
+    overflow-x: clip;
   }
-  .base-right-arrow {
-    left: 69%;
-  } */
+  .header-container::after {
+    width: 439px;
+    height: 600px;
+    top: 84px;
+    right: -100px;
+  }
+  .header-container__silicon::after {
+    width: 439px;
+    height: 600px;
+    top: -16px;
+    right: 0px;
+  }
+  .topBoron-title {
+    font-size: 37px;
+  }
+  .topBoron-title span {
+    font-size: 90px;
+  }
+  .topBoron-title span + .up {
+    font-size: 48px;
+  }
+  .topSilicon-title {
+    font-size: 37px;
+  }
+  .topSilicon-title span {
+    font-size: 90px;
+  }
+  .topSilicon-title span + .up {
+    font-size: 48px;
+  }
+  .table-title {
+    font-size: 37px;
+    margin-bottom: 22px;
+  }
 }
 @media (max-width: 1050px) {
   .typesSlider-slider__img {
@@ -243,6 +286,9 @@
   .technology-item__img {
     max-width: 100%;
   }
+  .characteristics-btn {
+    position: static;
+  }
 }
 @media (max-width: 950px) {
   .application-left-arrow {
@@ -251,6 +297,9 @@
   .application-right-arrow {
     top: -400px;
   }
+  .typesSlider-right-arrow {
+    left: 94%;
+  }
 }
 @media (max-width: 900px) {
   .typesSlider-slider__text {
@@ -258,6 +307,14 @@
   }
   .typesSlider-slider__img {
     margin-top: 23%;
+  }
+  .table {
+    display: none;
+    visibility: hidden;
+  }
+  .table-slider {
+    display: block !important;
+    visibility: visible;
   }
 }
 @media (max-width: 850px) {
@@ -271,6 +328,19 @@
   }
 }
 @media (max-width: 800px) {
+  .topBoron-text {
+    font-size: 20px;
+  }
+  .topBoron-title {
+    font-size: 30px;
+    max-width: 470px;
+  }
+  .topBoron-title span + .up {
+    font-size: 30px;
+  }
+  .topBoron-title span {
+    font-size: 65px;
+  }
   .typesSlider-slider__img {
     margin-top: 30%;
   }
@@ -284,8 +354,19 @@
   .characteristics-title {
     font-size: 30px;
   }
+  .table-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
 }
 @media (max-width: 750px) {
+  .topBoron {
+    margin-bottom: 80px;
+  }
+  .topSilicon {
+    margin-bottom: 80px;
+    margin-top: 160px;
+  }
   .botonTypes-right-arrow {
     top: -350px;
     left: 91%;
@@ -293,11 +374,50 @@
   .botonTypes-left-arrow {
     top: -251px;
   }
+  .typesSlider {
+    padding: 0px;
+  }
+  .typesSlider-mobile {
+    display: block !important;
+  }
+  .typesSlider-slider {
+    display: none !important;
+  }
   .typesSlider-slider__text {
     padding: 0 80px 80px 80px;
   }
   .typesSlider-slider__img {
     margin-top: 0;
+  }
+  .typesSlider-left-arrow {
+    display: none;
+  }
+  .typesSlider-right-arrow {
+    display: none;
+  }
+  .typesSlider-mobile-left-arrow {
+    display: block;
+  }
+  .typesSlider-mobile-right-arrow {
+    display: block;
+  }
+  .boronProcessing {
+    display: none;
+  }
+  .boronProcessingMobile {
+    display: block;
+  }
+  .characteristics-img {
+    display: none;
+  }
+  .characteristics-img-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .characteristics-btn {
+    float: initial;
+    margin: 0 auto;
+    display: flex;
   }
   .application-left-arrow {
     top: -260px;
@@ -310,26 +430,35 @@
   }
   .footer-logo {
     margin-right: 80px;
+    max-width: 180px;
+  }
+  .footer {
+    padding: 60px 40px;
+    justify-content: space-between;
+  }
+  .technology {
+    display: none;
+    visibility: hidden;
   }
 }
 @media (max-width: 700px) {
-  .topBoron-title {
-    font-size: 38px;
+  .header-container::after {
+    width: 374px;
+    height: 505px;
+    top: 80px;
+    right: -140px;
   }
-  .topBoron-title span {
-    font-size: 100px;
+  .header-container__silicon::after {
+    width: 300px;
+    height: 450px;
+    top: -16px;
+    right: 0px;
   }
-  .topBoron-title span + .up {
-    font-size: 50px;
+  .topBoron-text {
+    font-size: 18px;
   }
-  .topSilicon-title {
-    font-size: 38px;
-  }
-  .topSilicon-title span {
-    font-size: 100px;
-  }
-  .topSilicon-title span + .up {
-    font-size: 50px;
+  .topSilicon-text {
+    font-size: 18px;
   }
   .boronProcessing-title {
     font-size: 26px;
@@ -338,11 +467,20 @@
     font-size: 22px;
   }
   .application-left-arrow {
-    top: -328px;
-    left: 25px;
+    top: -320px;
+    left: 5px;
+    background-image: url("../assets/mobile-left-arrow.svg");
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 30px;
   }
   .application-right-arrow {
-    top: -427px;
+    top: -350px;
+    background-image: url("../assets/mobile-right-arrow.svg");
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 30px;
+    right: 0;
   }
   .contacts-text {
     font-size: 44px;
@@ -364,6 +502,12 @@
   .typesSlider-slider__img {
     margin-top: 50px;
   }
+  .top-item__two {
+    margin-right: 80px;
+  }
+  .top-item__two::after {
+    left: 348px;
+  }
   .footer-logo {
     margin-right: 40px;
     max-width: 150px;
@@ -374,39 +518,56 @@
 }
 @media (max-width: 600px) {
   .topBoron-title {
-    font-size: 31px;
+    font-size: 22px;
+    max-width: 340px;
   }
   .topBoron-title span {
-    font-size: 80px;
+    font-size: 45px;
   }
   .topBoron-title span + .up {
-    font-size: 40px;
+    font-size: 22px;
+  }
+  .topBoron-text {
+    font-size: 16px;
+    margin-bottom: 48px;
   }
   .topBoron-links {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .topBoron-btn {
-    margin-bottom: 30px;
+    margin-top: 15px;
+    width: 100%;
   }
   .topSilicon-title {
-    font-size: 31px;
+    font-size: 22px;
+    max-width: 340px;
   }
   .topSilicon-title span {
-    font-size: 80px;
+    font-size: 45px;
   }
   .topSilicon-title span + .up {
-    font-size: 40px;
+    font-size: 22px;
+  }
+  .topSilicon-text {
+    font-size: 16px;
+    margin-bottom: 48px;
   }
   .topSilicon-links {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .topSilicon-btn {
-    margin-bottom: 30px;
+    margin-top: 15px;
+    width: 100%;
+  }
+  .table-title {
+    font-size: 24px;
+    margin-bottom: 14px;
   }
   .button-outlined {
     margin-left: 0;
+    width: 100%;
   }
   .typesSlider-title {
     font-size: 32px;
@@ -417,27 +578,49 @@
   .botonTypes-left-arrow {
     top: -251px;
   }
+  .reasons {
+    overflow-x: hidden;
+  }
+  .reasons-top__inner {
+    margin-bottom: 40px;
+  }
   .reasons-item__text {
     font-size: 14px;
   }
   .reasons-item__title {
     font-size: 20px;
   }
+  .top-item__one {
+    margin-bottom: -80px;
+  }
+  .top-item__two::after {
+    left: 245px;
+  }
+  .top-item__one::after {
+    background-image: url("../assets/boron-nitride/1-mobile.png");
+    width: 135px;
+    height: 213px;
+    left: -70px;
+  }
+  .top-item__two::after {
+    background-image: url("../assets/boron-nitride/2-mobile.png");
+    width: 128px;
+    height: 213px;
+    left: 350px;
+    top: -80px;
+  }
+  .reasons-bot__item::after {
+    background-image: url("../assets/boron-nitride/3-mobile.png");
+    width: 196px;
+    height: 213px;
+    top: -40px;
+    left: -62px;
+  }
   .application-left-arrow {
-    top: -285px;
-    left: 25px;
-    width: 80px;
-    height: 80px;
-    background-size: contain;
-    background-repeat: no-repeat;
+    top: -260px;
   }
   .application-right-arrow {
-    top: -366px;
-    width: 80px;
-    height: 80px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    right: 25px;
+    top: -290px;
   }
   .contacts-text {
     font-size: 35px;
@@ -445,6 +628,51 @@
   }
   .technology-item__btn {
     padding: 19px 37px;
+  }
+  .boronProcessingMobile-title {
+    font-size: 30px;
+  }
+  .footer {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .footer-nav__link {
+    font-size: 12px;
+  }
+  .footer-nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: end;
+    text-align: right;
+  }
+  .footer-logo {
+    margin-right: 0px;
+    max-width: 150px;
+    margin-bottom: 17px;
+  }
+  .footer-link__wrapper {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .footer-link__social {
+    display: block;
+  }
+  .footer-tel {
+    display: block;
+    font-size: 12px;
+    color: #8a8a8a;
+  }
+  .footer-text {
+    display: block;
+    font-size: 12px;
+    color: #8a8a8a;
   }
 }
 @media (max-width: 550px) {
@@ -471,45 +699,19 @@
   .header-contacts {
     right: 9%;
   }
+  .typesSlider-title {
+    font-size: 24px;
+  }
 }
 @media (max-width: 500px) {
   .header-contacts-tel {
     margin-right: 50px;
   }
-  .topBoron {
-    margin-top: 300px;
-  }
-  .topBoron-title {
-    font-size: 23px;
-  }
-  .topBoron-title span {
-    font-size: 65px;
-    color: #5b5b5b;
-  }
-  .topBoron-title span + .up {
-    font-size: 33px;
-  }
-  .topBoron-text {
-    margin-bottom: 80px;
-    font-size: 22px;
-  }
-  .topSilicon {
-    margin-top: 300px;
-  }
-  .topSilicon-title {
-    font-size: 23px;
-    color: #ffffff90;
-  }
-  .topSilicon-title span {
-    font-size: 65px;
-  }
-  .topSilicon-title span + .up {
-    font-size: 33px;
-    color: #ffffff90;
-  }
-  .topSilicon-text {
-    margin-bottom: 80px;
-    font-size: 22px;
+  .header-container__silicon::after {
+    width: 250px;
+    height: 400px;
+    top: -25px;
+    right: 0px;
   }
   .boronProcessing-title {
     margin-bottom: 40px;
@@ -518,42 +720,21 @@
   .boronProcessing-item__title {
     font-size: 20px;
   }
-  .top-item__one::after {
-    display: none;
+  .reasons-item__text {
+    font-size: 12px;
   }
-  .top-item__two::after {
-    display: none;
-  }
-  .reasons-bot__item::after {
-    display: none;
-  }
-  .top-item__one {
-    margin-left: 0px;
-  }
-  .top-item__two {
-    margin-left: 0px;
-  }
-  .reasons-bot__item {
-    margin-left: 0px;
+  .reasons-item__title {
+    font-size: 16px;
   }
   .reasons-title {
-    font-size: 26px;
+    font-size: 24px;
     margin-bottom: 85px;
   }
-  .reasons-top__inner {
-    margin-bottom: 80px;
+  .top-item__one {
+    margin-left: 50px;
   }
-  .top-item__two {
-    margin-top: 80px;
-  }
-  .application-left-arrow {
-    top: -250px;
-  }
-  .application-right-arrow {
-    top: -331px;
-  }
-  .contacts-form__wrapper {
-    flex-direction: column-reverse;
+  .top-item__two::after {
+    left: 285px;
   }
   .contacts-form {
     padding: 40px 40px 40px 40px;
@@ -565,9 +746,15 @@
   .contacts-form-accept {
     margin-bottom: 20px;
     text-align: left;
+    font-size: 12px;
   }
   .contacts-text {
     font-size: 28px;
+  }
+  .contacts-form__btn {
+    font-size: 16px;
+    padding: 19px 19px;
+    margin-right: 23px;
   }
   .footer-nav__list {
     grid-template-columns: repeat(1, 1fr);
@@ -583,10 +770,60 @@
     padding: 81px 20px 37px 20px;
   }
   .characteristics-title {
-    font-size: 26px;
+    font-size: 24px;
+  }
+  .boronProcessingMobile-left-arrow {
+    top: -290px;
+  }
+  .boronProcessingMobile-right-arrow {
+    top: -320px;
   }
 }
 @media (max-width: 450px) {
+  .header-container::after {
+    width: 332px;
+    height: 454px;
+    top: 22px;
+    right: -140px;
+  }
+  .header-container__silicon::after {
+    width: 250px;
+    height: 400px;
+    top: -25px;
+    right: 0px;
+  }
+  .topBoron {
+    margin-top: 132px;
+    margin-bottom: 80px;
+  }
+  .topBoron-title {
+    font-size: 14px;
+  }
+  .topBoron-title span {
+    font-size: 48px;
+  }
+  .topBoron-title span + .up {
+    font-size: 14px;
+  }
+  .topBoron-text {
+    font-size: 12px;
+  }
+  .topSilicon {
+    margin-top: 132px;
+    margin-bottom: 80px;
+  }
+  .topSilicon-title {
+    font-size: 14px;
+  }
+  .topSilicon-title span {
+    font-size: 48px;
+  }
+  .topSilicon-title span + .up {
+    font-size: 14px;
+  }
+  .topSilicon-text {
+    font-size: 12px;
+  }
   .header-contacts {
     right: 32%;
     flex-direction: column;
@@ -616,43 +853,56 @@
     padding: 0;
   }
   .application-title {
-    font-size: 21px;
+    font-size: 24px;
+    margin-bottom: 14px;
   }
   .contacts-title {
     font-size: 50px;
     margin-bottom: 0;
   }
+  .boronProcessingMobile-title {
+    font-size: 24px;
+  }
+  .boronProcessingMobile-item__title {
+    font-size: 18px;
+  }
+  .boronProcessingMobile-item__text {
+    font-size: 12px;
+  }
+  .typesSlider-mobile-right-arrow {
+    left: 97%;
+  }
+  .boronProcessingMobile-right-arrow {
+    left: 97%;
+  }
+  .top-item__two::after {
+    left: 250px;
+  }
+  .footer {
+    padding: 60px 12px;
+  }
+  .footer-logo {
+    max-width: 100px;
+  }
 }
 @media (max-width: 400px) {
+  .header-container__silicon::after {
+    width: 250px;
+    height: 350px;
+    top: -18px;
+    right: 0px;
+  }
   .button-outlined {
     padding: 19px 20px;
-  }
-  .topBoron-title span {
-    font-size: 50px;
-  }
-  .topBoron-title {
-    font-size: 20px;
-  }
-  .topBoron-title span + .up {
-    font-size: 27px;
-  }
-  .topSilicon-title span {
-    font-size: 50px;
-  }
-  .topSilicon-title {
-    font-size: 20px;
-  }
-  .topSilicon-title span + .up {
-    font-size: 27px;
   }
   .typesSlider-title {
     font-size: 26px;
   }
   .application-left-arrow {
-    top: -20px;
+    top: -200px;
   }
   .application-right-arrow {
-    top: -100px;
+    top: -230px;
   }
   .application-slider__title {
     margin-left: 20px;
@@ -668,10 +918,27 @@
     max-width: 100%;
   }
   .contacts-text {
-    font-size: 20px;
+    font-size: 24px;
+    margin-bottom: 24px;
   }
   .contacts-form {
     padding: 40px 20px;
+  }
+  .boronProcessingMobile-left-arrow {
+    top: -220px;
+  }
+  .boronProcessingMobile-right-arrow {
+    top: -250px;
+    left: 96%;
+  }
+  .typesSlider-mobile-right-arrow {
+    left: 96%;
+  }
+  .characteristics-img-mobile:nth-child(2) {
+    right: -8px;
+  }
+  .characteristics-img-mobile {
+    max-width: 325px;
   }
 }
 @media (max-width: 370px) {
@@ -692,16 +959,39 @@
   .reasons-item__text {
     font-size: 13px;
   }
-  .footer {
-    flex-direction: column;
+  .top-item__two::after {
+    left: 200px;
+    top: -50px;
   }
-  .footer-logo {
-    margin-bottom: 40px;
+  .top-item__one {
+    padding: 40px 20px;
+    margin-left: 35px;
+  }
+  .top-item__two {
+    margin-right: 45px;
+    padding: 40px 20px;
+  }
+  .reasons-bot__item {
+    margin-left: 35px;
+    margin-bottom: 24px;
+    padding: 40px 20px;
   }
   .contacts-form {
     width: 100%;
   }
   .contacts-form__btn {
-    padding: 19px 33px;
+    padding: 4px 16px;
+  }
+  .characteristics-img-mobile:nth-child(2) {
+    right: -5px;
+  }
+  .characteristics-img-mobile {
+    max-width: 310px;
+  }
+  .footer-tel {
+    font-size: 8px;
+  }
+  .footer-text {
+    font-size: 8px;
   }
 }

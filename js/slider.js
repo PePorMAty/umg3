@@ -19,6 +19,54 @@ const boronTypesSwiper = new Swiper(".typesSlider-slider", {
     },
   },
 });
+
+const boronTypesModileSwiper = new Swiper(".typesSlider-mobile", {
+  loop: true, // Бесконечная прокрутка
+  navigation: {
+    nextEl: ".typesSlider-mobile-right-arrow",
+    prevEl: ".typesSlider-mobile-left-arrow",
+  },
+  slidesPerView: 2,
+  spaceBetween: 40,
+  initialSlide: 0,
+  slideToClickedSlide: true,
+  freeMode: true,
+  breakpoints: {
+    // Настройки для разных размеров экрана
+    320: {
+      slidesPerView: 1,
+    },
+    750: {
+      slidesPerView: 2,
+    },
+  },
+});
+
+const boronProcessingMobileSwiper = new Swiper(
+  ".boronProcessingMobile-slider",
+  {
+    loop: true, // Бесконечная прокрутка
+    navigation: {
+      nextEl: ".boronProcessingMobile-right-arrow",
+      prevEl: ".boronProcessingMobile-left-arrow",
+    },
+    slidesPerView: 2,
+    spaceBetween: 40,
+    initialSlide: 0,
+    slideToClickedSlide: true,
+    freeMode: true,
+    breakpoints: {
+      // Настройки для разных размеров экрана
+      320: {
+        slidesPerView: 1,
+      },
+      750: {
+        slidesPerView: 2,
+      },
+    },
+  }
+);
+
 const applictationSwiper = new Swiper(".application-slider", {
   loop: true, // Бесконечная прокрутка
   navigation: {
@@ -48,6 +96,19 @@ const baseSwiper = new Swiper(".base-slider", {
   navigation: {
     nextEl: ".base-right-arrow",
     prevEl: ".base-left-arrow",
+  },
+  slidesPerView: 1,
+  spaceBetween: 40,
+  initialSlide: 0,
+  slideToClickedSlide: true,
+  freeMode: true,
+});
+
+const tableSwiper = new Swiper(".table-slider", {
+  loop: true, // Бесконечная прокрутка
+  pagination: {
+    el: ".swiper-pagination",
+    /* bulletClass: ".table-slider__bullet", */
   },
   slidesPerView: 1,
   spaceBetween: 40,

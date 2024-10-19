@@ -64,7 +64,7 @@ body {
 .nav-list {
   display: flex;
   padding: 22px 0;
-  z-index: 1;
+  z-index: 5;
 }
 
 .nav-item {
@@ -79,7 +79,7 @@ body {
 
 .header-contacts {
   display: flex;
-  z-index: 1;
+  z-index: 5;
 }
 
 .header-contacts-tel {
@@ -120,6 +120,7 @@ body {
 .header-no-border {
   border-radius: 0px;
 }
+
 .container-no-padding {
   padding: 0px 0px;
 }
@@ -139,8 +140,8 @@ body {
 .burger-menu__open {
   position: relative;
   cursor: pointer;
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 25px;
   background-image: url("../assets/burger-menu-icon.svg");
   background-repeat: no-repeat;
   margin: auto 0;
@@ -216,7 +217,6 @@ body {
 }
 
 .typesSlider-slider {
-  display: flex;
   gap: 40px;
 }
 
@@ -248,12 +248,43 @@ body {
   display: flex;
 }
 
+.typesSlider-mobile {
+  display: none !important;
+}
+
+.typesSlider-mobile__item {
+  max-width: 732px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 14px;
+  color: #161616;
+  min-height: 400px;
+}
+
+.typesSlider-mobile__title {
+  padding: 20px 24px;
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+
+.typesSlider-mobile__text {
+  color: #999999;
+  padding: 20px 24px;
+}
+
+.typesSlider-mobile__img {
+  width: 100%;
+  max-width: 336px;
+  max-height: 213px;
+  margin: auto auto;
+  display: flex;
+}
+
 .typesSlider-left-arrow {
   position: relative;
   background-image: url("../assets/arrow-left.svg");
   width: 99px;
   height: 99px;
-
   top: -250px;
   z-index: 10;
   left: -50px;
@@ -269,6 +300,29 @@ body {
   z-index: 10;
   left: 96%;
   cursor: pointer;
+}
+
+.typesSlider-mobile-left-arrow {
+  position: relative;
+  background-image: url("../assets/mobile-left-arrow.svg");
+  width: 18px;
+  height: 30px;
+  top: -230px;
+  z-index: 10;
+  left: -10px;
+  cursor: pointer;
+  display: none;
+}
+.typesSlider-mobile-right-arrow {
+  background-image: url("../assets/mobile-right-arrow.svg");
+  width: 18px;
+  height: 30px;
+  position: relative;
+  top: -260px;
+  z-index: 10;
+  left: 98%;
+  cursor: pointer;
+  display: none;
 }
 
 .boronProcessing {
@@ -316,6 +370,73 @@ body {
   opacity: 0.8;
 }
 
+.boronProcessingMobile {
+  margin-bottom: 120px;
+  display: none;
+}
+
+.boronProcessingMobile-title {
+  margin-bottom: 40px;
+  font-size: 44px;
+  text-transform: uppercase;
+}
+
+.boronProcessingMobile-wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2b2b2b;
+  border-radius: 14px;
+  padding: 24px 20px;
+}
+
+.boronProcessingMobile-item__title {
+  margin-bottom: 40px;
+  font-size: 24px;
+  margin-left: 9px;
+}
+
+.boronProcessingMobile-item__text {
+  max-width: 470px;
+  margin-bottom: 24px;
+  margin-left: 9px;
+}
+
+.boronProcessingMobile-item__btn {
+  text-transform: none;
+}
+
+.boronProcessingMobile-link img {
+  transition: opacity 0.2 ease-in-out;
+  margin-bottom: 14px;
+  width: 100%;
+}
+
+.boronProcessingMobile-link img:hover {
+  opacity: 0.8;
+}
+
+.boronProcessingMobile-left-arrow {
+  position: relative;
+  background-image: url("../assets/mobile-left-arrow.svg");
+  width: 18px;
+  height: 30px;
+  top: -370px;
+  z-index: 10;
+  left: -5px;
+  cursor: pointer;
+}
+
+.boronProcessingMobile-right-arrow {
+  background-image: url(../assets/mobile-right-arrow.svg);
+  width: 18px;
+  height: 30px;
+  position: relative;
+  top: -400px;
+  z-index: 10;
+  left: 98%;
+  cursor: pointer;
+}
+
 .characteristics {
   margin-bottom: 120px;
 }
@@ -324,11 +445,32 @@ body {
   font-size: 44px;
   margin-bottom: 50px;
   max-width: 820px;
+  text-transform: uppercase;
 }
 
 .characteristics-img {
   max-width: 1500px;
   width: 100%;
+}
+
+.characteristics-img-wrapper {
+  display: none;
+}
+
+.characteristics-img-mobile {
+  max-width: 400px;
+  position: relative;
+}
+
+.characteristics-img-mobile:nth-child(1) {
+  left: -10px;
+}
+
+.characteristics-img-mobile:nth-child(2) {
+  float: right;
+  grid-column: span 2;
+  justify-self: self-end;
+  right: -10px;
 }
 
 .characteristics-btn {
@@ -439,10 +581,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: end;
-}
-
-.application {
-  margin-bottom: 380px;
 }
 
 .application-title__wrapper {
@@ -589,6 +727,18 @@ body {
 .footer-logo {
   margin-right: 157px;
   cursor: pointer;
+}
+
+.footer-link__social {
+  display: none;
+}
+
+.footer-tel {
+  display: none;
+}
+
+.footer-text {
+  display: none;
 }
 
 .footer-nav__list {
