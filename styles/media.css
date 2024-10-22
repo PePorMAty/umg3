@@ -256,6 +256,9 @@
     top: -320px;
     left: 99%;
   }
+  .base-btn-mobile {
+    display: flex;
+  }
   .header-container {
     overflow-x: clip;
   }

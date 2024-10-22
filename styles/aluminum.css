@@ -201,7 +201,7 @@ body {
 }
 
 .base {
-  margin-bottom: 180px;
+  margin-bottom: 80px;
 }
 
 .base-title {
@@ -354,6 +354,11 @@ body {
   left: 98%;
   cursor: pointer;
   display: none;
+}
+
+.base-btn-mobile {
+  display: none;
+  margin: 0 auto;
 }
 
 .application-title__wrapper {
