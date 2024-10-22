@@ -43,7 +43,6 @@ body {
   width: 887px;
   height: 678px;
   top: 310%;
-  /* right: -12px; */
   right: -0.6%;
   z-index: -10;
 }
@@ -66,7 +65,7 @@ body {
 .nav-list {
   display: flex;
   padding: 22px 0;
-  z-index: 1;
+  z-index: 5;
 }
 
 .nav-item {
@@ -81,7 +80,7 @@ body {
 
 .header-contacts {
   display: flex;
-  z-index: 1;
+  z-index: 5;
 }
 
 .header-contacts-tel {
@@ -147,8 +146,8 @@ body {
 .burger-menu__open {
   position: relative;
   cursor: pointer;
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 25px;
   background-image: url("../assets/burger-menu-icon.svg");
   background-repeat: no-repeat;
   margin: auto 0;
@@ -183,7 +182,7 @@ body {
   color: #ffffff30;
   text-transform: uppercase;
   max-width: 820px;
-  margin-bottom: 62px;
+  margin-bottom: 61px;
 }
 
 .topAluminum-title span {
@@ -299,8 +298,62 @@ body {
   cursor: pointer;
 }
 
-.application {
-  margin-bottom: 268px;
+.base-slider-mobile {
+  display: none !important;
+}
+
+.base-slider-mobile__item {
+  max-width: 732px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 14px;
+  color: #161616;
+  min-height: 400px;
+}
+
+.base-slider-mobile__title {
+  padding: 20px 24px;
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+
+.base-slider-mobile__text {
+  color: #999999;
+  padding: 20px 24px;
+  margin-top: -20px;
+}
+
+.base-slider-mobile__img {
+  width: 100%;
+  max-width: 336px;
+  max-height: 213px;
+  margin: auto auto;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.base-slider-mobile-left-arrow {
+  position: relative;
+  background-image: url("../assets/mobile-left-arrow.svg");
+  width: 18px;
+  height: 30px;
+  top: -230px;
+  z-index: 10;
+  left: -10px;
+  cursor: pointer;
+  display: none;
+}
+
+.base-slider-mobile-right-arrow {
+  background-image: url("../assets/mobile-right-arrow.svg");
+  width: 18px;
+  height: 30px;
+  position: relative;
+  top: -260px;
+  z-index: 10;
+  left: 98%;
+  cursor: pointer;
+  display: none;
 }
 
 .application-title__wrapper {

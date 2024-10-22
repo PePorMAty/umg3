@@ -3,7 +3,7 @@ const burgerClose = document.querySelector(".burger-menu__close");
 const navList = document.querySelector(".nav-list");
 const headerContacts = document.querySelector(".header-contacts");
 const header = document.querySelector(".header");
-const headerNav = document.querySelector(".heade-nav");
+const headerNav = document.querySelector(".header-nav");
 const headerContainer = document.querySelector(".header-container");
 
 burgerOpen.addEventListener("click", () => {

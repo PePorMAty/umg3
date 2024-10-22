@@ -18,6 +18,12 @@
   .application-left-arrow {
     top: -302px;
   }
+  .aluminum-right-arrow {
+    top: -370px;
+  }
+  .aluminum-left-arrow {
+    top: -270px;
+  }
   .contacts-text {
     font-size: 55px;
   }
@@ -71,6 +77,12 @@
   }
   .application-left-arrow {
     top: -271px;
+  }
+  .aluminum-right-arrow {
+    top: -370px;
+  }
+  .aluminum-left-arrow {
+    top: -270px;
   }
   .application-slider__title {
     margin-left: 25px;
@@ -165,7 +177,7 @@
     align-items: center;
     height: 300vw;
     width: 100vw;
-    left: 0;
+    left: 0px;
     flex-direction: column;
   }
   .nav-item {
@@ -184,7 +196,25 @@
   .typesSlider-slider__title {
     font-size: 20px;
   }
+  .typesSlider-title {
+    font-size: 33px;
+  }
   .boronProcessing-title {
+    font-size: 33px;
+  }
+  .reasons-title {
+    font-size: 33px;
+  }
+  .application-title {
+    font-size: 33px;
+  }
+  .contacts-title {
+    font-size: 80px;
+  }
+  .characteristics-title {
+    font-size: 33px;
+  }
+  .base-title {
     font-size: 33px;
   }
   .application-left-arrow {
@@ -195,6 +225,12 @@
     top: -465px;
     right: 60px;
   }
+  .aluminum-right-arrow {
+    top: -370px;
+  }
+  .aluminum-left-arrow {
+    top: -270px;
+  }
   .technology-item__img {
     max-width: 400px;
   }
@@ -202,7 +238,23 @@
     max-width: 900px;
   }
   .base-wrapper {
+    display: none;
+    visibility: hidden;
     flex-direction: column;
+  }
+  .base-slider-mobile {
+    display: block !important;
+  }
+  .base-slider-mobile-left-arrow {
+    display: block !important;
+    top: -290px;
+    left: -5px;
+  }
+
+  .base-slider-mobile-right-arrow {
+    display: block !important;
+    top: -320px;
+    left: 99%;
   }
   .header-container {
     overflow-x: clip;
@@ -237,8 +289,17 @@
   .topSilicon-title span + .up {
     font-size: 48px;
   }
-  .table-title {
+  .topAluminum-title {
     font-size: 37px;
+  }
+  .topAluminum-title span {
+    font-size: 90px;
+  }
+  .topAluminum-title span + .up {
+    font-size: 48px;
+  }
+  .table-title {
+    font-size: 33px;
     margin-bottom: 22px;
   }
 }
@@ -274,9 +335,6 @@
   .boronProcessing-item__text {
     max-width: 100%;
   }
-  .application-title {
-    font-size: 34px;
-  }
   .technology-item__wrapper {
     flex-direction: column;
   }
@@ -299,6 +357,32 @@
   }
   .typesSlider-right-arrow {
     left: 94%;
+  }
+  .application-slider__list {
+    display: none;
+    visibility: hidden;
+  }
+  .application-left-arrow {
+    top: -320px;
+    left: 5px;
+    background-image: url("../assets/mobile-left-arrow.svg");
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 30px;
+  }
+  .application-right-arrow {
+    top: -350px;
+    background-image: url("../assets/mobile-right-arrow.svg");
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 30px;
+    right: 0;
+  }
+  .aluminum-right-arrow {
+    top: -240px;
+  }
+  .aluminum-left-arrow {
+    top: -210px;
   }
 }
 @media (max-width: 900px) {
@@ -341,22 +425,64 @@
   .topBoron-title span {
     font-size: 65px;
   }
+  .topSilicon-text {
+    font-size: 20px;
+  }
+  .topSilicon-title {
+    font-size: 30px;
+    max-width: 470px;
+  }
+  .topSilicon-title span + .up {
+    font-size: 30px;
+  }
+  .topSilicon-title span {
+    font-size: 65px;
+  }
+  .topAluminum-text {
+    font-size: 20px;
+  }
+  .topAluminum-title {
+    font-size: 30px;
+    max-width: 470px;
+  }
+  .topAluminum-title span + .up {
+    font-size: 30px;
+  }
+  .topAluminum-title span {
+    font-size: 65px;
+  }
   .typesSlider-slider__img {
     margin-top: 30%;
+  }
+  .typesSlider-title {
+    font-size: 30px;
+  }
+  .boronProcessing-title {
+    font-size: 30px;
   }
   .reasons-title {
     font-size: 30px;
   }
+  .application-title {
+    font-size: 30px;
+  }
   .contacts-title {
-    font-size: 90px;
+    font-size: 60px;
     margin-bottom: 40px;
   }
   .characteristics-title {
     font-size: 30px;
   }
+  .technology-title {
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
   .table-title {
     font-size: 30px;
     margin-bottom: 20px;
+  }
+  .base-title {
+    font-size: 30px;
   }
 }
 @media (max-width: 750px) {
@@ -364,6 +490,10 @@
     margin-bottom: 80px;
   }
   .topSilicon {
+    margin-bottom: 80px;
+    margin-top: 160px;
+  }
+  .topAluminum {
     margin-bottom: 80px;
     margin-top: 160px;
   }
@@ -407,6 +537,9 @@
   .boronProcessingMobile {
     display: block;
   }
+  .boronProcessingMobile-title {
+    font-size: 30px;
+  }
   .characteristics-img {
     display: none;
   }
@@ -425,8 +558,11 @@
   .application-right-arrow {
     top: -356px;
   }
-  .application-title {
-    font-size: 26px;
+  .aluminum-right-arrow {
+    top: -240px;
+  }
+  .aluminum-left-arrow {
+    top: -210px;
   }
   .footer-logo {
     margin-right: 80px;
@@ -439,6 +575,12 @@
   .technology {
     display: none;
     visibility: hidden;
+  }
+  .header-container__aluminum::after {
+    top: -15px;
+  }
+  .base-slider-mobile-right-arrow {
+    left: 98%;
   }
 }
 @media (max-width: 700px) {
@@ -460,27 +602,32 @@
   .topSilicon-text {
     font-size: 18px;
   }
-  .boronProcessing-title {
+  .topAluminum-text {
+    font-size: 18px;
+  }
+  .typesSlider-title {
     font-size: 26px;
   }
-  .boronProcessing-item__title {
-    font-size: 22px;
+  .boronProcessingMobile-title {
+    font-size: 26px;
   }
-  .application-left-arrow {
-    top: -320px;
-    left: 5px;
-    background-image: url("../assets/mobile-left-arrow.svg");
-    background-repeat: no-repeat;
-    width: 18px;
-    height: 30px;
+  .reasons-title {
+    font-size: 26px;
   }
-  .application-right-arrow {
-    top: -350px;
-    background-image: url("../assets/mobile-right-arrow.svg");
-    background-repeat: no-repeat;
-    width: 18px;
-    height: 30px;
-    right: 0;
+  .application-title {
+    font-size: 26px;
+  }
+  .characteristics-title {
+    font-size: 26px;
+  }
+  .technology-title {
+    font-size: 26px;
+  }
+  .table-title {
+    font-size: 26px;
+  }
+  .base-title {
+    font-size: 26px;
   }
   .contacts-text {
     font-size: 44px;
@@ -497,6 +644,9 @@
     padding: 19px 45px;
   }
   .topSilicon-btn {
+    padding: 19px 45px;
+  }
+  .topAluminum-btn {
     padding: 19px 45px;
   }
   .typesSlider-slider__img {
@@ -561,16 +711,55 @@
     margin-top: 15px;
     width: 100%;
   }
+  .topAluminum-title {
+    font-size: 22px;
+    max-width: 340px;
+  }
+  .topAluminum-title span {
+    font-size: 45px;
+  }
+  .topAluminum-title span + .up {
+    font-size: 22px;
+  }
+  .topAluminum-text {
+    font-size: 16px;
+    margin-bottom: 48px;
+  }
+  .topAluminum-links {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .topAluminum-btn {
+    margin-top: 15px;
+    width: 100%;
+  }
+  .typesSlider-title {
+    font-size: 24px;
+  }
+  .boronProcessingMobile-title {
+    font-size: 24px;
+  }
+  .reasons-title {
+    font-size: 24px;
+  }
+  .application-title {
+    font-size: 24px;
+  }
+  .characteristics-title {
+    font-size: 24px;
+  }
+  .technology-title {
+    font-size: 24px;
+  }
   .table-title {
     font-size: 24px;
-    margin-bottom: 14px;
+  }
+  .base-title {
+    font-size: 24px;
   }
   .button-outlined {
     margin-left: 0;
     width: 100%;
-  }
-  .typesSlider-title {
-    font-size: 32px;
   }
   .botonTypes-right-arrow {
     top: -350px;
@@ -621,6 +810,12 @@
   }
   .application-right-arrow {
     top: -290px;
+  }
+  .aluminum-right-arrow {
+    top: -240px;
+  }
+  .aluminum-left-arrow {
+    top: -210px;
   }
   .contacts-text {
     font-size: 35px;
@@ -674,6 +869,9 @@
     font-size: 12px;
     color: #8a8a8a;
   }
+  .header-container__aluminum::after {
+    top: 10px;
+  }
 }
 @media (max-width: 550px) {
   .botonTypes-right-arrow {
@@ -687,20 +885,8 @@
     background-size: contain;
     top: -270px;
   }
-  .boronProcessing {
-    padding: 81px 30px 0px 30px;
-  }
-  .application-title {
-    font-size: 24px;
-  }
-  .contacts-title {
-    font-size: 70px;
-  }
   .header-contacts {
     right: 9%;
-  }
-  .typesSlider-title {
-    font-size: 24px;
   }
 }
 @media (max-width: 500px) {
@@ -713,13 +899,6 @@
     top: -25px;
     right: 0px;
   }
-  .boronProcessing-title {
-    margin-bottom: 40px;
-    font-size: 22px;
-  }
-  .boronProcessing-item__title {
-    font-size: 20px;
-  }
   .reasons-item__text {
     font-size: 12px;
   }
@@ -727,7 +906,6 @@
     font-size: 16px;
   }
   .reasons-title {
-    font-size: 24px;
     margin-bottom: 85px;
   }
   .top-item__one {
@@ -762,9 +940,6 @@
   .technology-item__btn {
     font-size: 14px;
     padding: 19px 10px;
-  }
-  .technology-title {
-    font-size: 30px;
   }
   .technology {
     padding: 81px 20px 37px 20px;
@@ -824,6 +999,22 @@
   .topSilicon-text {
     font-size: 12px;
   }
+  .topAluminum {
+    margin-top: 132px;
+    margin-bottom: 80px;
+  }
+  .topAluminum-title {
+    font-size: 14px;
+  }
+  .topAluminum-title span {
+    font-size: 48px;
+  }
+  .topAluminum-title span + .up {
+    font-size: 14px;
+  }
+  .topAluminum-text {
+    font-size: 12px;
+  }
   .header-contacts {
     right: 32%;
     flex-direction: column;
@@ -853,7 +1044,6 @@
     padding: 0;
   }
   .application-title {
-    font-size: 24px;
     margin-bottom: 14px;
   }
   .contacts-title {
@@ -884,6 +1074,9 @@
   .footer-logo {
     max-width: 100px;
   }
+  .base-slider-mobile__text {
+    font-size: 12px;
+  }
 }
 @media (max-width: 400px) {
   .header-container__silicon::after {
@@ -895,14 +1088,17 @@
   .button-outlined {
     padding: 19px 20px;
   }
-  .typesSlider-title {
-    font-size: 26px;
-  }
   .application-left-arrow {
     top: -200px;
   }
   .application-right-arrow {
     top: -230px;
+  }
+  .application-left-arrow {
+    top: -150px;
+  }
+  .application-right-arrow {
+    top: -180px;
   }
   .application-slider__title {
     margin-left: 20px;
@@ -940,6 +1136,12 @@
   .characteristics-img-mobile {
     max-width: 325px;
   }
+  .base-slider-mobile-right-arrow {
+    top: -350px;
+  }
+  .base-slider-mobile-left-arrow {
+    top: -320px;
+  }
 }
 @media (max-width: 370px) {
   .header-contacts {
@@ -951,10 +1153,6 @@
   }
   .botonTypes-right-arrow {
     left: 74%;
-  }
-  .boronProcessing-item__btn {
-    text-transform: none;
-    padding: 19px 13px;
   }
   .reasons-item__text {
     font-size: 13px;

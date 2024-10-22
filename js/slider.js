@@ -104,6 +104,28 @@ const baseSwiper = new Swiper(".base-slider", {
   freeMode: true,
 });
 
+const baseModileSwiper = new Swiper(".base-slider-mobile", {
+  loop: true, // Бесконечная прокрутка
+  navigation: {
+    nextEl: ".base-slider-mobile-right-arrow",
+    prevEl: ".base-slider-mobile-left-arrow",
+  },
+  slidesPerView: 1,
+  spaceBetween: 40,
+  initialSlide: 0,
+  slideToClickedSlide: true,
+  freeMode: true,
+  breakpoints: {
+    // Настройки для разных размеров экрана
+    320: {
+      slidesPerView: 1,
+    },
+    750: {
+      slidesPerView: 2,
+    },
+  },
+});
+
 const tableSwiper = new Swiper(".table-slider", {
   loop: true, // Бесконечная прокрутка
   pagination: {

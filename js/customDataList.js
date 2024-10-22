@@ -10,6 +10,15 @@ for (let option of material.options) {
   };
 }
 
+document.addEventListener("click", function (event) {
+  // Check if the clicked element is not the materialInput or its parent
+  if (!event.target.closest("#materialInput")) {
+    // If it's not, hide the datalist
+    material.style.display = "none";
+    materialInput.style.borderRadius = "5px";
+  }
+});
+
 materialInput.oninput = function () {
   currentFocus = -1;
   var text = materialInput.value.toUpperCase();
@@ -32,7 +41,7 @@ materialInput.onkeydown = function (e) {
   } else if (e.keyCode == 13) {
     e.preventDefault();
     if (currentFocus > -1) {
-      /*and simulate a click on the "active" item:*/
+      /* and simulate a click on the "active" item: */
       if (material.options) material.options[currentFocus].click();
     }
   }
