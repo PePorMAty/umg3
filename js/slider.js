@@ -50,6 +50,9 @@ const boronProcessingMobileSwiper = new Swiper(
       nextEl: ".boronProcessingMobile-right-arrow",
       prevEl: ".boronProcessingMobile-left-arrow",
     },
+    pagination: {
+      el: ".swiper-pagination",
+    },
     slidesPerView: 2,
     spaceBetween: 40,
     initialSlide: 0,

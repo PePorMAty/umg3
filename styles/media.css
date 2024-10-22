@@ -539,6 +539,7 @@
   }
   .boronProcessingMobile {
     display: block;
+    margin-bottom: 50px;
   }
   .boronProcessingMobile-title {
     font-size: 30px;
@@ -581,6 +582,9 @@
   }
   .header-container__aluminum::after {
     top: -15px;
+  }
+  .base {
+    margin-bottom: 80px;
   }
   .base-slider-mobile-right-arrow {
     left: 98%;
