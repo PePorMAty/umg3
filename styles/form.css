@@ -54,12 +54,21 @@
   margin-bottom: 160px;
 }
 
-.popup-top__form-active {
+.popup-details__form-active {
+  display: block !important;
+  visibility: visible !important;
+}
+.popup-contact__form-active {
   display: block !important;
   visibility: visible !important;
 }
 
-.popup-top__form {
+.popup-details__form {
+  display: none;
+  visibility: hidden;
+}
+
+.popup-contact__form {
   display: none;
   visibility: hidden;
 }
@@ -276,6 +285,10 @@ datalist::-webkit-scrollbar-thumb {
   color: #2b2b2b;
   background: inherit;
   border: 3px solid #5c5c5c;
+}
+
+.contact-form-btn {
+  margin: 30px auto 0px auto;
 }
 
 .order-form__wrapper {
