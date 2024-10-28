@@ -5,17 +5,20 @@ const boronTypesSwiper = new Swiper(".typesSlider-slider", {
     prevEl: ".typesSlider-left-arrow",
   },
   slidesPerView: 2,
+  slidesPerGroup: 2,
   spaceBetween: 40,
   initialSlide: 0,
   slideToClickedSlide: true,
-  freeMode: true,
+  freeMode: false,
   breakpoints: {
     // Настройки для разных размеров экрана
     320: {
       slidesPerView: 1,
+      slidesPerGroup: 1,
     },
     750: {
       slidesPerView: 2,
+      slidesPerGroup: 2,
     },
   },
 });
@@ -78,9 +81,11 @@ const applictationSwiper = new Swiper(".application-slider", {
   },
   slidesPerView: 2.5,
   spaceBetween: 40,
-  initialSlide: 0,
+  initialSlide: 1,
   slideToClickedSlide: true,
   freeMode: true,
+  watchOverflow: true,
+  centeredSlides: true,
   breakpoints: {
     // Настройки для разных размеров экрана
     320: {

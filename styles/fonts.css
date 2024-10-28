@@ -2,32 +2,32 @@
 
 @font-face {
   font-family: "Geist";
-  src: url("/fonts/Geist/ttf/Geist-Regular.ttf");
+  src: url("../fonts/Geist/ttf/Geist-Regular.ttf");
 }
 
 @font-face {
   font-family: "Geist Bold";
-  src: url("/fonts/Geist/ttf/Geist-Bold.ttf");
+  src: url("../fonts/Geist/ttf/Geist-Bold.ttf");
 }
 
 @font-face {
   font-family: "Geist Medium";
-  src: url("/fonts/Geist/ttf/Geist-Medium.ttf") format("ttf");
+  src: url("../fonts/Geist/ttf/Geist-Medium.ttf") format("ttf");
 }
 
 @font-face {
   font-family: "Geist Light";
-  src: url("/fonts/Geist/ttf/Geist-Light.ttf");
+  src: url("../fonts/Geist/ttf/Geist-Light.ttf");
 }
 
 @font-face {
   font-family: "Hero";
-  src: url("/fonts/Hero/Hero-Regular.ttf");
+  src: url("../fonts/Hero/Hero-Regular.ttf");
 }
 
 @font-face {
   font-family: "Hero Bold";
-  src: url("/fonts/Hero/Hero-Bold.ttf");
+  src: url("../fonts/Hero/Hero-Bold.ttf");
 }
 
 .ibm-plex-sans-regular {
