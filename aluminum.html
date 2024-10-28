@@ -56,7 +56,155 @@
     <div class="overlay"></div>
     <div class="popup">
       <form
-        class="popup-top__form form"
+        class="popup-details__form form"
+        action="order-top0-form"
+        onsubmit="event.preventDefault()"
+      >
+        <h3 class="popup-form__title geist-bold">Форма оформления заказа</h3>
+        <fieldset class="fieldset">
+          <legend class="form-title geist-medium">Детали заказа</legend>
+          <div class="bot-form__wrapper">
+            <p class="form-label__wrapper">
+              <label class="form-label" for="material">Материал</label>
+              <input
+                class="form-input input1"
+                id="materialInput"
+                name="material-input"
+                type="text"
+                placeholder="Оксид алюминия"
+                list="material-options"
+                autocomplete="off"
+                role="combobox"
+              />
+              <datalist id="material" role="listbox">
+                <option class="option" value="Вариант 1">Вариант 1</option>
+                <option class="option" value="Вариант 2">Вариант 2</option>
+                <option class="option" value="Вариант 3">Вариант 3</option>
+                <option class="option" value="Вариант 1">Вариант 1</option>
+                <option class="option" value="Вариант 2">Вариант 2</option>
+                <option class="option" value="Вариант 3">Вариант 3</option>
+                <option class="option" value="Вариант 1">Вариант 1</option>
+                <option class="option" value="Вариант 2">Вариант 2</option>
+                <option class="option" value="Вариант 3">Вариант 3</option>
+                <option class="option" value="Вариант 1">Вариант 1</option>
+                <option class="option" value="Вариант 2">Вариант 2</option>
+                <option class="option" value="Вариант 3">Вариант 3</option>
+              </datalist>
+            </p>
+            <p class="form-label__wrapper">
+              <label class="form-label" for="size">Размер заготовки (мм)</label>
+              <input
+                class="form-input"
+                id="size"
+                type="text"
+                placeholder="ДхШхВ"
+              />
+            </p>
+          </div>
+          <div class="bot-form__wrapper">
+            <p class="form-label__wrapper">
+              <label class="form-label label-file1" for="blueprint"
+                >Чертеж изделия
+                <input
+                  class="form-input input2"
+                  id="blueprint"
+                  name="blueprint"
+                  type="file"
+                  placeholder="Загрузить"
+                />
+                <span class="input-file" for="blueprint">Загрузить</span>
+              </label>
+            </p>
+            <p class="form-label__wrapper">
+              <label class="form-label label-file2" for="requirements"
+                >ТУ (требования)
+                <input
+                  class="form-input input3"
+                  id="requirements"
+                  type="file"
+                  placeholder="Загрузить"
+                />
+                <span class="input-file" for="blueprint">Загрузить</span>
+              </label>
+            </p>
+            <p class="form-label__wrapper">
+              <label class="form-label" for="quantity">Количество</label>
+              <input
+                class="form-input input4"
+                id="quantity"
+                type="number"
+                placeholder="-  0  +"
+              />
+            </p>
+            <p class="form-label__wrapper">
+              <label class="form-label label-file3" for="map"
+                >Карта предприятия
+                <input
+                  class="form-input input5"
+                  id="map"
+                  type="file"
+                  placeholder="Загрузить"
+                />
+                <span class="input-file" for="blueprint">Загрузить</span>
+              </label>
+            </p>
+          </div>
+          <div class="bot-form__wrapper">
+            <p class="form-label__wrapper mt2">
+              <label class="form-label" for="city">Адрес доставки</label>
+              <input
+                class="form-input"
+                id="city"
+                type="text"
+                placeholder="Город"
+              />
+            </p>
+            <p class="form-label__wrapper mt1 mt2">
+              <input
+                class="form-input"
+                type="text"
+                id="street"
+                placeholder="Улица"
+              />
+            </p>
+            <p class="form-label__wrapper mt1">
+              <input
+                class="form-input"
+                type="text"
+                id="house"
+                placeholder="Дом"
+              />
+            </p>
+            <p class="form-label__wrapper mt1">
+              <input
+                class="form-input"
+                type="text"
+                id="office"
+                placeholder="Офис"
+              />
+            </p>
+          </div>
+          <div class="text-area__wrapper">
+            <label class="form-label" for="comments">Комментарии</label>
+            <textarea
+              class="textarea"
+              name="comments"
+              id="comments"
+              placeholder="Дополнительные уточнения по заказу"
+            ></textarea>
+          </div>
+          <div class="form-buttons__wrapper">
+            <button class="button form-btn" onclick="moveToContactForm()">
+              Оформить заказ
+            </button>
+            <button class="button outlined-form-btn">
+              Сохранить и оформить ещё заказ
+            </button>
+          </div>
+        </fieldset>
+      </form>
+      <form
+        class="popup-contact__form form"
         action="order-top0-form"
         onsubmit="event.preventDefault()"
       >
@@ -79,7 +227,7 @@
               <label class="form-label" for="name">ФИО</label>
               <input
                 class="form-input"
-                id="name"
+                id="contactName"
                 type="text"
                 placeholder="Иванов Иван Иванович"
               />
@@ -94,134 +242,24 @@
               />
             </p>
             <p class="form-label__wrapper">
-              <label class="form-label" for="tel">Телефон</label>
+              <label class="form-label" for="phone">Телефон</label>
               <input
                 class="form-input"
-                id="tel"
+                id="phone"
                 type="tel"
                 placeholder="+7 (___) ___-__-__"
               />
             </p>
           </div>
-        </fieldset>
-        <fieldset class="fieldset">
-          <legend class="form-title geist-medium">Детали заказа</legend>
-          <div class="bot-form__wrapper">
-            <p class="form-label__wrapper">
-              <label class="form-label" for="material">Материал</label>
-              <input
-                class="form-input input1"
-                id="materialInput"
-                name="material-input"
-                type="text"
-                placeholder="Оксид алюминия"
-                list="material-options"
-                autocomplete="off"
-                role="combobox"
-              />
-              <datalist id="material" role="listbox">
-                <option value="Вариант 1">Вариант 1</option>
-                <option value="Вариант 2">Вариант 2</option>
-                <option value="Вариант 3">Вариант 3</option>
-                <option value="Вариант 1">Вариант 1</option>
-                <option value="Вариант 2">Вариант 2</option>
-                <option value="Вариант 3">Вариант 3</option>
-                <option value="Вариант 1">Вариант 1</option>
-                <option value="Вариант 2">Вариант 2</option>
-                <option value="Вариант 3">Вариант 3</option>
-                <option value="Вариант 1">Вариант 1</option>
-                <option value="Вариант 2">Вариант 2</option>
-                <option value="Вариант 3">Вариант 3</option>
-              </datalist>
-            </p>
-            <p class="form-label__wrapper">
-              <label class="form-label" for="size">Размер заготовки (мм)</label>
-              <input
-                class="form-input"
-                id="size"
-                type="text"
-                placeholder="ДхШхВ"
-              />
-            </p>
-          </div>
-          <div class="bot-form__wrapper">
-            <p class="form-label__wrapper">
-              <label class="form-label" for="blueprint">Чертеж изделия</label>
-              <label class="input-file" for="blueprint">Загрузить</label>
-              <input
-                class="form-input input2"
-                id="blueprint"
-                type="file"
-                placeholder="Загрузить"
-              />
-            </p>
-            <p class="form-label__wrapper">
-              <label class="form-label" for="requirements"
-                >ТУ (требования)</label
-              >
-              <label class="input-file" for="blueprint">Загрузить</label>
-              <input
-                class="form-input input3"
-                id="requirements"
-                type="file"
-                placeholder="Загрузить"
-              />
-            </p>
-            <p class="form-label__wrapper">
-              <label class="form-label" for="quantity">Количество</label>
-              <input
-                class="form-input input4"
-                id="quantity"
-                type="number"
-                placeholder="-  0  +"
-              />
-            </p>
-            <p class="form-label__wrapper">
-              <label class="form-label" for="map">Карта предприятия</label>
-              <label class="input-file" for="blueprint">Загрузить</label>
-              <input
-                class="form-input input5"
-                id="map"
-                type="file"
-                placeholder="Загрузить"
-              />
-            </p>
-          </div>
-          <div class="bot-form__wrapper">
-            <p class="form-label__wrapper">
-              <label class="form-label" for="address">Адрес доставки</label>
-              <input
-                class="form-input"
-                id="address"
-                type="text"
-                placeholder="Город"
-              />
-            </p>
-            <p class="form-label__wrapper mt1">
-              <input class="form-input" type="text" placeholder="Улица" />
-            </p>
-            <p class="form-label__wrapper mt1">
-              <input class="form-input" type="text" placeholder="Дом" />
-            </p>
-            <p class="form-label__wrapper mt1">
-              <input class="form-input" type="text" placeholder="Офис" />
-            </p>
-          </div>
-          <div class="text-area__wrapper">
-            <label class="form-label" for="comments">Комментарии</label>
-            <textarea
-              class="textarea"
-              name="comments"
-              id="comments"
-              placeholder="Дополнительные уточнения по заказу"
-            ></textarea>
-          </div>
           <div class="form-buttons__wrapper">
-            <button class="button form-btn" onclick="confirmOrder()">
-              Оформить заказ
+            <button class="button form-btn" onclick="moveToOrderForm()">
+              Далее
             </button>
-            <button class="button outlined-form-btn">
-              Сохранить и оформить ещё заказ
+            <button
+              class="button outlined-form-btn"
+              onclick="returnToDetailsForm()"
+            >
+              Вернуться
             </button>
           </div>
         </fieldset>
@@ -235,17 +273,19 @@
         <fieldset class="fieldset">
           <legend class="form-title geist-medium">Состав заказа</legend>
           <div class="order-form__wrapper">
-            <p class="order-form__text">Изделие 1 Оксид алюминия</p>
-            <p class="order-form__text">300 шт</p>
-            <p class="order-form__text">550 мм</p>
-            <p class="order-form__text">
+            <p class="order-form__text" id="materialOutput"></p>
+            <p class="order-form__text" id="quantityOutput">300 шт</p>
+            <p class="order-form__text" id="sizeOutput">550 мм</p>
+            <p class="order-form__text" id="addressOutput">
               ООО “Название компании”, г. Москва, ул Ленина
             </p>
           </div>
           <div class="form-buttons__wrapper">
-            <button class="button form-btn">Оформить заказ</button>
-            <button class="button outlined-form-btn" onclick="oneMoreOrder()">
-              Заказать ещё
+            <button class="button form-btn" onclick="confirmForm()">
+              Оформить заказ
+            </button>
+            <button class="button outlined-form-btn">
+              Сохранить и оформить ещё заказ
             </button>
           </div>
         </fieldset>
@@ -270,9 +310,9 @@
             <a href="#">
               <button class="topAluminum-btn button">Подробнее</button>
             </a>
-            <a href="#">
-              <button class="button button-outlined">Оформить заказ</button>
-            </a>
+            <button class="button button-outlined" onclick="openPopup()">
+              Оформить заказ
+            </button>
           </div>
         </section>
         <section class="base">
@@ -674,6 +714,7 @@
     ></script>
     <script defer src="js/slider.js"></script>
     <script defer src="js/main.js"></script>
+    <script defer src="js/form.js"></script>
     <script defer src="js/customDataList.js"></script>
   </body>
 </html>

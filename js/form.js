@@ -6,7 +6,7 @@ const detailsForm = document.querySelector(".popup-details__form");
 const orderForm = document.querySelector(".popup-order-form");
 const contactForm = document.querySelector(".popup-contact__form");
 
-const obj = {
+const formData = {
   companyName: "",
   contactName: "",
   email: "",
@@ -77,15 +77,15 @@ const moveToOrderForm = () => {
   contactForm.classList.remove("popup-contact__form-active");
   orderForm.classList.add("popup-order-form-active");
 
-  obj.material = material;
-  obj.size = size;
-  obj.blueprint = blueprint;
-  obj.quantity = quantity;
-  obj.map = map;
-  obj.address.city = city;
-  obj.address.street = street;
-  obj.address.house = house;
-  obj.address.office = office;
+  formData.material = material;
+  formData.size = size;
+  formData.blueprint = blueprint;
+  formData.quantity = quantity;
+  formData.map = map;
+  formData.address.city = city;
+  formData.address.street = street;
+  formData.address.house = house;
+  formData.address.office = office;
 
   materialOutput.textContent = `${material}`;
   quantityOutput.textContent = `${quantity} шт`;
@@ -113,10 +113,43 @@ const confirmForm = () => {
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
 
-  obj.companyName = companyName;
-  obj.contactName = contactName;
-  obj.email = email;
-  obj.phone = phone;
+  formData.companyName = companyName;
+  formData.contactName = contactName;
+  formData.email = email;
+  formData.phone = phone;
 
-  console.log(obj);
+  console.log(formData);
 };
+// Поведение input type file
+const labelFile1 = document.querySelector(".label-file1 input[type=file]");
+const labelFile2 = document.querySelector(".label-file2 input[type=file]");
+const labelFile3 = document.querySelector(".label-file3 input[type=file]");
+const inputFileImg = document.querySelectorAll(".input-file");
+
+labelFile1.addEventListener("change", function () {
+  let file = this.files[0];
+  this.nextElementSibling.textContent = file.name;
+  inputFileImg.forEach((el, index) => {
+    if (index === 0) {
+      el.classList.add("inputWithoutImg");
+    }
+  });
+});
+labelFile2.addEventListener("change", function () {
+  let file = this.files[0];
+  this.nextElementSibling.textContent = file.name;
+  inputFileImg.forEach((el, index) => {
+    if (index === 1) {
+      el.classList.add("inputWithoutImg");
+    }
+  });
+});
+labelFile3.addEventListener("change", function () {
+  let file = this.files[0];
+  this.nextElementSibling.textContent = file.name;
+  inputFileImg.forEach((el, index) => {
+    if (index === 2) {
+      el.classList.add("inputWithoutImg");
+    }
+  });
+});

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/silicon.css" />
     <link rel="stylesheet" href="styles/fonts.css" />
     <link rel="stylesheet" href="styles/media.css" />
+    <link rel="stylesheet" href="styles/form.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -51,6 +52,246 @@
         </nav>
       </div>
     </header>
+    <!-- Форма оформления заказа -->
+    <div class="overlay"></div>
+    <div class="popup">
+      <form
+        class="popup-details__form form"
+        action="order-top0-form"
+        onsubmit="event.preventDefault()"
+      >
+        <h3 class="popup-form__title geist-bold">Форма оформления заказа</h3>
+        <fieldset class="fieldset">
+          <legend class="form-title geist-medium">Детали заказа</legend>
+          <div class="bot-form__wrapper">
+            <p class="form-label__wrapper">
+              <label class="form-label" for="material">Материал</label>
+              <input
+                class="form-input input1"
+                id="materialInput"
+                name="material-input"
+                type="text"
+                placeholder="Оксид алюминия"
+                list="material-options"
+                autocomplete="off"
+                role="combobox"
+              />
+              <datalist id="material" role="listbox">
+                <option class="option" value="Вариант 1">Вариант 1</option>
+                <option class="option" value="Вариант 2">Вариант 2</option>
+                <option class="option" value="Вариант 3">Вариант 3</option>
+                <option class="option" value="Вариант 1">Вариант 1</option>
+                <option class="option" value="Вариант 2">Вариант 2</option>
+                <option class="option" value="Вариант 3">Вариант 3</option>
+                <option class="option" value="Вариант 1">Вариант 1</option>
+                <option class="option" value="Вариант 2">Вариант 2</option>
+                <option class="option" value="Вариант 3">Вариант 3</option>
+                <option class="option" value="Вариант 1">Вариант 1</option>
+                <option class="option" value="Вариант 2">Вариант 2</option>
+                <option class="option" value="Вариант 3">Вариант 3</option>
+              </datalist>
+            </p>
+            <p class="form-label__wrapper">
+              <label class="form-label" for="size">Размер заготовки (мм)</label>
+              <input
+                class="form-input"
+                id="size"
+                type="text"
+                placeholder="ДхШхВ"
+              />
+            </p>
+          </div>
+          <div class="bot-form__wrapper">
+            <p class="form-label__wrapper">
+              <label class="form-label label-file1" for="blueprint"
+                >Чертеж изделия
+                <input
+                  class="form-input input2"
+                  id="blueprint"
+                  name="blueprint"
+                  type="file"
+                  placeholder="Загрузить"
+                />
+                <span class="input-file" for="blueprint">Загрузить</span>
+              </label>
+            </p>
+            <p class="form-label__wrapper">
+              <label class="form-label label-file2" for="requirements"
+                >ТУ (требования)
+                <input
+                  class="form-input input3"
+                  id="requirements"
+                  type="file"
+                  placeholder="Загрузить"
+                />
+                <span class="input-file" for="blueprint">Загрузить</span>
+              </label>
+            </p>
+            <p class="form-label__wrapper">
+              <label class="form-label" for="quantity">Количество</label>
+              <input
+                class="form-input input4"
+                id="quantity"
+                type="number"
+                placeholder="-  0  +"
+              />
+            </p>
+            <p class="form-label__wrapper">
+              <label class="form-label label-file3" for="map"
+                >Карта предприятия
+                <input
+                  class="form-input input5"
+                  id="map"
+                  type="file"
+                  placeholder="Загрузить"
+                />
+                <span class="input-file" for="blueprint">Загрузить</span>
+              </label>
+            </p>
+          </div>
+          <div class="bot-form__wrapper">
+            <p class="form-label__wrapper mt2">
+              <label class="form-label" for="city">Адрес доставки</label>
+              <input
+                class="form-input"
+                id="city"
+                type="text"
+                placeholder="Город"
+              />
+            </p>
+            <p class="form-label__wrapper mt1 mt2">
+              <input
+                class="form-input"
+                type="text"
+                id="street"
+                placeholder="Улица"
+              />
+            </p>
+            <p class="form-label__wrapper mt1">
+              <input
+                class="form-input"
+                type="text"
+                id="house"
+                placeholder="Дом"
+              />
+            </p>
+            <p class="form-label__wrapper mt1">
+              <input
+                class="form-input"
+                type="text"
+                id="office"
+                placeholder="Офис"
+              />
+            </p>
+          </div>
+          <div class="text-area__wrapper">
+            <label class="form-label" for="comments">Комментарии</label>
+            <textarea
+              class="textarea"
+              name="comments"
+              id="comments"
+              placeholder="Дополнительные уточнения по заказу"
+            ></textarea>
+          </div>
+          <div class="form-buttons__wrapper">
+            <button class="button form-btn" onclick="moveToContactForm()">
+              Оформить заказ
+            </button>
+            <button class="button outlined-form-btn">
+              Сохранить и оформить ещё заказ
+            </button>
+          </div>
+        </fieldset>
+      </form>
+      <form
+        class="popup-contact__form form"
+        action="order-top0-form"
+        onsubmit="event.preventDefault()"
+      >
+        <h3 class="popup-form__title geist-bold">Форма оформления заказа</h3>
+        <fieldset class="fieldset">
+          <legend class="form-title geist-medium">Персональные данные</legend>
+          <div class="top-form__wrapper">
+            <p class="form-label__wrapper">
+              <label class="form-label" for="companyName"
+                >Название компании</label
+              >
+              <input
+                class="form-input"
+                id="companyName"
+                type="text"
+                placeholder="ООО Название"
+              />
+            </p>
+            <p class="form-label__wrapper">
+              <label class="form-label" for="name">ФИО</label>
+              <input
+                class="form-input"
+                id="contactName"
+                type="text"
+                placeholder="Иванов Иван Иванович"
+              />
+            </p>
+            <p class="form-label__wrapper">
+              <label class="form-label" for="email">Email</label>
+              <input
+                class="form-input"
+                id="email"
+                type="email"
+                placeholder="example@mail.ru"
+              />
+            </p>
+            <p class="form-label__wrapper">
+              <label class="form-label" for="phone">Телефон</label>
+              <input
+                class="form-input"
+                id="phone"
+                type="tel"
+                placeholder="+7 (___) ___-__-__"
+              />
+            </p>
+          </div>
+          <div class="form-buttons__wrapper">
+            <button class="button form-btn" onclick="moveToOrderForm()">
+              Далее
+            </button>
+            <button
+              class="button outlined-form-btn"
+              onclick="returnToDetailsForm()"
+            >
+              Вернуться
+            </button>
+          </div>
+        </fieldset>
+      </form>
+      <form
+        class="popup-order-form form"
+        action="order bot form"
+        onsubmit="event.preventDefault()"
+      >
+        <h3 class="popup-form__title geist-bold">Форма оформления заказа</h3>
+        <fieldset class="fieldset">
+          <legend class="form-title geist-medium">Состав заказа</legend>
+          <div class="order-form__wrapper">
+            <p class="order-form__text" id="materialOutput"></p>
+            <p class="order-form__text" id="quantityOutput">300 шт</p>
+            <p class="order-form__text" id="sizeOutput">550 мм</p>
+            <p class="order-form__text" id="addressOutput">
+              ООО “Название компании”, г. Москва, ул Ленина
+            </p>
+          </div>
+          <div class="form-buttons__wrapper">
+            <button class="button form-btn" onclick="confirmForm()">
+              Оформить заказ
+            </button>
+            <button class="button outlined-form-btn">
+              Сохранить и оформить ещё заказ
+            </button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <!-- Конец формы оформления заказа -->
     <main class="main">
       <div class="container">
         <section class="topSilicon">
@@ -71,9 +312,9 @@
             <a href="#">
               <button class="topSilicon-btn button">Подробнее</button>
             </a>
-            <a href="#">
-              <button class="button button-outlined">Оформить заказ</button>
-            </a>
+            <button class="button button-outlined" onclick="openPopup()">
+              Оформить заказ
+            </button>
           </div>
         </section>
         <section class="typesSlider">
@@ -718,7 +959,9 @@
       </nav>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/slider.js"></script>
-    <script src="js/main.js"></script>
+    <script defer src="js/slider.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/form.js"></script>
+    <script defer src="js/customDataList.js"></script>
   </body>
 </html>

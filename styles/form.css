@@ -166,6 +166,8 @@
   max-width: 508px;
   font-size: 23px;
   width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 input[type="file"] {
@@ -185,6 +187,10 @@ input[type="file"] {
   font-size: 23px;
   color: #2b2b2b30;
   position: relative;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* margin-top: 11px; */
 }
 
 .input-file::after {
@@ -196,6 +202,19 @@ input[type="file"] {
   width: 24px;
   height: 30px;
   right: 40px;
+}
+
+.inputWithoutImg {
+  position: relative;
+}
+
+.inputWithoutImg::after {
+  content: "";
+  background-image: none;
+}
+
+.input4 {
+  margin-top: -10px;
 }
 
 datalist {
@@ -332,6 +351,9 @@ datalist::-webkit-scrollbar-thumb {
   .outlined-form-btn {
     padding: 19px 25px;
     max-width: 450px;
+  }
+  .input-file {
+    margin-top: 10px;
   }
 }
 @media (max-width: 950px) {
