@@ -105,26 +105,30 @@
             <p class="form-label__wrapper">
               <label class="form-label label-file1" for="blueprint"
                 >Чертеж изделия
-                <input
-                  class="form-input input2"
-                  id="blueprint"
-                  name="blueprint"
-                  type="file"
-                  placeholder="Загрузить"
-                />
-                <span class="input-file" for="blueprint">Загрузить</span>
+                <label class="label-wrapper">
+                  <input
+                    class="form-input input2"
+                    id="blueprint"
+                    name="blueprint"
+                    type="file"
+                    placeholder="Загрузить"
+                  />
+                  <span class="input-file" for="blueprint">Загрузить</span>
+                </label>
               </label>
             </p>
             <p class="form-label__wrapper">
               <label class="form-label label-file2" for="requirements"
                 >ТУ (требования)
-                <input
-                  class="form-input input3"
-                  id="requirements"
-                  type="file"
-                  placeholder="Загрузить"
-                />
-                <span class="input-file" for="blueprint">Загрузить</span>
+                <label class="label-wrapper">
+                  <input
+                    class="form-input input3"
+                    id="requirements"
+                    type="file"
+                    placeholder="Загрузить"
+                  />
+                  <span class="input-file" for="blueprint">Загрузить</span>
+                </label>
               </label>
             </p>
             <p class="form-label__wrapper">
@@ -139,13 +143,15 @@
             <p class="form-label__wrapper">
               <label class="form-label label-file3" for="map"
                 >Карта предприятия
-                <input
-                  class="form-input input5"
-                  id="map"
-                  type="file"
-                  placeholder="Загрузить"
-                />
-                <span class="input-file" for="blueprint">Загрузить</span>
+                <label class="label-wrapper">
+                  <input
+                    class="form-input input5"
+                    id="map"
+                    type="file"
+                    placeholder="Загрузить"
+                  />
+                  <span class="input-file" for="blueprint">Загрузить</span>
+                </label>
               </label>
             </p>
           </div>
@@ -306,7 +312,7 @@
             характеристики, как относительно низкое тепловое расширение, высокая
             теплопроводность, твердость, стойкость к истиранию и коррозии и, что
             наиболее важно, сохранение упругого сопротивления при температурах
-            до 1650°С, привели к широкому спектру применений..
+            до 1650°С, привели к широкому спектру применений.
           </p>
           <div class="topSilicon-links">
             <a href="#">
@@ -323,10 +329,16 @@
             <div class="swiper-wrapper">
               <div class="typesSlider-slider__item swiper-slide">
                 <h3 class="typesSlider-slider__title geist-bold">
-                  Низкая плотность
+                  Прочная кристаллическая структура
                 </h3>
                 <p class="typesSlider-slider__text geist-medium">
-                  Какой-то текст про низкую плотность
+                  Карбид кремния состоит из легких элементов, кремния (Si) и
+                  углерода (C).<br />
+                  Основным строительным блоком карборундов является кристалл из
+                  четырех атомов углерода, образующих тетраэдр, ковалентно
+                  связанных с одним атомом кремния в центре.<br />
+                  SiC также проявляет полиморфизм, поскольку карборунд
+                  существует в различных фазах и кристаллических структурах
                 </p>
               </div>
               <div class="typesSlider-slider__item swiper-slide">
@@ -337,16 +349,79 @@
                 />
               </div>
               <div class="typesSlider-slider__item swiper-slide">
-                <img
-                  class="typesSlider-slider__img"
-                  src="./assets/application-slider-img1.png"
-                  alt="slide-img"
-                />
+                <h3 class="typesSlider-slider__title geist-bold">
+                  Высокая твердость
+                </h3>
+                <p class="typesSlider-slider__text geist-medium">
+                  Карбид кремния имеет твердость по шкале МООСА 9, что делает
+                  его самым твердым доступным материалом после карбида бора
+                  (9,5) и алмаза (10).<br />
+                  Это свойство делает очевидным выбор карбида кремния как
+                  материала для изготовления механических уплотнений,
+                  подшипников и режущих инструментов
+                </p>
               </div>
               <div class="typesSlider-slider__item swiper-slide">
                 <img
                   class="typesSlider-slider__img"
-                  src="./assets/application-slider-img2.png"
+                  src="./assets/silicon/silicon-slider-img.png"
+                  alt="slide-img"
+                />
+              </div>
+              <div class="typesSlider-slider__item swiper-slide">
+                <h3 class="typesSlider-slider__title geist-bold">
+                  Устойчивость к высоким температурам
+                </h3>
+                <p class="typesSlider-slider__text geist-medium">
+                  Стойкость карбида кремния к высоким температурам и
+                  термическому удару позволяет использовать его в производстве
+                  <br />
+                  огнеупорных кирпичей и других огнеупорных материалов.
+                  Разложение карбида кремния начинается при 2000°С
+                </p>
+              </div>
+              <div class="typesSlider-slider__item swiper-slide">
+                <img
+                  class="typesSlider-slider__img"
+                  src="./assets/silicon/silicon-slider-img.png"
+                  alt="slide-img"
+                />
+              </div>
+              <div class="typesSlider-slider__item swiper-slide">
+                <h3 class="typesSlider-slider__title geist-bold">
+                  Электропроводность
+                </h3>
+                <p class="typesSlider-slider__text geist-medium">
+                  Если карбид кремния очищается,то ведет себя как электрический
+                  изолятор. Однако, изменяя примеси, можно придать карбиду
+                  кремния электрические свойства полупроводника. Обычными
+                  примесями являются алюминий, железо, кислород и свободный
+                  углерод.
+                </p>
+              </div>
+              <div class="typesSlider-slider__item swiper-slide">
+                <img
+                  class="typesSlider-slider__img"
+                  src="./assets/silicon/silicon-slider-img.png"
+                  alt="slide-img"
+                />
+              </div>
+              <div class="typesSlider-slider__item swiper-slide">
+                <h3 class="typesSlider-slider__title geist-bold">
+                  Химическая устойчивость
+                </h3>
+                <p class="typesSlider-slider__text geist-medium">
+                  Карбид кремния – стабильное и химически инертное вещество,
+                  обладающее высокой коррозионной стойкостью даже при
+                  воздействии или кипячении в кислотах (соляная, серная или
+                  плавиковая кислота) или основаниях (концентрированные
+                  гидроксиды натрия).
+                </p>
+              </div>
+              <div class="typesSlider-slider__item swiper-slide">
+                <img
+                  class="typesSlider-slider__img"
+                  src="./assets/silicon/silicon-slider-img.png"
                   alt="slide-img"
                 />
               </div>
@@ -386,10 +461,14 @@
               </div>
             </div>
           </div>
-          <div class="typesSlider-left-arrow"></div>
-          <div class="typesSlider-right-arrow"></div>
-          <div class="typesSlider-mobile-left-arrow"></div>
-          <div class="typesSlider-mobile-right-arrow"></div>
+          <div class="typesSlider-left-arrow siliconTypes-left-arrow"></div>
+          <div class="typesSlider-right-arrow siliconTypes-right-arrow"></div>
+          <div
+            class="typesSlider-mobile-left-arrow siliconTypes-mobile-left-arrow"
+          ></div>
+          <div
+            class="typesSlider-mobile-right-arrow siliconTypes-mobile-right-arrow"
+          ></div>
         </section>
         <section class="technology">
           <h3 class="technology-title ibm-plex-sans-bold">

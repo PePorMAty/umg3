@@ -665,7 +665,7 @@ body {
   margin-bottom: 80px;
   color: #ffffff30;
   text-transform: uppercase;
-  display: inline-block;
+  display: block;
 }
 
 .contacts-form {
