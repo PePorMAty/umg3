@@ -362,14 +362,6 @@ body {
   text-transform: none;
 }
 
-.boronProcessing-link img {
-  transition: opacity 0.2 ease-in-out;
-}
-
-.boronProcessing-link img:hover {
-  opacity: 0.8;
-}
-
 .boronProcessingMobile {
   margin-bottom: 120px;
   display: none;
@@ -438,7 +430,7 @@ body {
 }
 
 .characteristics {
-  margin-bottom: 120px;
+  margin-bottom: -120px;
 }
 
 .characteristics-title {
@@ -451,6 +443,8 @@ body {
 .characteristics-img {
   max-width: 1500px;
   width: 100%;
+  position: relative;
+  left: -175px;
 }
 
 .characteristics-img-wrapper {
@@ -476,7 +470,7 @@ body {
 .characteristics-btn {
   float: right;
   position: relative;
-  bottom: 150px;
+  bottom: 525px;
 }
 
 .reasons {
@@ -591,9 +585,21 @@ body {
 
 .application-title {
   font-size: 44px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   max-width: 1100px;
   text-transform: uppercase;
+}
+
+.application-info__list {
+  margin-bottom: 40px;
+  margin-left: 25px;
+}
+
+.application-info__item {
+  list-style: disc;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #999999;
 }
 
 .application-left-arrow {
@@ -601,7 +607,7 @@ body {
   width: 99px;
   height: 99px;
   position: relative;
-  top: -350px;
+  top: -300px;
   z-index: 10;
   left: 100px;
   cursor: pointer;
@@ -612,7 +618,7 @@ body {
   width: 99px;
   height: 99px;
   position: relative;
-  top: -450px;
+  top: -400px;
   z-index: 10;
   right: 100px;
   float: right;
@@ -639,6 +645,14 @@ body {
   margin-left: 80px;
   position: relative;
   bottom: 110px;
+}
+
+.inactive-slide {
+  filter: blur(3px);
+}
+
+.swiper-slide-active {
+  filter: blur(0);
 }
 
 .contacts {

@@ -10,6 +10,7 @@ const boronTypesSwiper = new Swiper(".typesSlider-slider", {
   initialSlide: 0,
   slideToClickedSlide: true,
   freeMode: false,
+  watchOverflow: true,
   breakpoints: {
     // Настройки для разных размеров экрана
     320: {
@@ -33,7 +34,8 @@ const boronTypesModileSwiper = new Swiper(".typesSlider-mobile", {
   spaceBetween: 40,
   initialSlide: 0,
   slideToClickedSlide: true,
-  freeMode: true,
+  freeMode: false,
+  watchOverflow: true,
   breakpoints: {
     // Настройки для разных размеров экрана
     320: {
@@ -60,7 +62,8 @@ const boronProcessingMobileSwiper = new Swiper(
     spaceBetween: 40,
     initialSlide: 0,
     slideToClickedSlide: true,
-    freeMode: true,
+    freeMode: false,
+    watchOverflow: true,
     breakpoints: {
       // Настройки для разных размеров экрана
       320: {
@@ -80,10 +83,11 @@ const applictationSwiper = new Swiper(".application-slider", {
     prevEl: ".application-left-arrow",
   },
   slidesPerView: 2.5,
+  slidesPerSlide: 1,
   spaceBetween: 40,
   initialSlide: 1,
-  slideToClickedSlide: true,
-  freeMode: true,
+  slideToClickedSlide: false,
+  freeMode: false,
   watchOverflow: true,
   centeredSlides: true,
   breakpoints: {
@@ -109,7 +113,8 @@ const baseSwiper = new Swiper(".base-slider", {
   spaceBetween: 40,
   initialSlide: 0,
   slideToClickedSlide: true,
-  freeMode: true,
+  freeMode: false,
+  watchOverflow: true,
 });
 
 const baseModileSwiper = new Swiper(".base-slider-mobile", {
@@ -122,14 +127,18 @@ const baseModileSwiper = new Swiper(".base-slider-mobile", {
   spaceBetween: 40,
   initialSlide: 0,
   slideToClickedSlide: true,
-  freeMode: true,
+  freeMode: false,
+  watchOverflow: true,
   breakpoints: {
     // Настройки для разных размеров экрана
     320: {
       slidesPerView: 1,
     },
     750: {
-      slidesPerView: 2,
+      slidesPerView: 1,
+    },
+    1150: {
+      slidesPerView: 1,
     },
   },
 });
@@ -144,5 +153,6 @@ const tableSwiper = new Swiper(".table-slider", {
   spaceBetween: 40,
   initialSlide: 0,
   slideToClickedSlide: true,
-  freeMode: true,
+  freeMode: false,
+  watchOverflow: true,
 });

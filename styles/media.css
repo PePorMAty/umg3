@@ -5,6 +5,12 @@
   .base-info {
     max-width: 750px;
   }
+  .application-right-arrow {
+    top: -380px;
+  }
+  .application-left-arrow {
+    top: -280px;
+  }
 }
 @media (max-width: 1600px) {
   .typesSlider {
@@ -20,10 +26,10 @@
     font-size: 20px;
   }
   .application-right-arrow {
-    top: -400px;
+    top: -350px;
   }
   .application-left-arrow {
-    top: -302px;
+    top: -250px;
   }
   .aluminum-right-arrow {
     top: -370px;
@@ -49,6 +55,12 @@
   .header-container::after {
     width: 580px;
     height: 785px;
+  }
+  .characteristics-img {
+    left: 0px;
+  }
+  .characteristics-btn {
+    bottom: 350px;
   }
 }
 @media (max-width: 1350px) {
@@ -99,10 +111,10 @@
     top: -400px;
   }
   .application-right-arrow {
-    top: -370px;
+    top: -320px;
   }
   .application-left-arrow {
-    top: -271px;
+    top: -220px;
   }
   .aluminum-right-arrow {
     top: -370px;
@@ -243,13 +255,19 @@
   .base-title {
     font-size: 33px;
   }
+  .features-title {
+    font-size: 33px;
+  }
+  .application-info__item {
+    font-size: 22px;
+  }
   .application-left-arrow {
-    top: -365px;
-    left: 64px;
+    top: -300px;
+    left: 30px;
   }
   .application-right-arrow {
-    top: -465px;
-    right: 60px;
+    top: -400px;
+    right: 30px;
   }
   .aluminum-right-arrow {
     top: -370px;
@@ -273,13 +291,13 @@
   }
   .base-slider-mobile-left-arrow {
     display: block !important;
-    top: -290px;
+    top: -220px;
     left: -5px;
   }
 
   .base-slider-mobile-right-arrow {
     display: block !important;
-    top: -320px;
+    top: -250px;
     left: 99%;
   }
   .base-btn-mobile {
@@ -331,6 +349,9 @@
     font-size: 33px;
     margin-bottom: 22px;
   }
+  .features-item {
+    font-size: 22px;
+  }
 }
 @media (max-width: 1100px) {
   .typesSlider-right-arrow {
@@ -344,6 +365,9 @@
   }
   .siliconTypes-right-arrow {
     top: -400px;
+  }
+  .characteristics-img {
+    left: -100px;
   }
 }
 @media (max-width: 1050px) {
@@ -387,8 +411,11 @@
   .technology-item__img {
     max-width: 100%;
   }
+  .characteristics {
+    margin-bottom: 60px;
+  }
   .characteristics-btn {
-    position: static;
+    bottom: 150px;
   }
 }
 @media (max-width: 950px) {
@@ -405,12 +432,11 @@
   .typesSlider-left-arrow {
     top: -475px;
   }
-  .application-slider__list {
-    display: none;
-    visibility: hidden;
+  .application-slider__info {
+    padding: 200px 40px 80px 40px;
   }
   .application-left-arrow {
-    top: -320px;
+    top: -220px;
     left: 5px;
     background-image: url("../assets/mobile-left-arrow.svg");
     background-repeat: no-repeat;
@@ -418,18 +444,25 @@
     height: 30px;
   }
   .application-right-arrow {
-    top: -350px;
+    top: -250px;
     background-image: url("../assets/mobile-right-arrow.svg");
     background-repeat: no-repeat;
     width: 18px;
     height: 30px;
     right: 0;
   }
+  .inactive-slide {
+    opacity: 0.5;
+  }
+
+  .swiper-slide-active {
+    opacity: 1;
+  }
   .aluminum-right-arrow {
-    top: -240px;
+    top: -300px;
   }
   .aluminum-left-arrow {
-    top: -210px;
+    top: -270px;
   }
 }
 @media (max-width: 900px) {
@@ -531,6 +564,9 @@
   .application-title {
     font-size: 30px;
   }
+  .application-info__item {
+    font-size: 20px;
+  }
   .contacts-title {
     font-size: 60px;
     margin-bottom: 40px;
@@ -548,6 +584,15 @@
   }
   .base-title {
     font-size: 30px;
+  }
+  .features-title {
+    font-size: 30px;
+  }
+  .features-item {
+    font-size: 20px;
+  }
+  .application-slider__info {
+    padding: 170px 40px 80px 40px;
   }
 }
 @media (max-width: 750px) {
@@ -626,18 +671,19 @@
     float: initial;
     margin: 0 auto;
     display: flex;
+    position: static;
   }
   .application-left-arrow {
-    top: -260px;
+    top: -185px;
   }
   .application-right-arrow {
-    top: -290px;
+    top: -215px;
   }
   .aluminum-right-arrow {
-    top: -240px;
+    top: -300px;
   }
   .aluminum-left-arrow {
-    top: -210px;
+    top: -270px;
   }
   .footer-logo {
     margin-right: 80px;
@@ -695,6 +741,9 @@
   .application-title {
     font-size: 26px;
   }
+  .application-info__item {
+    font-size: 18px;
+  }
   .characteristics-title {
     font-size: 26px;
   }
@@ -707,11 +756,23 @@
   .base-title {
     font-size: 26px;
   }
+  .features-title {
+    font-size: 26px;
+  }
+  .features-item {
+    font-size: 18px;
+  }
   .contacts-text {
     font-size: 44px;
   }
   .header-contacts {
     right: 17%;
+  }
+  .application-info__item {
+    font-size: 20px;
+  }
+  .application-slider__info {
+    margin-right: 30px;
   }
 }
 @media (max-width: 650px) {
@@ -823,6 +884,9 @@
   .application-title {
     font-size: 24px;
   }
+  .application-info__item {
+    font-size: 16px;
+  }
   .characteristics-title {
     font-size: 24px;
   }
@@ -834,6 +898,13 @@
   }
   .base-title {
     font-size: 24px;
+  }
+  .features-title {
+    font-size: 24px;
+  }
+  .features-item {
+    font-size: 16px;
+    font-weight: 400;
   }
   .button-outlined {
     margin-left: 0;
@@ -884,10 +955,10 @@
     left: -62px;
   }
   .application-left-arrow {
-    top: -260px;
+    top: -185px;
   }
   .application-right-arrow {
-    top: -290px;
+    top: -215px;
   }
   .aluminum-right-arrow {
     top: -240px;
@@ -1043,6 +1114,16 @@
   .boronProcessingMobile-right-arrow {
     top: -320px;
   }
+  .application-info__wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .application-info__item {
+    font-size: 18px;
+  }
+  .application-slider__info {
+    padding: 130px 40px 80px 40px;
+  }
 }
 @media (max-width: 450px) {
   .header-container::after {
@@ -1167,6 +1248,9 @@
   .base-slider-mobile__text {
     font-size: 12px;
   }
+  .application-slider__info {
+    padding: 80px 40px 80px 40px;
+  }
 }
 @media (max-width: 400px) {
   .header-container__silicon::after {
@@ -1178,23 +1262,26 @@
   .button-outlined {
     padding: 19px 20px;
   }
-  .application-left-arrow {
-    top: -200px;
-  }
-  .application-right-arrow {
-    top: -230px;
+  .application-info__item {
+    font-size: 16px;
   }
   .application-left-arrow {
     top: -200px;
   }
   .application-right-arrow {
     top: -230px;
+  }
+  .application-left-arrow {
+    top: -135px;
+  }
+  .application-right-arrow {
+    top: -165px;
   }
   .aluminum-right-arrow {
-    top: -180px;
+    top: -300px;
   }
   .aluminum-left-arrow {
-    top: -150px;
+    top: -270px;
   }
   .application-slider__title {
     margin-left: 20px;
@@ -1237,6 +1324,9 @@
   }
   .base-slider-mobile-left-arrow {
     top: -320px;
+  }
+  .application-slider__info {
+    padding: 40px 20px 80px 20px;
   }
 }
 @media (max-width: 370px) {
