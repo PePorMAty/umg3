@@ -271,23 +271,25 @@
         </fieldset>
       </form>
       <form
+        id="orderForm"
         class="popup-order-form form"
         action="order bot form"
-        onsubmit="event.preventDefault()"
       >
         <h3 class="popup-form__title geist-bold">Форма оформления заказа</h3>
         <fieldset class="fieldset">
           <legend class="form-title geist-medium">Состав заказа</legend>
           <div class="order-form__wrapper">
             <p class="order-form__text" id="materialOutput"></p>
-            <p class="order-form__text" id="quantityOutput">300 шт</p>
-            <p class="order-form__text" id="sizeOutput">550 мм</p>
-            <p class="order-form__text" id="addressOutput">
-              ООО “Название компании”, г. Москва, ул Ленина
-            </p>
+            <p class="order-form__text" id="quantityOutput">шт</p>
+            <p class="order-form__text" id="sizeOutput">мм</p>
+            <p class="order-form__text" id="addressOutput"></p>
           </div>
           <div class="form-buttons__wrapper">
-            <button class="button form-btn" onclick="confirmForm()">
+            <button
+              class="button form-btn"
+              onclick="confirmForm()"
+              type="submit"
+            >
               Оформить заказ
             </button>
             <button class="button outlined-form-btn">
@@ -603,11 +605,57 @@
           <h3 class="characteristics-title geist-bold">
             Характеристики технической креамики из Нитрида Бора
           </h3>
+          <div class="characteristics-wrapper">
+            <div class="characteristics-item c-item1">
+              <p class="characteristics-item__text ibm-plex-sans-regular">
+                Чистота до 99,99%, поверхностное уплотнение, хорошие
+                газобарьерные свойства.
+              </p>
+            </div>
+            <div class="characteristics-item c-item2">
+              <p class="characteristics-item__text ibm-plex-sans-regular">
+                Отличная стойкость к тепловому удару, отличная теплопроводность,
+                низкий коэффициент теплового расширения.
+              </p>
+            </div>
+            <div class="characteristics-item c-item3">
+              <p class="characteristics-item__text ibm-plex-sans-regular">
+                Устойчивость к кислотам, щелочам, солям и органическим
+                реагентам. Между тем, он не вступает в реакцию с большинством
+                расплавленных металлов и полупроводниковых материалов.
+              </p>
+            </div>
+            <div class="characteristics-item c-item4">
+              <p class="characteristics-item__text ibm-plex-sans-regular">
+                Высокое сопротивление; Высокая диэлектрическая проницаемость;
+                Низкий коэффициент рассеивания; Отличная способность к
+                микроволновым и инфракрасным лучам.
+              </p>
+            </div>
+            <div class="characteristics-item c-item5">
+              <p class="characteristics-item__text ibm-plex-sans-regular">
+                Цвет керамики из PBN - слоновая кость и оранжево-коричневый,
+                нетоксичный, пористый, прост в обработке.
+              </p>
+            </div>
+            <div class="characteristics-item c-item6">
+              <p class="characteristics-item__text ibm-plex-sans-regular">
+                Прочность увеличивается с повышением температуры и достигает
+                максимума при 2200 ° C.
+              </p>
+            </div>
+            <div class="characteristics-item c-item7">
+              <p class="characteristics-item__text ibm-plex-sans-regular">
+                Он обладает анизотропией в механике, нагревании и электричестве.
+              </p>
+            </div>
+          </div>
           <img
             class="characteristics-img"
-            src="assets/boron-nitride/characteristics-bg.png"
+            src="assets/boron-nitride/characteristics-img.png"
             alt="characteristics-bg"
           />
+
           <div class="characteristics-img-wrapper">
             <img
               class="characteristics-img-mobile"
@@ -624,6 +672,79 @@
             ОФОРМИТЬ ЗАКАЗ
           </button>
         </section>
+      </div>
+      <section class="characteristics-mobile">
+        <h3 class="characteristics-title geist-bold">
+          Характеристики технической креамики из Нитрида Бора
+        </h3>
+        <div class="characteristics-wrapper">
+          <div class="characteristics-item c-item1">
+            <p class="characteristics-item__text ibm-plex-sans-regular">
+              Цвет керамики из PBN - слоновая кость и оранжево-коричневый,
+              нетоксичный, пористый, прост в обработке.
+            </p>
+          </div>
+          <div class="characteristics-item c-item2">
+            <p class="characteristics-item__text ibm-plex-sans-regular">
+              Прочность увеличивается с повышением температуры и достигает
+              максимума при 2200 ° C.
+            </p>
+          </div>
+          <div class="characteristics-item c-item3">
+            <p class="characteristics-item__text ibm-plex-sans-regular">
+              Он обладает анизотропией в механике, нагревании и электричестве.
+            </p>
+          </div>
+          <div class="characteristics-item c-item4">
+            <p class="characteristics-item__text ibm-plex-sans-regular">
+              Высокое сопротивление;<br />
+              Высокая диэлектрическая проницаемость;<br />
+              Низкий коэффициент рассеивания; <br />
+              Отличная способность к микроволновым и инфракрасным лучам.
+            </p>
+          </div>
+          <div class="characteristics-item c-item5">
+            <p class="characteristics-item__text ibm-plex-sans-regular">
+              Устойчивость к кислотам, щелочам, солям и органическим реагентам.
+              Между тем, он не вступает в реакцию с большинством расплавленных
+              металлов и полупроводниковых материалов.
+            </p>
+          </div>
+          <div class="characteristics-item c-item6">
+            <p class="characteristics-item__text ibm-plex-sans-regular">
+              Отличная стойкость к тепловому удару, отличная теплопроводность,
+              низкий коэффициент теплового расширения.
+            </p>
+          </div>
+          <div class="characteristics-item c-item7">
+            <p class="characteristics-item__text ibm-plex-sans-regular">
+              Чистота до 99,99%, поверхностное уплотнение, хорошие газобарьерные
+              свойства.
+            </p>
+          </div>
+        </div>
+        <img
+          class="characteristics-img"
+          src="assets/boron-nitride/characteristics-img.png"
+          alt="characteristics-bg"
+        />
+        <div class="characteristics-img-wrapper">
+          <img
+            class="characteristics-img-mobile"
+            src="assets/boron-nitride/characteristics-bg-left-mobile.png"
+            alt="characteristics-bg"
+          />
+          <img
+            class="characteristics-img-mobile"
+            src="assets/boron-nitride/characteristics-bg-right-mobile.png"
+            alt="characteristics-bg"
+          />
+        </div>
+        <button class="characteristics-btn button" onclick="openPopup()">
+          ОФОРМИТЬ ЗАКАЗ
+        </button>
+      </section>
+      <div class="container">
         <section class="reasons">
           <h3 class="reasons-title">
             ПРЕИМУЩЕСТВА ИСПОЛЬЗОВАНИЯ КЕРАМИКИ НА ОСНОВЕ НИТРИДА БОРА

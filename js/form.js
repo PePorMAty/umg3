@@ -5,25 +5,7 @@ const overlay = document.querySelector(".overlay");
 const detailsForm = document.querySelector(".popup-details__form");
 const orderForm = document.querySelector(".popup-order-form");
 const contactForm = document.querySelector(".popup-contact__form");
-
-const formData = {
-  companyName: "",
-  contactName: "",
-  email: "",
-  phone: "",
-  material: "",
-  size: "",
-  blueprint: "",
-  quantity: 0,
-  map: "",
-  address: {
-    city: "",
-    street: "",
-    house: "",
-    office: "",
-  },
-};
-
+// Открытие попапа и формы
 overlay.addEventListener("click", function (e) {
   popup.classList.remove("popup-active");
   overlay.classList.remove("overlay-active");
@@ -55,6 +37,24 @@ const openPopup = () => {
   header.classList.add("blur");
   main.classList.add("blur");
   footer.classList.add("blur");
+};
+// Обработка полей  формы
+const formData = {
+  companyName: "",
+  contactName: "",
+  email: "",
+  phone: "",
+  material: "",
+  size: "",
+  blueprint: "",
+  quantity: 0,
+  map: "",
+  address: {
+    city: "",
+    street: "",
+    house: "",
+    office: "",
+  },
 };
 
 const moveToOrderForm = () => {
@@ -117,9 +117,61 @@ const confirmForm = () => {
   formData.contactName = contactName;
   formData.email = email;
   formData.phone = phone;
-
-  console.log(formData);
 };
+
+document
+  .getElementById("orderForm")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    confirmForm();
+    console.log(formData);
+
+    const webhookUrl =
+      "https://b24-hoecyn.bitrix24.ru/rest/1/8prrmu40folgl1rq/"; // Замените на URL вашего вебхука
+
+    // Формирование данных для создания лида
+    const leadData = {
+      fields: {
+        TITLE: `Новый заказ от ${formData.material}`,
+        NAME: formData.contactName,
+        PHONE: [{ VALUE: formData.phone, VALUE_TYPE: "WORK" }],
+        EMAIL: [{ VALUE: formData.email, VALUE_TYPE: "WORK" }],
+        COMMENTS: `Материал: ${formData.material}, Количество: ${formData.quantity}, Размер: ${formData.size}`,
+        ADDRESS: `${formData.address.city}, ул. ${formData.address.street}, д. ${formData.address.house}, оф. ${formData.address.office}`,
+        UF_CRM_BLUEPRINT: `Чертёж: ${formData.blueprint}`, // Замените на идентификатор пользовательского поля, если необходимо
+        UF_CRM_MAP: `Карта: ${formData.map}`, // Замените на идентификатор пользовательского поля, если необходимо
+        MATERIAL: `Материал: ${formData.material}`, // Замените на идентификатор пользовательского поля, если необходимо
+        UF_CRM_QUANTITY: `Количество: ${formData.quantity}`, // Замените на идентификатор пользовательского поля, если необходимо
+        UF_CRM_SIZE: `Размер: ${formData.size}`,
+      },
+      params: { REGISTER_SONET_EVENT: "Y" }, // Создание события в ленте новостей
+    };
+
+    // Отправка данных на сервер Bitrix24
+    fetch(webhookUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(leadData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.result) {
+          alert("Заказ оформлен! ID лида: " + data.result);
+        } else {
+          alert(
+            "Ошибка: " + (data.error_description || "Не удалось создать лид")
+          );
+        }
+      })
+      .catch((error) => {
+        console.error("Ошибка:", error);
+        alert("Произошла ошибка при отправке данных.");
+      });
+  });
+
 // Поведение input type file
 const labelFile1 = document.querySelector(".label-file1 input[type=file]");
 const labelFile2 = document.querySelector(".label-file2 input[type=file]");
