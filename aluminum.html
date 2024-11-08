@@ -43,7 +43,7 @@
             >
             <a class="header-contacts-btn" href="#">
               <button class="header-btn button ibm-plex-sans-bold">
-                Подробнее
+                Оформить заказ
               </button>
             </a>
           </div>
@@ -300,6 +300,7 @@
     <!-- Конец формы оформления заказа -->
     <main class="main">
       <div class="container">
+        <div class="topAluminum-bg"></div>
         <section class="topAluminum">
           <h1 class="topAluminum-title geist-light">
             техническая керамика из
@@ -313,7 +314,7 @@
             свойств.
           </p>
           <div class="topAluminum-links">
-            <a href="#">
+            <a href="#base">
               <button class="topAluminum-btn button">Подробнее</button>
             </a>
             <button class="button button-outlined" onclick="openPopup()">
@@ -321,7 +322,7 @@
             </button>
           </div>
         </section>
-        <section class="base">
+        <section class="base" id="base">
           <h3 class="base-title geist-bold">
             Керамика на основе Оксида алюминия
           </h3>
@@ -340,7 +341,9 @@
                 подшипники, керамические уплотнения и диски водяных клапанов);
               </p>
               <p class="base-text-two ibm-plex-sans-regular"></p>
-              <button class="base-btn button">Бесплатная консультация</button>
+              <button class="base-btn button" onclick="openPopup()">
+                Оформить заказ
+              </button>
             </div>
             <div class="base-slider__wrapper">
               <div class="base-slider swiper">
@@ -763,7 +766,7 @@
             <a class="footer-nav__link" href="#">Виды</a>
           </li>
           <li class="footer-nav__item">
-            <a class="footer-nav__link" href="#">Обратботка</a>
+            <a class="footer-nav__link" href="#">Обработка</a>
           </li>
           <li class="footer-nav__item">
             <a class="footer-nav__link" href="#">Характеристики</a>

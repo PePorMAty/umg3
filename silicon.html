@@ -43,7 +43,7 @@
             >
             <a class="header-contacts-btn" href="#">
               <button class="header-btn button ibm-plex-sans-bold">
-                Подробнее
+                Оформить заказ
               </button>
             </a>
           </div>
@@ -300,6 +300,7 @@
     <!-- Конец формы оформления заказа -->
     <main class="main">
       <div class="container">
+        <div class="topSilicon-bg"></div>
         <section class="topSilicon">
           <h1 class="topSilicon-title geist-light">
             техническая керамика из
@@ -315,7 +316,7 @@
             до 1650°С, привели к широкому спектру применений.
           </p>
           <div class="topSilicon-links">
-            <a href="#">
+            <a href="#typesSliderSilicon">
               <button class="topSilicon-btn button">Подробнее</button>
             </a>
             <button class="button button-outlined" onclick="openPopup()">
@@ -323,7 +324,7 @@
             </button>
           </div>
         </section>
-        <section class="typesSlider">
+        <section class="typesSlider" id="typesSliderSilicon">
           <h2 class="typesSlider-title geist-bold">Свойства карбида кремния</h2>
           <div class="typesSlider-slider swiper">
             <div class="swiper-wrapper">
@@ -546,8 +547,8 @@
                 температуре около 1500оС при непосредственном контакте или с
                 использованием паров кремния.
               </p>
-              <button class="technology-item__btn button">
-                Бесплатная консультация
+              <button class="technology-item__btn button" onclick="openPopup()">
+                Оформить заказ
               </button>
             </div>
             <img
@@ -570,8 +571,8 @@
                 гибкостью размеров и чистотой порошка обеспечивает получение
                 продукта хорошего качества при разумной стоимости.
               </p>
-              <button class="technology-item__btn button">
-                Бесплатная консультация
+              <button class="technology-item__btn button" onclick="openPopup()">
+                Оформить заказ
               </button>
             </div>
             <img
@@ -1140,7 +1141,7 @@
             <a class="footer-nav__link" href="#">Виды</a>
           </li>
           <li class="footer-nav__item">
-            <a class="footer-nav__link" href="#">Обратботка</a>
+            <a class="footer-nav__link" href="#">Обработка</a>
           </li>
           <li class="footer-nav__item">
             <a class="footer-nav__link" href="#">Характеристики</a>

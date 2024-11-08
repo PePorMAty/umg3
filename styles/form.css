@@ -7,6 +7,10 @@
   visibility: visible !important;
 }
 
+body.popup-open {
+  overflow: hidden;
+}
+
 .overlay-active {
   visibility: visible !important;
 }
@@ -35,13 +39,21 @@
 }
 
 .popup {
-  position: absolute;
+  position: fixed;
   top: 130px;
   z-index: 999;
   right: 0;
   left: 0;
   display: none;
   visibility: hidden;
+}
+
+.popup-content {
+  margin: 0 auto;
+  padding: 20px;
+  width: 80%;
+  height: 1000px; /* Adjust the height as needed */
+  overflow: auto; /* Add this line */
 }
 
 .form {

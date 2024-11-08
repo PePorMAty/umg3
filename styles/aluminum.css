@@ -36,14 +36,16 @@ body {
 
 .header-container::after {
   content: "";
+}
+
+.topAluminum-bg {
   position: absolute;
   background-image: url("../assets/aluminum/aluminum-top-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 887px;
   height: 678px;
-  top: 310%;
-  right: -0.6%;
+  right: 0;
   z-index: -10;
 }
 
@@ -271,9 +273,8 @@ body {
 .base-slider__img {
   width: 100%;
   max-width: 615px;
-  max-height: 400px;
-  margin: auto auto;
-  display: flex;
+  max-height: 250px;
+  margin-top: 13%;
 }
 
 .base-left-arrow {

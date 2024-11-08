@@ -145,6 +145,12 @@
   }
 }
 @media (max-width: 1400px) {
+  .typesSlider-left-arrow {
+    top: -265px;
+  }
+  .typesSlider-right-arrow {
+    top: -365px;
+  }
   .c-item1 {
     top: 68px;
     left: 13.5vw;
@@ -187,6 +193,12 @@
   }
 }
 @media (max-width: 1300px) {
+  .typesSlider-right-arrow {
+    top: -400px;
+  }
+  .typesSlider-left-arrow {
+    top: -300px;
+  }
   .application-slider__title {
     font-size: 18px;
     margin-bottom: 10px;
@@ -242,10 +254,10 @@
 }
 @media (max-width: 1250px) {
   .typesSlider-right-arrow {
-    top: -475px;
+    top: -413px;
   }
   .typesSlider-left-arrow {
-    top: -375px;
+    top: -313px;
   }
   .siliconTypes-left-arrow {
     top: -300px;
@@ -271,6 +283,14 @@
   }
   .technology-item__img {
     max-width: 500px;
+  }
+}
+@media (max-width: 1225px) {
+  .typesSlider-right-arrow {
+    top: -475px;
+  }
+  .typesSlider-left-arrow {
+    top: -375px;
   }
 }
 @media (max-width: 1200px) {
@@ -306,8 +326,8 @@
     margin-top: 140px;
   }
   .top-item__two::after {
-    top: -150px;
-    left: 380px;
+    top: -320px;
+    left: 290px;
   }
   .reasons-top__item {
     padding: 20px 24px;
@@ -316,8 +336,7 @@
     flex-direction: column;
   }
   .reasons-bot__item {
-    margin-left: 50px;
-    margin-bottom: 24px;
+    margin-bottom: 44px;
   }
   .reason-item__link {
     margin-top: 80px;
@@ -488,10 +507,15 @@
     top: 84px;
     right: -100px;
   }
-  .header-container__silicon::after {
+  .topSilicon-bg {
     width: 439px;
     height: 600px;
-    top: -16px;
+    top: 20%;
+    right: 0px;
+  }
+  .topAluminum-bg {
+    width: 439px;
+    height: 600px;
     right: 0px;
   }
   .topBoron-title {
@@ -603,6 +627,12 @@
   }
 }
 @media (max-width: 1050px) {
+  .typesSlider-right-arrow {
+    top: -430px;
+  }
+  .typesSlider-left-arrow {
+    top: -330px;
+  }
   .typesSlider-slider__img {
     margin-top: 15%;
   }
@@ -647,7 +677,21 @@
     right: 12.9vw;
   }
 }
+@media (max-width: 1030px) {
+  .typesSlider-right-arrow {
+    top: -475px;
+  }
+  .typesSlider-left-arrow {
+    top: -375px;
+  }
+}
 @media (max-width: 1000px) {
+  .typesSlider-right-arrow {
+    top: -505px;
+  }
+  .typesSlider-left-arrow {
+    top: -405px;
+  }
   .boronProcessing-wrapper {
     display: flex;
     flex-direction: column;
@@ -794,6 +838,13 @@
   }
 }
 @media (max-width: 900px) {
+  .reasons-bot__item {
+    margin-bottom: 44px;
+    margin-left: 150px;
+  }
+  .typesSlider {
+    margin-bottom: 0;
+  }
   .typesSlider-slider__text {
     font-size: 13px;
   }
@@ -944,6 +995,7 @@
   }
   .typesSlider {
     padding: 0px;
+    margin-bottom: 0;
   }
   .typesSlider-mobile {
     display: block !important;
@@ -987,7 +1039,6 @@
   .boronProcessingMobile-title {
     font-size: 30px;
   }
-
   .application-left-arrow {
     top: -185px;
   }
@@ -1029,11 +1080,16 @@
     top: 80px;
     right: -140px;
   }
-  .header-container__silicon::after {
+  .topSilicon-bg {
     width: 300px;
     height: 450px;
     top: -16px;
     right: 0px;
+  }
+  .topAluminum-bg {
+    width: 300px;
+    height: 450px;
+    top: 0;
   }
   .topBoron-text {
     font-size: 18px;
@@ -1118,6 +1174,14 @@
   }
   .footer {
     padding: 60px 40px;
+  }
+}
+@media (max-width: 620px) {
+  .typesSlider-mobile-left-arrow {
+    top: -340px;
+  }
+  .typesSlider-mobile-right-arrow {
+    top: -370px;
   }
 }
 @media (max-width: 600px) {
@@ -1250,24 +1314,23 @@
     left: 245px;
   }
   .top-item__one::after {
-    background-image: url("../assets/boron-nitride/1-mobile.png");
-    width: 135px;
-    height: 213px;
-    left: -70px;
+    font-size: 300px;
+    left: -80px;
+    top: -144px;
   }
   .top-item__two::after {
-    background-image: url("../assets/boron-nitride/2-mobile.png");
-    width: 128px;
-    height: 213px;
-    left: 350px;
-    top: -80px;
+    font-size: 300px;
+    left: 377px;
+    top: -144px;
+    background: linear-gradient(279deg, #161616 20.77%, #0f70b7 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .reasons-bot__item::after {
-    background-image: url("../assets/boron-nitride/3-mobile.png");
-    width: 196px;
-    height: 213px;
-    top: -40px;
-    left: -62px;
+    font-size: 300px;
+    top: -108px;
+    left: -120px;
   }
   .application-left-arrow {
     top: -185px;
@@ -1357,11 +1420,15 @@
   .header-contacts-tel {
     margin-right: 50px;
   }
-  .header-container__silicon::after {
+  .topSilicon-bg {
     width: 250px;
     height: 400px;
     top: -25px;
     right: 0px;
+  }
+  .topAluminum-bg {
+    width: 250px;
+    height: 400px;
   }
   .typesSlider-mobile-right-arrow {
     top: -420px;
@@ -1447,10 +1514,15 @@
     top: 22px;
     right: -140px;
   }
-  .header-container__silicon::after {
+  .topSilicon-bg {
     width: 250px;
     height: 400px;
     top: -25px;
+    right: 0px;
+  }
+  .topAluminum-bg {
+    width: 250px;
+    height: 400px;
     right: 0px;
   }
   .topBoron {
@@ -1582,11 +1654,24 @@
     font-size: 14px;
   }
 }
+@media (max-width: 430px) {
+  .typesSlider-mobile-right-arrow {
+    top: -465px;
+  }
+  .typesSlider-mobile-left-arrow {
+    top: -435px;
+  }
+}
 @media (max-width: 400px) {
-  .header-container__silicon::after {
+  .topSilicon-bg {
     width: 250px;
     height: 350px;
     top: -18px;
+    right: 0px;
+  }
+  .topAluminum-bg {
+    width: 250px;
+    height: 350px;
     right: 0px;
   }
   .button-outlined {

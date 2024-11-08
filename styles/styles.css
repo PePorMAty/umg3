@@ -561,15 +561,19 @@ body {
 }
 
 .top-item__one::after {
-  content: "";
-  position: absolute;
-  background-image: url("../assets/boron-nitride/1.png");
-  background-repeat: no-repeat;
-  width: 225px;
-  height: 355px;
-  top: -65px;
-  left: -125px;
   z-index: -10;
+  content: "1";
+  position: absolute;
+  font-size: 500px;
+  top: -250px;
+  left: -135px;
+  z-index: -10;
+  font-family: Geist Bold;
+  color: #0f70b7;
+  background: linear-gradient(279deg, #161616 37.77%, #0f70b7 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .reasons-item__title {
@@ -580,6 +584,7 @@ body {
 .reasons-item__text {
   max-width: 435px;
   color: #999999;
+  color: #161616;
 }
 
 .top-item__two {
@@ -588,15 +593,18 @@ body {
 }
 
 .top-item__two::after {
-  content: "";
+  content: "2";
   position: absolute;
-  background-image: url("../assets/boron-nitride/2.png");
-  background-repeat: no-repeat;
-  width: 225px;
-  height: 355px;
-  top: -100px;
-  left: -120px;
+  font-size: 500px;
+  top: -261px;
+  left: -144px;
   z-index: -10;
+  font-family: Geist Bold;
+  color: #0f70b7;
+  background: linear-gradient(279deg, #161616 30.77%, #0f70b7 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .reasons-bot__inner {
@@ -616,15 +624,18 @@ body {
 }
 
 .reasons-bot__item::after {
-  content: "";
+  content: "3";
   position: absolute;
-  background-image: url("../assets/boron-nitride/3.png");
-  background-repeat: no-repeat;
-  width: 225px;
-  height: 355px;
-  top: -100px;
-  left: -120px;
+  font-size: 500px;
+  top: -260px;
+  left: -153px;
   z-index: -10;
+  font-family: Geist Bold;
+  color: #0f70b7;
+  background: linear-gradient(279deg, #161616 30.77%, #0f70b7 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .reasons-btn {

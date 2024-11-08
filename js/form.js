@@ -13,6 +13,7 @@ overlay.addEventListener("click", function (e) {
   main.classList.remove("blur");
   footer.classList.remove("blur");
   orderForm.classList.remove("popup-order-form-active");
+  document.querySelector("body").classList.remove("popup-open");
 });
 popup.addEventListener("click", function (e) {
   const detailsFormPopup = e.composedPath().includes(detailsForm);
@@ -26,6 +27,7 @@ popup.addEventListener("click", function (e) {
     footer.classList.remove("blur");
     orderForm.classList.remove("popup-order-form-active");
     contactForm.classList.remove("popup-contact__form-active");
+    document.querySelector("body").classList.remove("popup-open");
   }
 });
 
@@ -37,6 +39,7 @@ const openPopup = () => {
   header.classList.add("blur");
   main.classList.add("blur");
   footer.classList.add("blur");
+  document.querySelector("body").classList.add("popup-open");
 };
 // Обработка полей  формы
 const formData = {

@@ -36,14 +36,17 @@ body {
 
 .header-container::after {
   content: "";
+}
+
+.topSilicon-bg {
   position: absolute;
   background-image: url("../assets/silicon/silicon-top-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 1096px;
   height: 974px;
-  top: 145%;
-  right: -0.6%;
+  top: 20%;
+  right: 0;
   z-index: -10;
 }
 
