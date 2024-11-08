@@ -349,7 +349,11 @@ datalist::-webkit-scrollbar-thumb {
 .order-form__text {
   color: #2b2b2b;
 }
-
+@media (max-width: 1500px) {
+  .popup-content {
+    width: 100%;
+  }
+}
 @media (max-width: 1200px) {
   .bot-form__wrapper {
     justify-content: center;
