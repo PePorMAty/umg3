@@ -28,7 +28,12 @@ body {
 }
 
 .header {
-  margin-top: 10px;
+  position: fixed;
+  margin: 10px auto 0 auto;
+  max-width: 1890px;
+  width: 100%;
+  top: 0;
+  z-index: 999;
 }
 
 .header-container {

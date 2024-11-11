@@ -27,7 +27,6 @@ body {
 }
 
 .header {
-  margin-top: 10px;
 }
 
 .header-container {
@@ -45,10 +44,21 @@ body {
   background-size: cover;
   width: 876px;
   height: 1232px;
-  top: -10px;
+  top: -240px;
   right: 0;
   z-index: -10;
 }
+
+/* .topBoron-bg {
+  position: absolute;
+  background-image: url("../assets/boron-nitride/boron-main-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 887px;
+  height: 678px;
+  right: 0;
+  z-index: -10;
+} */
 
 .header-nav {
   display: flex;
@@ -56,6 +66,12 @@ body {
   background-color: #161616;
   padding: 22px 40px;
   border-radius: 8px;
+  position: fixed;
+  margin: 10px auto 0 auto;
+  max-width: 1820px;
+  width: 100%;
+  top: 0;
+  z-index: 999;
 }
 
 .logo {
