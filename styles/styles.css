@@ -416,7 +416,7 @@ body {
   background-image: url("../assets/mobile-left-arrow.svg");
   width: 18px;
   height: 30px;
-  top: -370px;
+  top: -457px;
   z-index: 10;
   left: -5px;
   cursor: pointer;
@@ -427,7 +427,7 @@ body {
   width: 18px;
   height: 30px;
   position: relative;
-  top: -400px;
+  top: -487px;
   z-index: 10;
   left: 98%;
   cursor: pointer;

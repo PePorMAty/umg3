@@ -63,10 +63,10 @@
     top: -250px;
   }
   .aluminum-right-arrow {
-    top: -370px;
+    top: -400px;
   }
   .aluminum-left-arrow {
-    top: -270px;
+    top: -300px;
   }
   .contacts-text {
     font-size: 55px;
@@ -272,10 +272,10 @@
     top: -220px;
   }
   .aluminum-right-arrow {
-    top: -370px;
+    top: -400px;
   }
   .aluminum-left-arrow {
-    top: -270px;
+    top: -300px;
   }
   .application-slider__title {
     margin-left: 25px;
@@ -291,6 +291,12 @@
   }
   .typesSlider-left-arrow {
     top: -375px;
+  }
+  .siliconTypes-right-arrow {
+    top: -400px;
+  }
+  .siliconTypes-left-arrow {
+    top: -300px;
   }
 }
 @media (max-width: 1200px) {
@@ -327,7 +333,7 @@
   }
   .top-item__two::after {
     top: -320px;
-    left: 290px;
+    left: 272px;
   }
   .reasons-top__item {
     padding: 20px 24px;
@@ -464,12 +470,6 @@
     top: -400px;
     right: 30px;
   }
-  .aluminum-right-arrow {
-    top: -370px;
-  }
-  .aluminum-left-arrow {
-    top: -270px;
-  }
   .technology-item__img {
     max-width: 400px;
   }
@@ -589,10 +589,10 @@
     top: -430px;
   }
   .siliconTypes-left-arrow {
-    top: -300px;
+    top: -350px;
   }
   .siliconTypes-right-arrow {
-    top: -400px;
+    top: -450px;
   }
   .characteristics-img {
     left: -100px;
@@ -683,6 +683,12 @@
   }
   .typesSlider-left-arrow {
     top: -375px;
+  }
+  .siliconTypes-left-arrow {
+    top: -300px;
+  }
+  .siliconTypes-right-arrow {
+    top: -400px;
   }
 }
 @media (max-width: 1000px) {
@@ -804,6 +810,12 @@
   .typesSlider-left-arrow {
     top: -475px;
   }
+  .siliconTypes-right-arrow {
+    top: -480px;
+  }
+  .siliconTypes-left-arrow {
+    top: -380px;
+  }
   .application-slider__info {
     padding: 200px 40px 80px 40px;
   }
@@ -857,6 +869,12 @@
   .typesSlider-slider__img {
     margin-top: 23%;
   }
+  .siliconTypes-right-arrow {
+    top: -420px;
+  }
+  .siliconTypes-left-arrow {
+    top: -320px;
+  }
   .table {
     display: none;
     visibility: hidden;
@@ -872,6 +890,12 @@
   }
   .typesSlider-left-arrow {
     top: -415px;
+  }
+  .siliconTypes-right-arrow {
+    top: -420px;
+  }
+  .siliconTypes-left-arrow {
+    top: -320px;
   }
   .footer-nav__list {
     display: grid;
@@ -933,6 +957,12 @@
   }
   .typesSlider-left-arrow {
     top: -450px;
+  }
+  .siliconTypes-right-arrow {
+    top: -480px;
+  }
+  .siliconTypes-left-arrow {
+    top: -380px;
   }
   .boronProcessing-title {
     font-size: 30px;
@@ -1040,10 +1070,10 @@
     font-size: 30px;
   }
   .application-left-arrow {
-    top: -185px;
+    top: -190px;
   }
   .application-right-arrow {
-    top: -215px;
+    top: -220px;
   }
   .aluminum-right-arrow {
     top: -300px;
@@ -1145,6 +1175,18 @@
   .application-slider__info {
     margin-right: 30px;
   }
+  .application-right-arrow {
+    top: -260px;
+  }
+  .application-left-arrow {
+    top: -230px;
+  }
+  .aluminum-right-arrow {
+    top: -300px;
+  }
+  .aluminum-left-arrow {
+    top: -270px;
+  }
 }
 @media (max-width: 650px) {
   .button-uotlined {
@@ -1166,7 +1208,7 @@
     margin-right: 80px;
   }
   .top-item__two::after {
-    left: 348px;
+    left: 240px;
   }
   .footer-logo {
     margin-right: 40px;
@@ -1182,6 +1224,12 @@
   }
   .typesSlider-mobile-right-arrow {
     top: -370px;
+  }
+  .siliconTypes-mobile-right-arrow {
+    top: -318px;
+  }
+  .siliconTypes-mobile-left-arrow {
+    top: -288px;
   }
 }
 @media (max-width: 600px) {
@@ -1339,10 +1387,10 @@
     top: -215px;
   }
   .aluminum-right-arrow {
-    top: -240px;
+    top: -300px;
   }
   .aluminum-left-arrow {
-    top: -210px;
+    top: -270px;
   }
   .contacts-text {
     font-size: 35px;
@@ -1491,10 +1539,10 @@
     font-size: 24px;
   }
   .boronProcessingMobile-left-arrow {
-    top: -290px;
+    top: -450px;
   }
   .boronProcessingMobile-right-arrow {
-    top: -320px;
+    top: -480px;
   }
   .application-info__wrapper {
     flex-direction: column;
@@ -1582,7 +1630,7 @@
     text-align: center;
   }
   .typesSlider {
-    margin-bottom: 80px;
+    margin-bottom: 0;
   }
   .typesSlider-slider__title {
     font-size: 15px;
@@ -1622,6 +1670,10 @@
   }
   .boronProcessingMobile-right-arrow {
     left: 97%;
+    top: -375px;
+  }
+  .boronProcessingMobile-left-arrow {
+    top: -345px;
   }
   .top-item__two::after {
     left: 250px;
@@ -1653,6 +1705,21 @@
   .characteristics-item__text {
     font-size: 14px;
   }
+  .reasons-bot__item {
+    margin-left: 110px;
+  }
+  .application-right-arrow {
+    top: -190px;
+  }
+  .application-left-arrow {
+    top: -160px;
+  }
+  .aluminum-right-arrow {
+    top: -300px;
+  }
+  .aluminum-left-arrow {
+    top: -270px;
+  }
 }
 @media (max-width: 430px) {
   .typesSlider-mobile-right-arrow {
@@ -1660,6 +1727,12 @@
   }
   .typesSlider-mobile-left-arrow {
     top: -435px;
+  }
+  .siliconTypes-mobile-right-arrow {
+    top: -370px;
+  }
+  .siliconTypes-mobile-left-arrow {
+    top: -340px;
   }
 }
 @media (max-width: 400px) {
@@ -1719,10 +1792,10 @@
     padding: 40px 20px;
   }
   .boronProcessingMobile-left-arrow {
-    top: -220px;
+    top: -365px;
   }
   .boronProcessingMobile-right-arrow {
-    top: -250px;
+    top: -395px;
     left: 96%;
   }
   .typesSlider-mobile-right-arrow {
@@ -1771,10 +1844,10 @@
     top: -490px;
   }
   .siliconTypes-mobile-right-arrow {
-    top: -310px;
+    top: -375px;
   }
   .siliconTypes-mobile-left-arrow {
-    top: -280px;
+    top: -345px;
   }
   .botonTypes-right-arrow {
     left: 74%;
