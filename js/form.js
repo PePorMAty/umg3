@@ -5,6 +5,7 @@ const overlay = document.querySelector(".overlay");
 const detailsForm = document.querySelector(".popup-details__form");
 const orderForm = document.querySelector(".popup-order-form");
 const contactForm = document.querySelector(".popup-contact__form");
+
 // Открытие попапа и формы
 overlay.addEventListener("click", function (e) {
   popup.classList.remove("popup-active");
@@ -15,6 +16,8 @@ overlay.addEventListener("click", function (e) {
   orderForm.classList.remove("popup-order-form-active");
   document.querySelector("body").classList.remove("popup-open");
 });
+
+// Закрытие попапа по клику вне формы
 popup.addEventListener("click", function (e) {
   const detailsFormPopup = e.composedPath().includes(detailsForm);
   const orderFormPopup = e.composedPath().includes(orderForm);
@@ -31,6 +34,7 @@ popup.addEventListener("click", function (e) {
   }
 });
 
+// Открытие попапа для заказа
 const openPopup = () => {
   window.scrollTo({ top: 0 });
   detailsForm.classList.add("popup-details__form-active");
@@ -52,6 +56,7 @@ const formData = {
   blueprint: "",
   quantity: 0,
   map: "",
+  comments: "",
   address: {
     city: "",
     street: "",
@@ -60,40 +65,72 @@ const formData = {
   },
 };
 
+function validateForm(form) {
+  let isValid = true;
+  const inputs = form.querySelectorAll("input");
+
+  inputs.forEach((input) => {
+    const errorSpanId = `${input.name}-error`;
+
+    if (!input.checkValidity()) {
+      isValid = false;
+      input.classList.add("invalid-input");
+
+      // Добавляем класс к .label-wrapper, если input внутри него не валиден
+      const wrapper = input.closest(".label-wrapper");
+      if (wrapper) {
+        wrapper.classList.add("invalid-input");
+      }
+    } else {
+      input.classList.remove("invalid-input");
+
+      // Убираем класс с .label-wrapper, если input валиден
+      const wrapper = input.closest(".label-wrapper");
+      if (wrapper) {
+        wrapper.classList.remove("invalid-input");
+      }
+    }
+  });
+
+  return isValid;
+}
+
 const moveToOrderForm = () => {
-  const material = document.getElementById("materialInput").value;
-  const size = document.getElementById("size").value;
-  const blueprint = document.getElementById("blueprint").value;
-  const quantity = document.getElementById("quantity").value;
-  const map = document.getElementById("map").value;
-  const city = document.getElementById("city").value;
-  const street = document.getElementById("street").value;
-  const house = document.getElementById("house").value;
-  const office = document.getElementById("office").value;
-  const materialOutput = document.getElementById("materialOutput");
-  const quantityOutput = document.getElementById("quantityOutput");
-  const sizeOutput = document.getElementById("sizeOutput");
-  const addressOutput = document.getElementById("addressOutput");
+  if (validateForm(contactForm)) {
+    window.scrollTo({ top: 0 });
+    detailsForm.classList.remove("popup-details__form-active");
+    contactForm.classList.remove("popup-contact__form-active");
+    orderForm.classList.add("popup-order-form-active");
 
-  window.scrollTo({ top: 0 });
-  detailsForm.classList.remove("popup-details__form-active");
-  contactForm.classList.remove("popup-contact__form-active");
-  orderForm.classList.add("popup-order-form-active");
+    // Сбор данных формы
+    const material = document.getElementById("materialInput").value;
+    const size = document.getElementById("size").value;
+    const blueprint = document.getElementById("blueprint").value;
+    const quantity = document.getElementById("quantity").value;
+    const map = document.getElementById("map").value;
+    const city = document.getElementById("city").value;
+    const street = document.getElementById("street").value;
+    const house = document.getElementById("house").value;
+    const office = document.getElementById("office").value;
+    const comments = document.getElementById("comments").value;
 
-  formData.material = material;
-  formData.size = size;
-  formData.blueprint = blueprint;
-  formData.quantity = quantity;
-  formData.map = map;
-  formData.address.city = city;
-  formData.address.street = street;
-  formData.address.house = house;
-  formData.address.office = office;
+    formData.material = material;
+    formData.size = size;
+    formData.blueprint = blueprint;
+    formData.quantity = quantity;
+    formData.map = map;
+    formData.address.city = city;
+    formData.address.street = street;
+    formData.address.house = house;
+    formData.address.office = office;
+    formData.comments = comments;
 
-  materialOutput.textContent = `${material}`;
-  quantityOutput.textContent = `${quantity} шт`;
-  sizeOutput.textContent = `${size} мм`;
-  addressOutput.textContent = `г.${city}, ул.${street}`;
+    // Обновление отображения данных
+    materialOutput.textContent = `${material}`;
+    quantityOutput.textContent = `${quantity} шт`;
+    sizeOutput.textContent = `${size} мм`;
+    addressOutput.textContent = `г.${city}, ул.${street}`;
+  }
 };
 
 const returnToDetailsForm = () => {
@@ -104,10 +141,12 @@ const returnToDetailsForm = () => {
 };
 
 const moveToContactForm = () => {
-  window.scrollTo({ top: 0 });
-  detailsForm.classList.remove("popup-details__form-active");
-  orderForm.classList.remove("popup-order-form-active");
-  contactForm.classList.add("popup-contact__form-active");
+  if (validateForm(detailsForm)) {
+    window.scrollTo({ top: 0 });
+    detailsForm.classList.remove("popup-details__form-active");
+    orderForm.classList.remove("popup-order-form-active");
+    contactForm.classList.add("popup-contact__form-active");
+  }
 };
 
 const confirmForm = () => {
@@ -122,16 +161,53 @@ const confirmForm = () => {
   formData.phone = phone;
 };
 
+// Функция для преобразования файла в base64
+function getFileBase64(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result.split(",")[1]); // Извлечение чистого base64 без префикса
+    reader.onerror = (error) => reject(error);
+  });
+}
+
+// Функция загрузки файла в папку Bitrix24 и получения ID файла
+const uploadFile = (file, folderId) => {
+  const formDataToSend = new FormData();
+  formDataToSend.append("file", file);
+
+  return fetch(
+    `https://b24-hoecyn.bitrix24.ru/rest/1/unzteqtggyuf3xdl/disk.folder.uploadfile?id=${folderId}`,
+    {
+      method: "POST",
+      body: formDataToSend,
+    }
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.error) {
+        throw new Error("Ошибка загрузки файла: " + data.error_description);
+      }
+      return data.result.ID; // Возвращаем ID загруженного файла
+    });
+};
+
 document
   .getElementById("orderForm")
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
+    // Сбор данных формы
     confirmForm();
-    console.log(formData);
 
+    // Загрузка файла карты, чертежа и ТУ (требований)
+    const mapFile = document.getElementById("map").files[0];
+    const blueprintFile = document.getElementById("blueprint").files[0];
+    const requirementsFile = document.getElementById("requirements").files[0];
+
+    // URL вебхука для создания лида
     const webhookUrl =
-      "https://b24-hoecyn.bitrix24.ru/rest/1/8prrmu40folgl1rq/"; // Замените на URL вашего вебхука
+      "https://b24-hoecyn.bitrix24.ru/rest/1/unzteqtggyuf3xdl/crm.lead.add.json";
 
     // Формирование данных для создания лида
     const leadData = {
@@ -140,39 +216,66 @@ document
         NAME: formData.contactName,
         PHONE: [{ VALUE: formData.phone, VALUE_TYPE: "WORK" }],
         EMAIL: [{ VALUE: formData.email, VALUE_TYPE: "WORK" }],
-        COMMENTS: `Материал: ${formData.material}, Количество: ${formData.quantity}, Размер: ${formData.size}`,
+        COMMENTS: formData.comments,
         ADDRESS: `${formData.address.city}, ул. ${formData.address.street}, д. ${formData.address.house}, оф. ${formData.address.office}`,
-        UF_CRM_BLUEPRINT: `Чертёж: ${formData.blueprint}`, // Замените на идентификатор пользовательского поля, если необходимо
-        UF_CRM_MAP: `Карта: ${formData.map}`, // Замените на идентификатор пользовательского поля, если необходимо
-        MATERIAL: `Материал: ${formData.material}`, // Замените на идентификатор пользовательского поля, если необходимо
-        UF_CRM_QUANTITY: `Количество: ${formData.quantity}`, // Замените на идентификатор пользовательского поля, если необходимо
-        UF_CRM_SIZE: `Размер: ${formData.size}`,
+        UF_CRM_1731490039: null, // Поле для карты (будет заполнено позже)
+        UF_CRM_1731502674: null, // Поле для чертежа (будет заполнено позже)
+        UF_CRM_1731577537: null, // Поле для требований (будет заполнено позже)
+        UF_CRM_1731490628: formData.quantity,
+        UF_CRM_1731490661: formData.size,
       },
-      params: { REGISTER_SONET_EVENT: "Y" }, // Создание события в ленте новостей
+      params: { REGISTER_SONET_EVENT: "Y" },
     };
 
-    // Отправка данных на сервер Bitrix24
-    fetch(webhookUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(leadData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.result) {
-          alert("Заказ оформлен! ID лида: " + data.result);
-        } else {
-          alert(
-            "Ошибка: " + (data.error_description || "Не удалось создать лид")
-          );
-        }
-      })
-      .catch((error) => {
-        console.error("Ошибка:", error);
-        alert("Произошла ошибка при отправке данных.");
-      });
+    if (mapFile) {
+      getFileBase64(mapFile)
+        .then((base64Map) => {
+          leadData.fields.UF_CRM_1731490039 = {
+            fileData: [`${mapFile.name}`, base64Map],
+          };
+          return blueprintFile ? getFileBase64(blueprintFile) : null;
+        })
+        .then((base64Blueprint) => {
+          if (base64Blueprint) {
+            leadData.fields.UF_CRM_1731502674 = {
+              fileData: [`${blueprintFile.name}`, base64Blueprint],
+            };
+          }
+          return requirementsFile ? getFileBase64(requirementsFile) : null;
+        })
+        .then((base64Requirements) => {
+          if (base64Requirements) {
+            leadData.fields.UF_CRM_1731577537 = {
+              fileData: [`${requirementsFile.name}`, base64Requirements],
+            };
+          }
+
+          console.log("Lead data:", leadData); // Отладка перед отправкой
+
+          // Отправка данных на сервер Bitrix24
+          return fetch(webhookUrl, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(leadData),
+          });
+        })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.result) {
+            alert("Заказ оформлен! ID лида: " + data.result);
+          } else {
+            alert(
+              "Ошибка: " + (data.error_description || "Не удалось создать лид")
+            );
+          }
+        })
+        .catch((error) => {
+          console.error("Ошибка при подготовке файлов:", error);
+          alert("Произошла ошибка при отправке данных.");
+        });
+    }
   });
 
 // Поведение input type file

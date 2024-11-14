@@ -164,6 +164,7 @@ body.popup-open {
 .form-label__wrapper {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .mt1 {
@@ -263,8 +264,8 @@ datalist {
   padding: 5px;
   max-height: 10rem;
   overflow-y: auto;
-  margin-top: 116px;
   z-index: 999;
+  top: 100px;
 }
 
 datalist::-webkit-scrollbar {
@@ -355,6 +356,14 @@ datalist::-webkit-scrollbar-thumb {
 
 .order-form__text {
   color: #2b2b2b;
+}
+
+.invalid-input {
+  border-color: red;
+}
+
+.label-wrapper.invalid-input {
+  border: 1px solid red;
 }
 @media (max-width: 1600px) {
   .popup-content {

@@ -79,6 +79,7 @@
                   list="material-options"
                   autocomplete="off"
                   role="combobox"
+                  required
                 />
                 <datalist id="material" role="listbox">
                   <option class="option" value="Вариант 1">Вариант 1</option>
@@ -104,6 +105,7 @@
                   id="size"
                   type="text"
                   placeholder="ДхШхВ"
+                  required
                 />
               </p>
             </div>
@@ -118,6 +120,7 @@
                       name="blueprint"
                       type="file"
                       placeholder="Загрузить"
+                      required
                     />
                     <span class="input-file" for="blueprint">Загрузить</span>
                   </label>
@@ -132,6 +135,7 @@
                       id="requirements"
                       type="file"
                       placeholder="Загрузить"
+                      required
                     />
                     <span class="input-file" for="blueprint">Загрузить</span>
                   </label>
@@ -144,6 +148,7 @@
                   id="quantity"
                   type="number"
                   placeholder="-  0  +"
+                  required
                 />
               </p>
               <p class="form-label__wrapper">
@@ -155,6 +160,7 @@
                       id="map"
                       type="file"
                       placeholder="Загрузить"
+                      required
                     />
                     <span class="input-file" for="blueprint">Загрузить</span>
                   </label>
@@ -169,6 +175,7 @@
                   id="city"
                   type="text"
                   placeholder="Город"
+                  required
                 />
               </p>
               <p class="form-label__wrapper mt1 mt2">
@@ -177,6 +184,7 @@
                   type="text"
                   id="street"
                   placeholder="Улица"
+                  required
                 />
               </p>
               <p class="form-label__wrapper mt1">
@@ -185,6 +193,7 @@
                   type="text"
                   id="house"
                   placeholder="Дом"
+                  required
                 />
               </p>
               <p class="form-label__wrapper mt1">
@@ -193,6 +202,7 @@
                   type="text"
                   id="office"
                   placeholder="Офис"
+                  required
                 />
               </p>
             </div>
@@ -233,6 +243,7 @@
                   id="companyName"
                   type="text"
                   placeholder="ООО Название"
+                  required
                 />
               </p>
               <p class="form-label__wrapper">
@@ -242,6 +253,7 @@
                   id="contactName"
                   type="text"
                   placeholder="Иванов Иван Иванович"
+                  required
                 />
               </p>
               <p class="form-label__wrapper">
@@ -251,6 +263,7 @@
                   id="email"
                   type="email"
                   placeholder="example@mail.ru"
+                  required
                 />
               </p>
               <p class="form-label__wrapper">
@@ -260,6 +273,7 @@
                   id="phone"
                   type="tel"
                   placeholder="+7 (___) ___-__-__"
+                  required
                 />
               </p>
             </div>
@@ -928,19 +942,5 @@
     <script defer src="js/main.js"></script>
     <script defer src="js/form.js"></script>
     <script defer src="js/customDataList.js"></script>
-    <script data-b24-form="inline/14/ueery3" data-skip-moving="true">
-      (function (w, d, u) {
-        var s = d.createElement("script");
-        s.async = true;
-        s.src = u + "?" + ((Date.now() / 180000) | 0);
-
-        var h = d.getElementsByTagName("script")[0];
-        h.parentNode.insertBefore(s, h);
-      })(
-        window,
-        document,
-        "https://cdn-ru.bitrix24.ru/b30693032/crm/form/loader_14.js"
-      );
-    </script>
   </body>
 </html>

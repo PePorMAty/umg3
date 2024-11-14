@@ -49,17 +49,6 @@ body {
   z-index: -10;
 }
 
-/* .topBoron-bg {
-  position: absolute;
-  background-image: url("../assets/boron-nitride/boron-main-bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 887px;
-  height: 678px;
-  right: 0;
-  z-index: -10;
-} */
-
 .header-nav {
   display: flex;
   justify-content: space-between;
@@ -171,8 +160,8 @@ body {
 .burger-menu__close {
   position: relative;
   cursor: pointer;
-  width: 24px;
-  height: 24px;
+  width: 33px;
+  height: 33px;
   display: none;
   background-image: url("../assets/close-burger-icon.svg");
   background-repeat: no-repeat;

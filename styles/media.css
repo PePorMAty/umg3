@@ -427,10 +427,12 @@
     display: none;
     position: absolute;
     bottom: -550%;
-    right: 27%;
+    right: 39vw;
+    flex-direction: column;
   }
   .header-contacts-tel {
-    margin-right: 100px;
+    left: 4vw;
+    position: relative;
   }
   .typesSlider-slider__title {
     font-size: 20px;
@@ -850,6 +852,12 @@
   }
 }
 @media (max-width: 900px) {
+  .header-contacts {
+    right: 37vw;
+  }
+  .header-contacts-tel {
+    left: 4vw;
+  }
   .reasons-bot__item {
     margin-bottom: 44px;
     margin-left: 150px;
@@ -1005,6 +1013,12 @@
   }
 }
 @media (max-width: 750px) {
+  .header-contacts {
+    right: 35vw;
+  }
+  .header-contacts-tel {
+    left: 5vw;
+  }
   .topBoron {
     margin-bottom: 80px;
   }
@@ -1166,9 +1180,6 @@
   .contacts-text {
     font-size: 44px;
   }
-  .header-contacts {
-    right: 17%;
-  }
   .application-info__item {
     font-size: 20px;
   }
@@ -1189,6 +1200,12 @@
   }
 }
 @media (max-width: 650px) {
+  .header-contacts {
+    right: 33vw;
+  }
+  .header-contacts-tel {
+    left: 6vw;
+  }
   .button-uotlined {
     padding: 19px 45px;
   }
@@ -1461,15 +1478,18 @@
     top: -270px;
   }
   .header-contacts {
-    right: 9%;
+    right: 28vw;
+  }
+  .header-contacts-tel {
+    left: 6vw;
   }
   .top-item__two::after {
     left: 343px;
   }
 }
 @media (max-width: 500px) {
-  .header-contacts-tel {
-    margin-right: 50px;
+  .header-contacts {
+    right: 26vw;
   }
   .topSilicon-bg {
     width: 250px;
@@ -1625,12 +1645,10 @@
     font-size: 12px;
   }
   .header-contacts {
-    right: 32%;
-    flex-direction: column;
+    right: 24vw;
   }
   .header-contacts-tel {
-    margin-right: 0px;
-    text-align: center;
+    left: 10vw;
   }
   .typesSlider {
     margin-bottom: 0;
@@ -1739,6 +1757,9 @@
   }
 }
 @media (max-width: 400px) {
+  .header-contacts {
+    right: 21vw;
+  }
   .topSilicon-bg {
     width: 250px;
     height: 350px;
@@ -1837,8 +1858,7 @@
 }
 @media (max-width: 370px) {
   .header-contacts {
-    right: 26%;
-    flex-direction: column;
+    right: 17vw;
   }
   .typesSlider {
     padding: 0 10px;
