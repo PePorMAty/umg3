@@ -192,6 +192,94 @@ body.popup-open {
   width: 100%;
 }
 
+/* Для Chrome и Safari */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Для Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Для IE и Edge */
+input[type="number"]::-ms-clear {
+  display: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  background-color: blue;
+}
+
+/* Стилизация кнопки уменьшения значения */
+input[type="number"]::-webkit-outer-spin-button {
+  background-color: red;
+}
+
+.input4 {
+  margin-top: -10px;
+  text-align: center;
+}
+
+.number {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+}
+.number input[type="number"] {
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+.number input[type="number"]::-webkit-outer-spin-button,
+.number input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+.number-minus {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  bottom: 0px;
+  width: 20px;
+  padding: 0;
+  display: block;
+  text-align: center;
+  border: none;
+  font-size: 23px;
+  color: #2b2b2b30;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: inherit;
+  height: 25px;
+}
+.number-plus {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  bottom: 0px;
+  width: 20px;
+  padding: 0;
+  display: block;
+  text-align: center;
+  border: none;
+  font-size: 23px;
+  color: #2b2b2b30;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: inherit;
+  height: 25px;
+}
+
 input[type="file"] {
   display: none;
 }
@@ -248,10 +336,6 @@ input[type="file"] {
 .inputWithoutImg::after {
   content: "";
   background-image: none;
-}
-
-.input4 {
-  margin-top: -10px;
 }
 
 datalist {
@@ -469,6 +553,12 @@ datalist::-webkit-scrollbar-thumb {
   .form {
     padding: 25px 10px 5px 10px;
   }
+  .number-plus {
+    top: 45px;
+  }
+  .number-minus {
+    top: 45px;
+  }
 }
 @media (max-width: 500px) {
   .input-file::after {
@@ -511,6 +601,12 @@ datalist::-webkit-scrollbar-thumb {
   }
   .input-file {
     max-width: 70px;
+  }
+  .number-plus {
+    top: 40px;
+  }
+  .number-minus {
+    top: 40px;
   }
 }
 @media (max-width: 370px) {

@@ -632,9 +632,6 @@
   .typesSlider-left-arrow {
     top: -330px;
   }
-  .typesSlider-slider__img {
-    margin-top: 15%;
-  }
   .typesSlider-slider__title {
     font-size: 20px;
   }
@@ -871,9 +868,6 @@
   .typesSlider-left-arrow {
     top: -375px;
   }
-  .typesSlider-slider__img {
-    margin-top: 23%;
-  }
   .siliconTypes-right-arrow {
     top: -420px;
   }
@@ -950,9 +944,6 @@
   }
   .topAluminum-title span {
     font-size: 65px;
-  }
-  .typesSlider-slider__img {
-    margin-top: 30%;
   }
   .typesSlider-title {
     font-size: 30px;

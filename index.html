@@ -143,13 +143,28 @@
               </p>
               <p class="form-label__wrapper">
                 <label class="form-label" for="quantity">Количество</label>
+
+                <button
+                  class="number-minus"
+                  type="button"
+                  onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"
+                >
+                  -
+                </button>
                 <input
                   class="form-input input4"
                   id="quantity"
                   type="number"
-                  placeholder="-  0  +"
+                  placeholder="0"
                   required
                 />
+                <button
+                  class="number-plus"
+                  type="button"
+                  onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"
+                >
+                  +
+                </button>
               </p>
               <p class="form-label__wrapper">
                 <label class="form-label label-file3" for="map"
@@ -438,7 +453,7 @@
                 </h5>
                 <img
                   class="typesSlider-mobile__img"
-                  src="./assets/boron-nitride/types-slider-img.png"
+                  src="./assets/boron-nitride/types-slider-img1.jpg"
                   alt="slide-img"
                 />
                 <p class="typesSlider-mobile__text geist-medium">
@@ -454,7 +469,7 @@
                 </h5>
                 <img
                   class="typesSlider-mobile__img"
-                  src="./assets/boron-nitride/types-slider-img.png"
+                  src="./assets/boron-nitride/types-slider-img2.jpg"
                   alt="slide-img"
                 />
                 <p class="typesSlider-mobile__text geist-medium">
