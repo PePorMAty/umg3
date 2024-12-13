@@ -22,33 +22,33 @@
           </a>
           <ul class="nav-list">
             <li class="nav-item">
-              <a class="nav-item__link" href="index.html">Виды</a>
+              <a class="nav-item__link" href="#Properties">Свойства</a>
             </li>
             <li class="nav-item">
-              <a class="nav-item__link" href="#">Обработка</a>
+              <a class="nav-item__link" href="#Production">Производство</a>
             </li>
             <li class="nav-item">
-              <a class="nav-item__link" href="aluminum.html">Характеристики</a>
+              <a class="nav-item__link" href="#Characteristics"
+                >Характеристики</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-item__link" href="#">Применение</a>
+              <a class="nav-item__link" href="#Application">Применение</a>
             </li>
             <li class="nav-item">
-              <a class="nav-item__link" href="#">Контакты</a>
+              <a class="nav-item__link" href="#Contacts">Контакты</a>
             </li>
           </ul>
           <div class="header-contacts">
             <a class="header-contacts-tel geist-bold" href="tel:+73517995499"
               >+7 (351) 799-54-99</a
             >
-            <a class="header-contacts-btn" href="#">
-              <button
-                class="header-btn button ibm-plex-sans-bold"
-                onclick="openPopup()"
-              >
-                Оформить заказ
-              </button>
-            </a>
+            <button
+              class="header-btn button ibm-plex-sans-bold"
+              onclick="openPopup()"
+            >
+              Оформить заказ
+            </button>
           </div>
           <div class="burger-menu__open"></div>
           <div class="burger-menu__close"></div>
@@ -325,7 +325,7 @@
             до 1650°С, привели к широкому спектру применений.
           </p>
           <div class="topSilicon-links">
-            <a href="#typesSliderSilicon">
+            <a href="#Properties">
               <button class="topSilicon-btn button">Подробнее</button>
             </a>
             <button class="button button-outlined" onclick="openPopup()">
@@ -333,7 +333,7 @@
             </button>
           </div>
         </section>
-        <section class="typesSlider" id="typesSliderSilicon">
+        <section class="typesSlider" id="Properties">
           <h2 class="typesSlider-title geist-bold">Свойства карбида кремния</h2>
           <div class="typesSlider-slider swiper">
             <div class="swiper-wrapper">
@@ -538,7 +538,7 @@
             class="typesSlider-mobile-right-arrow siliconTypes-mobile-right-arrow"
           ></div>
         </section>
-        <section class="technology">
+        <section class="technology" id="Production">
           <h3 class="technology-title ibm-plex-sans-bold">
             Технология производства
           </h3>
@@ -591,9 +591,9 @@
             />
           </div>
         </section>
-        <section class="boronProcessingMobile">
+        <section class="boronProcessingMobile" id="Production">
           <h3 class="boronProcessingMobile-title geist-bold">
-            Обработка керамики из Нитрида Бора
+            Технология производства
           </h3>
           <div class="boronProcessingMobile-slider swiper">
             <div class="swiper-wrapper">
@@ -663,7 +663,7 @@
           <div class="boronProcessingMobile-left-arrow"></div>
           <div class="boronProcessingMobile-right-arrow"></div>
         </section>
-        <section class="siliconTable">
+        <section class="siliconTable" id="Characteristics">
           <h3 class="table-title geist-bold">
             Сравнительные характеристики марок карбида кремния
           </h3>
@@ -958,7 +958,7 @@
           </div>
         </section>
       </div>
-      <section class="application">
+      <section class="application" id="Application">
         <div class="application-title__wrapper">
           <h3 class="application-title geist-bold">
             Применение технической керамики на основе пиролитического Нитрида
@@ -1073,7 +1073,7 @@
         </div>
       </section>
       <div class="container">
-        <section class="contacts">
+        <section class="contacts" id="Contacts">
           <h3 class="contacts-title geist-bold">контакты</h3>
           <div class="contacts-wrapper">
             <div class="contacts-info">
@@ -1169,19 +1169,5 @@
     <script defer src="js/main.js"></script>
     <script defer src="js/form.js"></script>
     <script defer src="js/customDataList.js"></script>
-    <script data-b24-form="inline/14/ueery3" data-skip-moving="true">
-      (function (w, d, u) {
-        var s = d.createElement("script");
-        s.async = true;
-        s.src = u + "?" + ((Date.now() / 180000) | 0);
-
-        var h = d.getElementsByTagName("script")[0];
-        h.parentNode.insertBefore(s, h);
-      })(
-        window,
-        document,
-        "https://cdn-ru.bitrix24.ru/b30693032/crm/form/loader_14.js"
-      );
-    </script>
   </body>
 </html>

@@ -121,7 +121,7 @@
     font-size: 15px;
   }
   .header-btn {
-    padding: 19px 50px;
+    padding: 19px 30px;
     font-size: 15px;
   }
   .header-container::after {
@@ -305,9 +305,6 @@
   }
   .typesSlider-slider__title {
     font-size: 22px;
-  }
-  .typesSlider-slider__img {
-    margin-top: 5%;
   }
   .boronProcessing-link img {
     max-width: 500px;

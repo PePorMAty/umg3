@@ -251,10 +251,11 @@ body {
 
 .typesSlider-slider__img {
   width: 100%;
-  max-width: 615px;
   max-height: 400px;
+  height: 100vw;
   margin: auto auto;
   display: flex;
+  border-radius: 14px;
 }
 
 .typesSlider-mobile {

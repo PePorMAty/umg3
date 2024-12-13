@@ -36,7 +36,6 @@ popup.addEventListener("click", function (e) {
 
 // Открытие попапа для заказа
 const openPopup = () => {
-  window.scrollTo({ top: 0 });
   detailsForm.classList.add("popup-details__form-active");
   popup.classList.add("popup-active");
   overlay.classList.add("overlay-active");
@@ -97,7 +96,6 @@ function validateForm(form) {
 
 const moveToOrderForm = () => {
   if (validateForm(contactForm)) {
-    window.scrollTo({ top: 0 });
     detailsForm.classList.remove("popup-details__form-active");
     contactForm.classList.remove("popup-contact__form-active");
     orderForm.classList.add("popup-order-form-active");
@@ -134,7 +132,6 @@ const moveToOrderForm = () => {
 };
 
 const returnToDetailsForm = () => {
-  window.scrollTo({ top: 0 });
   detailsForm.classList.add("popup-details__form-active");
   orderForm.classList.remove("popup-order-form-active");
   contactForm.classList.remove("popup-contact__form-active");
@@ -142,7 +139,6 @@ const returnToDetailsForm = () => {
 
 const moveToContactForm = () => {
   if (validateForm(detailsForm)) {
-    window.scrollTo({ top: 0 });
     detailsForm.classList.remove("popup-details__form-active");
     orderForm.classList.remove("popup-order-form-active");
     contactForm.classList.add("popup-contact__form-active");
@@ -172,24 +168,22 @@ function getFileBase64(file) {
 }
 
 // Функция загрузки файла в папку Bitrix24 и получения ID файла
-const uploadFile = (file, folderId) => {
+const uploadFile = async (file, folderId) => {
   const formDataToSend = new FormData();
   formDataToSend.append("file", file);
 
-  return fetch(
-    `https://b24-hoecyn.bitrix24.ru/rest/1/unzteqtggyuf3xdl/disk.folder.uploadfile?id=${folderId}`,
+  const response = await fetch(
+    `https://b24-jh08zp.bitrix24.ru/rest/34/7oqynbc8crah4bc0/disk.folder.uploadfile?id=${folderId}`,
     {
       method: "POST",
       body: formDataToSend,
     }
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      if (data.error) {
-        throw new Error("Ошибка загрузки файла: " + data.error_description);
-      }
-      return data.result.ID; // Возвращаем ID загруженного файла
-    });
+  );
+  const data = await response.json();
+  if (data.error) {
+    throw new Error("Ошибка загрузки файла: " + data.error_description);
+  }
+  return data.result.ID;
 };
 
 document
@@ -207,7 +201,7 @@ document
 
     // URL вебхука для создания лида
     const webhookUrl =
-      "https://b24-hoecyn.bitrix24.ru/rest/1/unzteqtggyuf3xdl/crm.lead.add.json";
+      "https://b24-jh08zp.bitrix24.ru/rest/34/7oqynbc8crah4bc0/crm.lead.add.json";
 
     // Формирование данных для создания лида
     const leadData = {
